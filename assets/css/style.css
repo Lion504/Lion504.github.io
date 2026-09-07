@@ -251,6 +251,13 @@ ul,ol{ margin:0; padding:0; list-style:none; }
 .btn--solid:hover svg{ transform:translateX(4px); }
 .btn--ghost{ border-color:var(--line); color:var(--bone-2); }
 .btn--ghost:hover{ border-color:var(--bone-2); color:var(--bone); }
+.btn--line{
+  border-color:var(--accent-dim); color:var(--accent);
+  background:rgba(224,164,88,.05);
+}
+.btn--line:hover{ border-color:var(--accent); background:rgba(224,164,88,.12); }
+.btn--line svg{ width:14px; height:14px; }
+.btn--line:hover svg{ transform:translateY(2px); }
 .btn--full{ width:100%; }
 
 .hero__meta{ display:flex; flex-wrap:wrap; gap:28px; }
