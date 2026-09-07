@@ -504,6 +504,14 @@ ul,ol{ margin:0; padding:0; list-style:none; }
 .entry__note{ font-size:14.5px; line-height:1.7; color:var(--dim); max-width:52ch; }
 
 .entry--major h3{ color:var(--bone); }
+/* the pre-degree career -- the one thing on this page a reader will not expect */
+.entry--exp{
+  border-left:2px solid var(--accent-dim);
+  padding-left:20px; padding-top:22px;
+  background:linear-gradient(to right, rgba(224,164,88,.045), transparent 62%);
+}
+.entry--exp h3{ color:var(--accent); }
+.entry--exp .entry__when{ color:var(--bone-2); }
 .place{ color:var(--accent); font-style:italic; }
 
 .grades{ margin-top:24px; }
