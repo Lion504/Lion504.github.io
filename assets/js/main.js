@@ -93,6 +93,33 @@
     });
   }
 
+  /* ═══ Project video: play only while on screen ═══
+     preload="none" in the markup, so the file is not fetched at all unless
+     the row is actually reached. Honours prefers-reduced-motion, where the
+     poster frame stays put. */
+  (function projectVideo() {
+    var vids = $$('.proj__shot video');
+    if (!vids.length) return;
+
+    var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (still || !('IntersectionObserver' in window)) return;
+
+    var vo = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        var v = en.target;
+        if (en.isIntersecting) {
+          if (v.preload === 'none') v.preload = 'auto';
+          var p = v.play();
+          if (p && p.catch) p.catch(function () { /* autoplay refused; poster stands */ });
+        } else if (!v.paused) {
+          v.pause();
+        }
+      });
+    }, { threshold: 0.35 });
+
+    vids.forEach(function (v) { vo.observe(v); });
+  })();
+
   /* ═══ Contact form ═══ */
   var form   = $('#contactForm');
   var status = $('#formStatus');

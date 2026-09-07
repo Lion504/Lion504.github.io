@@ -455,6 +455,48 @@ ul,ol{ margin:0; padding:0; list-style:none; }
 .lock{ color:var(--dim); display:inline-flex; align-items:center; gap:8px; }
 .lock::before{ content:"◆"; color:var(--accent-dim); font-size:8px; }
 
+/* ── project screenshots ────────────────────────────────────────────
+   Only some projects have a real screenshot: two are private, one is a
+   Java GUI, one is notebooks. Nothing here is a mockup. Rows without an
+   image keep the same text measure, so the column never jumps. */
+/* The figure is the 3rd grid child. Without explicit placement, auto-flow
+   drops it into the 70px number column on every width where the row is not
+   three columns wide -- it measured 68px there. Always place it. */
+.proj__shot{ margin:0; min-width:0; grid-column:2; }
+@media (min-width:1024px){
+  .proj{ grid-template-columns:70px minmax(0,1fr) minmax(0,1fr); align-items:start; }
+  .proj__shot{ grid-column:3; grid-row:1; padding-top:14px; }
+}
+@media (max-width:760px){
+  .proj__shot{ grid-column:1; }   /* the row collapses to one column here */
+}
+.proj__shot a{
+  display:block; overflow:hidden;
+  border:1px solid var(--line); border-radius:3px;
+  background:var(--ink-2);
+  box-shadow:0 24px 60px -34px rgba(0,0,0,.95);
+}
+/* Each shot keeps its own aspect. A forced common ratio only clipped real
+   content -- and the plates are never side by side, so nothing misaligns. */
+.proj__shot img,
+.proj__shot video{
+  width:100%; height:auto; display:block;
+  filter:grayscale(42%) contrast(1.02) brightness(.94);
+  transform:scale(1.004);
+  transition:filter .7s var(--ease), transform 1s var(--ease);
+}
+.proj__shot a:hover img,
+.proj__shot a:hover video{
+  filter:grayscale(0%) contrast(1) brightness(1.04);
+  transform:scale(1.03);
+}
+.proj__shot a:focus-visible{ border-color:var(--accent); }
+.proj__shot figcaption{
+  color:var(--dim); padding-top:11px;
+  display:flex; gap:8px; align-items:baseline;
+}
+.proj__shot figcaption::before{ content:"▪"; color:var(--accent-dim); font-size:7px; }
+
 .proj--lead .proj__top h3{ font-size:clamp(32px,4.6vw,58px); }
 .proj--lead{ background:linear-gradient(to bottom, rgba(239,236,230,.018), transparent); }
 
