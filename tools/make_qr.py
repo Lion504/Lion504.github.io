@@ -33,6 +33,10 @@ OUT = ROOT / "assets" / "img" / "qr"
 CODES = {
     "linkedin": "https://linkedin.com/in/lion504",
     "github": "https://github.com/Lion504",
+    # WhatsApp's own invite link. Deliberately NOT wa.me/<number>, which would
+    # publish the phone number in scannable plain text. Revoking the link in
+    # WhatsApp invalidates this code — regenerate here if that ever happens.
+    "whatsapp": "https://wa.me/qr/T5G4UJ4FHHBJJ1",
 }
 
 # Error correction M tolerates ~15% damage — enough for a screen or a printed

@@ -286,6 +286,11 @@ Do not wrap text sections in cards.
 - Design the 380px rendering first; the desktop layout is the enhancement.
 - Any element wider than its container scrolls inside its own
   `overflow-x: auto` wrapper. The page body never scrolls horizontally.
+- A surface that bleeds outside its column — a hover tint, a full-width band —
+  bleeds by `--bleed`, never by a raw spacing step. `--gut` bottoms out at 20px
+  on a phone, so a fixed 24px bleed hangs 4px past the viewport on every row.
+  `body { overflow-x: hidden }` hides that but does not fix it; measure
+  `scrollWidth` against `clientWidth` at 375px rather than trusting the clip.
 - Touch targets ≥ 44px. Nav collapses to the burger below `900px`.
 - **Never put `backdrop-filter` (or `filter`, `transform`, `perspective`) on an
   element that contains a `position:fixed` child.** Any of those make the element
