@@ -59,7 +59,11 @@ The canonical order for the main page, and the default for any new page:
    the reader believes the "what".
 5. **Experience & education** — including the ten years before the degree.
    Two columns: the linear career on the left, awards and references on the right.
-6. **Contact** — one clear route, plus the alternatives.
+6. **Contact** — one clear route, plus the alternatives. It also answers the two
+   questions a hiring reader has before they can act: **when can this person
+   start**, and **what is the low-risk way to try them**. Both are stated as
+   dates, never as "available immediately" in the abstract — a named month is
+   something a hiring manager can put in a calendar; an adjective is not.
 
 Rules:
 
@@ -253,6 +257,10 @@ the grouping is wrong.
 
 **`.entry`** — timeline item for experience, education and awards. Same field
 order as a project: when, name, org, note.
+
+**`.facts`** / **`.fact`** — the availability block at the top of Contact. A mono
+key over a plain-language value. Reserved for facts that determine whether the
+reader can act at all: start date, thesis window. Never used for a pitch.
 
 **`.cline`** — a contact row: mono key, value. Email is first.
 
