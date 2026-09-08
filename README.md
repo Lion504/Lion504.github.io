@@ -11,7 +11,6 @@ assets/css/style.css    the whole design system
 assets/js/i18n.js       EN / FI dictionary — edit copy here
 assets/js/main.js       language toggle, nav, scroll reveal, contact form
 assets/img/             portrait, OG card, favicon
-assets/Wang-Yongzhi-CV.pdf   the downloadable CV (redacted -- see below)
 tools/redact_cv.py      strips referee emails out of a freshly exported CV
 ```
 
@@ -27,10 +26,8 @@ visitor's mail client with the message pre-filled.
 **Colours and type** — the `:root` block at the top of `style.css`. Everything
 else derives from those tokens.
 
-**The CV PDF — do not just copy a new export over it.** The export puts the two
-referees' email addresses in the sidebar. This site tells visitors "Contact
-details available on request", and publishing those addresses breaks that
-promise for two people who are not you. Run the new export through:
+**The CV PDF is not published on this site.** If you decide to publish one in
+future, run a new export through the redaction tool first:
 
 ```bash
 pip install pypdf
