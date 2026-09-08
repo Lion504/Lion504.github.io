@@ -104,15 +104,18 @@ relevant to our stack", "check the commit share is real", "send an email".
 
 ### Colour
 
-Light ground, ink text, one signal colour. The signal colour marks exactly three
-things: the active/available state, links on hover/focus, and the numeric emphasis
-in the proof strip. Nothing else may use it.
+Light ground, ink text, one signal colour. The signal colour marks exactly four
+things: the active/available state, the numeric emphasis in the proof strip,
+interactive elements under hover or focus, and the block the pointer is currently
+resting in. Nothing else may use it — in particular it is never used to decorate
+static text.
 
 | Token | Value | Use |
 |---|---|---|
 | `--paper` | `#F7F5F1` | Page ground |
 | `--paper-2` | `#FFFFFF` | Raised surface (media frames, form fields) |
 | `--paper-3` | `#EDEAE3` | Alternate section band |
+| `--hover-ground` | `rgba(20,20,26,.035)` | The block the pointer rests in |
 | `--ink` | `#14141A` | Primary text, headings |
 | `--ink-2` | `#4A4A52` | Body prose |
 | `--ink-3` | `#8A8880` | Meta, captions, disabled |
@@ -179,6 +182,7 @@ uses them rather than inventing a fifth:
 | Gesture | Distance | Where |
 |---|---|---|
 | Colour shift | — | Row numbers, chips, grade rows, contact keys, captions |
+| Block response | — | The whole entry the pointer rests in (see below) |
 | Underline wipe | — | Nav links, project links, capability headings |
 | Lift | `--hover-lift` 2px up | Buttons and chips — things you can press |
 | Nudge | `--hover-nudge` 4px toward what it points at | Arrows, contact values, back-to-top |
@@ -189,8 +193,14 @@ inside a frame that already clips it. Never on a bare image.
 Two rules govern all of it:
 
 - **The row answers as a whole.** Hovering anywhere in a project entry responds
-  once — the number takes the signal colour, the frame border darkens, the shot
-  zooms. Six separate hover targets inside one row is noise.
+  once, as a single block: the ground lifts to `--hover-ground`, a 2px signal
+  rule wipes down the left edge, the index and the project name take the signal
+  colour, the frame border darkens and the shot zooms. Six separate hover targets
+  inside one row is noise.
+- **The response cannot depend on the media.** Not every entry carries a
+  screenshot, and an entry without one must react exactly as legibly as an entry
+  with one. Anything keyed only to `.proj__shot` leaves the text-only entries
+  feeling dead — check a media-less block before calling a hover change done.
 - **Colour responds everywhere a pointer exists; movement asks permission.**
   Colour and wipe gestures live in `@media (hover:hover)`. Every gesture that
   moves something lives in `@media (hover:hover) and

@@ -53,6 +53,9 @@
   --hover-lift:  2px;
   --hover-nudge: 4px;
   --hover-zoom:  1.04;
+  --hover-ground: rgba(20,20,26,.035);
+
+  --radius: 6px;
 }
 
 @media (prefers-color-scheme: dark){
@@ -66,6 +69,7 @@
     --signal:    #E2734F;
     --line:      rgba(242,239,233,.14);
     --line-soft: rgba(242,239,233,.07);
+    --hover-ground: rgba(242,239,233,.05);
   }
 }
 
@@ -355,7 +359,10 @@ ul,ol{ margin:0; padding:0; list-style:none; }
   grid-template-columns:auto minmax(0,1fr);
   gap:var(--sp-5);
   padding-block:var(--sp-7);
+  padding-inline:var(--sp-4);
+  margin-inline:calc(-1 * var(--sp-4));
   border-top:1px solid var(--line);
+  position:relative;
 }
 .proj:last-child{ border-bottom:1px solid var(--line); }
 .proj--shot{ grid-template-columns:auto minmax(0,1.1fr) minmax(0,.9fr); }
@@ -399,7 +406,7 @@ ul,ol{ margin:0; padding:0; list-style:none; }
   display:block;
   background:var(--paper-2);
   border:1px solid var(--line);
-  border-radius:6px;
+  border-radius:var(--radius);
   overflow:hidden;
 }
 .proj__shot .card{ aspect-ratio:var(--ratio-shot); }
@@ -504,7 +511,7 @@ a.cline:hover .cline__v{ color:var(--signal); }
   display:flex; flex-direction:column; gap:var(--sp-4);
   background:var(--paper-2);
   border:1px solid var(--line);
-  border-radius:6px;
+  border-radius:var(--radius);
   padding:var(--sp-6);
 }
 .field{ display:flex; flex-direction:column; gap:var(--sp-2); }
@@ -548,9 +555,27 @@ a.cline:hover .cline__v{ color:var(--signal); }
 @media (hover:hover){
 
   /* — colour: the row answers as a whole — */
-  .proj{ transition:border-color var(--t-fast) var(--ease); }
-  .proj__no{ transition:color var(--t-fast) var(--ease); }
+  .proj{
+    border-radius:var(--radius);
+    transition:background-color var(--t-fast) var(--ease),
+               border-color var(--t-fast) var(--ease);
+  }
+  .proj:hover{ background-color:var(--hover-ground); }
+
+  /* the wipe, stood on its end: a signal rule down the block's edge */
+  .proj::before{
+    content:""; position:absolute;
+    left:0; top:0; bottom:0; width:2px;
+    background:var(--signal);
+    transform:scaleY(0); transform-origin:top;
+    transition:transform var(--t-fast) var(--ease);
+  }
+  .proj:hover::before{ transform:scaleY(1); }
+
+  .proj__no,
+  .proj__top h3{ transition:color var(--t-fast) var(--ease); }
   .proj:hover .proj__no{ color:var(--signal); }
+  .proj:hover .proj__top h3{ color:var(--signal); }
   .proj__shot .card{ transition:border-color var(--t-fast) var(--ease); }
   .proj:hover .proj__shot .card{ border-color:var(--ink-3); }
 
