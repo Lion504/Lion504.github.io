@@ -39,9 +39,13 @@ the check follow.
 **Text** — change it in `index.html` (English) *and* in the matching key in
 `assets/js/i18n.js`, or the toggle will put the old wording back.
 
-**Contact form** — set `FORM_ENDPOINT` at the top of `assets/js/main.js` to a
-[Formspree](https://formspree.io) endpoint. Empty, it falls back to opening the
-visitor's mail client with the message pre-filled.
+**Contact form** — posts to the [Formspree](https://formspree.io) endpoint in
+`FORM_ENDPOINT` at the top of `assets/js/main.js`, which forwards to the address
+in `EMAIL`. The free tier allows 50 submissions a month; past that Formspree
+rejects them and the form shows the email address as a fallback link. Clear
+`FORM_ENDPOINT` to `''` and the form reverts to opening the visitor's own mail
+client instead. Keep reCAPTCHA off in the Formspree form settings — the
+submission is a background `fetch`, so a challenge has nowhere to render.
 
 **Colours and type** — the `:root` block at the top of
 `assets/css/design-system.css`. Everything else derives from those tokens, so

@@ -2,11 +2,10 @@
   'use strict';
 
   /* ── Contact form endpoint ─────────────────────────────────────────
-     Paste your Formspree endpoint here, e.g.
-        var FORM_ENDPOINT = 'https://formspree.io/f/xayzbwqd';
-     Until it is set, the form falls back to opening the visitor's
+     Formspree receives the submission and forwards it to EMAIL. Cleared
+     to '' the form still works, falling back to opening the visitor's own
      mail client with the message pre-filled. Nothing breaks either way. */
-  var FORM_ENDPOINT = '';
+  var FORM_ENDPOINT = 'https://formspree.io/f/xvkovqld';
   var EMAIL = 'Lehtonen6677@gmail.com';
 
   var $  = function (s, r) { return (r || document).querySelector(s); };
@@ -145,6 +144,19 @@
     status.className = 'form__status' + (kind ? ' is-' + kind : '');
   }
 
+  /* A failed send must not be a dead end. Telling someone to "email me
+     directly" without the address costs the message; this hands them the
+     address as something they can tap. */
+  function sayFailed(msg) {
+    say(msg, 'err');
+    status.appendChild(document.createTextNode(' '));
+    var a = document.createElement('a');
+    a.className = 'form__mail';
+    a.href = 'mailto:' + EMAIL;
+    a.textContent = EMAIL;
+    status.appendChild(a);
+  }
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -177,7 +189,7 @@
       form.reset();
       say(t('form.ok'), 'ok');
     }).catch(function () {
-      say(t('form.err'), 'err');
+      sayFailed(t('form.err'));
     });
   });
 

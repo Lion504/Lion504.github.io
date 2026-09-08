@@ -336,7 +336,12 @@ Non-negotiable on every page:
   phone number as surely as printing it would.
 - All translatable strings carry `data-i18n` keys present in both `en` and `fi`
   dictionaries. Adding copy without its Finnish counterpart is an incomplete change.
-- No external JS or CSS beyond the Google Fonts stylesheet. No framework, no
+- No external JS or CSS beyond the Google Fonts stylesheet. The contact form's
+  POST to Formspree is the site's only other third-party request, and it happens
+  only when a visitor submits the form — never on load.
+- Any path that can fail must leave the reader somewhere to go. "Email me
+  directly" without the address is a dead end; the failure state carries the
+  address as a link. No framework, no
   build step — the site is hand-written HTML, CSS and vanilla JS, and the footer
   says so.
 

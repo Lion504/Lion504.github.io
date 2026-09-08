@@ -585,6 +585,7 @@ a.cline:hover .cline__v{ color:var(--signal); }
 }
 .field input:focus,.field textarea:focus{ border-color:var(--signal); outline:none; }
 .form__status{ font-size:var(--fs-meta); color:var(--ink-3); min-height:1.4em; }
+.form__mail{ text-decoration:underline; text-underline-offset:2px; }
 .form__status.is-ok{ color:var(--signal); }
 .form__status.is-err{ color:var(--signal); }
 
