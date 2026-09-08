@@ -6,13 +6,32 @@ Live at **https://lion504.github.io**
 Hand-built static site. No framework, no build step, no dependencies.
 
 ```
-index.html              markup + content (EN inline, FI swapped at runtime)
-assets/css/style.css    the whole design system
-assets/js/i18n.js       EN / FI dictionary — edit copy here
-assets/js/main.js       language toggle, nav, scroll reveal, contact form
-assets/img/             portrait, OG card, favicon
-tools/redact_cv.py      strips referee emails out of a freshly exported CV
+DESIGN.md                     how pages on this site are designed — read first
+index.html                    markup + content (EN inline, FI swapped at runtime)
+assets/css/design-system.css  the token vocabulary DESIGN.md describes
+assets/js/i18n.js             EN / FI dictionary — edit copy here
+assets/js/main.js             language toggle, nav, scroll reveal, contact form
+assets/img/                   portrait, OG card, favicon
+tools/design_check.py         mechanically enforces the checkable DESIGN.md rules
+tools/redact_cv.py            strips referee emails out of a freshly exported CV
 ```
+
+## Design
+
+`DESIGN.md` is the guidance file for this site — brand voice, information
+architecture, the token and component vocabulary, and the anti-patterns to
+refuse. It is published at <https://lion504.github.io/DESIGN.md> so it can be
+handed to an agent alongside the stylesheet URL.
+
+Before publishing a change, run the checks:
+
+```bash
+python3 tools/design_check.py
+```
+
+A non-zero exit means the page is not ready. Fix the page, not the check —
+unless the rule itself was wrong, in which case change `DESIGN.md` first and let
+the check follow.
 
 ## Editing
 
@@ -23,8 +42,9 @@ tools/redact_cv.py      strips referee emails out of a freshly exported CV
 [Formspree](https://formspree.io) endpoint. Empty, it falls back to opening the
 visitor's mail client with the message pre-filled.
 
-**Colours and type** — the `:root` block at the top of `style.css`. Everything
-else derives from those tokens.
+**Colours and type** — the `:root` block at the top of
+`assets/css/design-system.css`. Everything else derives from those tokens, so
+change them there rather than anywhere else.
 
 **The CV PDF is not published on this site.** If you decide to publish one in
 future, run a new export through the redaction tool first:
