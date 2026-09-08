@@ -13,6 +13,7 @@ assets/js/i18n.js             EN / FI dictionary — edit copy here
 assets/js/main.js             language toggle, nav, scroll reveal, contact form
 assets/img/                   portrait, OG card, favicon
 tools/design_check.py         mechanically enforces the checkable DESIGN.md rules
+tools/make_qr.py              regenerates the contact QR codes (needs `segno`)
 tools/redact_cv.py            strips referee emails out of a freshly exported CV
 ```
 
