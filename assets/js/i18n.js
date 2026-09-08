@@ -2,20 +2,22 @@
    send this link to anyone. Anything you change, change it only here. */
 window.I18N = {
   en: {
-    "_title": "Wang Yongzhi — AI & Software Engineer, Helsinki",
+    _title: "Wang Yongzhi — AI & Software Engineer, Helsinki",
     "nav.work": "Work",
     "nav.skills": "Capabilities",
     "nav.education": "Experience",
     "nav.contact": "Contact",
 
     "hero.available": "Available now &middot; full-time from January 2027",
-    "hero.role": "AI&nbsp;Engineer <span class=\"sep\">·</span> Backend <span class=\"sep\">·</span> Full&#8209;stack",
-    "hero.lede": "Ten years running project delivery, then a deliberate move into software engineering. I build LLM systems end to end — multi&#8209;agent orchestration, semantic vector search, multi&#8209;provider model routing, and the CI/CD and quality gates that keep them honest. A junior title, a decade of shipping behind it.",
+    "hero.role":
+      'AI&nbsp;Engineer <span class="sep">·</span> Backend <span class="sep">·</span> Full&#8209;stack',
+    "hero.lede":
+      "Ten years running project delivery, then a deliberate move into software engineering. I build LLM systems end to end — multi&#8209;agent orchestration, semantic vector search, multi&#8209;provider model routing, and the CI/CD and quality gates that keep them honest. A junior title, a decade of shipping behind it.",
     "hero.cta1": "See selected work",
     "hero.cta2": "Get in touch",
     "hero.cv": "Download CV",
     "hero.loc": "Helsinki, Finland",
-    "hero.fi": "Suomi (B1)",
+    "hero.fi": "Suomi (A2)",
 
     "stat.ects": "ECTS completed",
     "stat.gpa": "Current GPA",
@@ -28,36 +30,47 @@ window.I18N = {
     "link.live": "Live site",
 
     "p1.role": "Sole author — AI Systems Architect &amp; Full-stack",
-    "p1.desc": "An autonomous multi-agent platform for job-market intelligence. Background workers run real-time scrapers across four Finnish job boards, LLM-driven CV-to-job match scoring, a two-pass self-critiquing cover-letter generator, and deep company-research agents. I architected the semantic vector search over the corpus and the dynamic multi-provider LLM routing with per-feature model selection, behind a Jenkins + SonarQube quality gate.",
+    "p1.desc":
+      "An autonomous multi-agent platform for job-market intelligence. Background workers run real-time scrapers across four Finnish job boards, LLM-driven CV-to-job match scoring, a two-pass self-critiquing cover-letter generator, and deep company-research agents. I architected the semantic vector search over the corpus and the dynamic multi-provider LLM routing with per-feature model selection, behind a Jenkins + SonarQube quality gate.",
     "p1.stat": "postings scraped and LLM-scored to date",
     "p1.private": "Private repo — walkthrough available on request",
 
     "p2.role": "Sole author — 43 of 43 commits",
-    "p2.desc": "An interactive visualiser of the Finnish job market, combining StatFin occupational data with AI-exposure scoring. I self-hosted the supporting Linux infrastructure and the observability stack behind it.",
+    "p2.desc":
+      "An interactive visualiser of the Finnish job market, combining StatFin occupational data with AI-exposure scoring. I self-hosted the supporting Linux infrastructure and the observability stack behind it.",
     "p2.stat": "GitHub stars",
 
     "p3.role": "Lead contributor — 183 of 263 commits, team of four",
-    "p3.desc": "An AI cover-letter generator built on Gemini. I led the frontend and DevOps work — the Vaadin UI, the Docker image and the Jenkins pipeline — and was the project's most active committer across the Spring Boot backend. Ships with six-language internationalisation including right-to-left support, JMeter load testing, and a SonarQube static-analysis gate.",
+    "p3.desc":
+      "An AI cover-letter generator built on Gemini. I led the frontend and DevOps work — the Vaadin UI, the Docker image and the Jenkins pipeline — and was the project's most active committer across the Spring Boot backend. Ships with six-language internationalisation including right-to-left support, JMeter load testing, and a SonarQube static-analysis gate.",
 
-    "p4.role": "Lead contributor &amp; Scrum Master — 258 of 381 commits, team of five",
-    "p4.desc": "A Finnish job-market scraper and aggregator pulling listings from multiple sources with AI-assisted analysis, built as a monorepo. I ran the team's Scrum process alongside the engineering.",
+    "p4.role":
+      "Lead contributor &amp; Scrum Master — 258 of 381 commits, team of five",
+    "p4.desc":
+      "A Finnish job-market scraper and aggregator pulling listings from multiple sources with AI-assisted analysis, built as a monorepo. I ran the team's Scrum process alongside the engineering.",
 
     "p5.role": "Unity &amp; backend developer — Junction 2025",
-    "p5.desc": "A browser-based 3D finance-education game built at Junction 2025 in a two-person team. I worked on gameplay systems and backend integration, including custom ShaderLab and HLSL shader work.",
+    "p5.desc":
+      "A browser-based 3D finance-education game built at Junction 2025 in a two-person team. I worked on gameplay systems and backend integration, including custom ShaderLab and HLSL shader work.",
 
     "p6.role": "Lead contributor — 157 of 271 commits, team of four",
-    "p6.desc": "A Java discrete-event simulation of airport operations with a graphical interface. I built the simulation engine and backend as the team's most active committer.",
+    "p6.desc":
+      "A Java discrete-event simulation of airport operations with a graphical interface. I built the simulation engine and backend as the team's most active committer.",
 
     "p7.role": "Gameplay systems — 91 of 305 commits, team of four",
-    "p7.desc": "A full-stack multiplayer 3D horror board game on a FastAPI backend with Three.js rendering. Primarily backend work as the second of four contributors.",
+    "p7.desc":
+      "A full-stack multiplayer 3D horror board game on a FastAPI backend with Three.js rendering. Primarily backend work as the second of four contributors.",
 
     "p8.role": "Sole author to date — 7 of 7 commits",
-    "p8.desc": "Forecasting Finnish labour-market indicators — quarterly job vacancies at one, two and four quarters ahead — from the Statistics Finland PxWeb API, with a retrieval layer that explains the result from official bulletins rather than replacing the numbers. I set one rule at the start: the fine-tuned model has to beat seasonal-naive, last-value, linear-regression and Prophet baselines, or it does not ship. Every snapshot and model run writes a provenance manifest. Ingestion and validation are complete; fine-tuning and evaluation are in progress.",
+    "p8.desc":
+      "Forecasting Finnish labour-market indicators — quarterly job vacancies at one, two and four quarters ahead — from the Statistics Finland PxWeb API, with a retrieval layer that explains the result from official bulletins rather than replacing the numbers. I set one rule at the start: the fine-tuned model has to beat seasonal-naive, last-value, linear-regression and Prophet baselines, or it does not ship. Every snapshot and model run writes a provenance manifest. Ingestion and validation are complete; fine-tuning and evaluation are in progress.",
     "exp.yrs": "years",
     "exp.role": "Project Manager",
     "exp.org": "China",
-    "exp.note": "A decade running project delivery before I moved to Finland and into software engineering. The management half of my CV is not new: planning, stakeholder communication and shipping to a deadline are things I did professionally for ten years — which is why I took the Scrum Master role on JobAio rather than avoiding it.",
-    "shot.jobsresearch": "Admin · the multi-provider LLM engine behind every feature",
+    "exp.note":
+      "A decade running project delivery before I moved to Finland and into software engineering. The management half of my CV is not new: planning, stakeholder communication and shipping to a deadline are things I did professionally for ten years — which is why I took the Scrum Master role on JobAio rather than avoiding it.",
+    "shot.jobsresearch":
+      "Admin · the multi-provider LLM engine behind every feature",
     "shot.moneymoves": "Live build · Unity 3D city with a running balance",
     "shot.fijob": "Live site · 459 occupations, sized by employment",
     "shot.jobaio": "Application UI · preferences and language filtering",
@@ -74,7 +87,8 @@ window.I18N = {
 
     "sec.edu": "Experience &amp; education",
     "edu.title": "Ten years before the degree.",
-    "edu.major": "Professional major: Software Engineering · 165 / 240 ECTS · GPA 4.38 / 5.0",
+    "edu.major":
+      "Professional major: Software Engineering · 165 / 240 ECTS · GPA 4.38 / 5.0",
     "edu.selected": "Selected coursework",
     "c.ml": "Machine Learning Algorithms",
     "c.sw": "Software 1 &amp; 2",
@@ -89,19 +103,22 @@ window.I18N = {
     "c.fin": "Finnish 1–4 (20 ECTS)",
     "edu.voc": "Vocational School Diploma",
     "edu.voc.org": "China · 4.2 / 5.0",
-    "aw1": "Formed a team with Finnish participants for Peikko's BIM metadata challenge with zero prior domain experience. Over nearly forty sleepless hours we climbed the learning curve and finished in the top ten of nearly two hundred submissions.",
-    "aw2": "Returned for a second year and delivered MoneyMoves — a browser-based 3D finance-education game — as gameplay and backend developer.",
-    "aw3": "Competed in the Unbreakable Connectivity track, November 2024.",
+    aw1: "Formed a team with Finnish participants for Peikko's BIM metadata challenge with zero prior domain experience. Over nearly forty sleepless hours we climbed the learning curve and finished in the top ten of nearly two hundred submissions.",
+    aw2: "Returned for a second year and delivered MoneyMoves — a browser-based 3D finance-education game — as gameplay and backend developer.",
+    aw3: "Competed in the Unbreakable Connectivity track, November 2024.",
     "refs.lbl": "References",
     "refs.note": "Contact details available on request.",
 
     "avail.start.k": "Start",
-    "avail.start.v": "Available to start now, alongside my studies — and full-time from January 2027.",
+    "avail.start.v":
+      "Available to start now, alongside my studies — and full-time from January 2027.",
     "avail.thesis.k": "Thesis",
-    "avail.thesis.v": "I write my thesis from January 2027 and I am looking for a thesis-worthy problem in applied LLM systems — a low-risk way for us to work together before either of us commits.",
+    "avail.thesis.v":
+      "I write my thesis from January 2027 and I am looking for a thesis-worthy problem in applied LLM systems — a low-risk way for us to work together before either of us commits.",
     "sec.contact": "Contact",
     "contact.title": "Let's talk.",
-    "contact.sub": "I'm looking for an internship, trainee or junior position as an AI engineer, backend or full-stack developer — in Helsinki or remote across the EU.",
+    "contact.sub":
+      "I'm looking for an internship, trainee or junior position as an AI engineer, backend or full-stack developer — in Helsinki or remote across the EU.",
     "contact.wa": "Message me <i>\u2197</i>",
     "contact.loc": "Location",
     "qr.lbl": "Scan from another device",
@@ -120,24 +137,27 @@ window.I18N = {
     "form.invalid": "Please fill in every field with a valid email.",
 
     "foot.built": "Built from scratch · HTML, CSS, vanilla JS · no framework",
-    "foot.top": "Back to top ↑"
+    "foot.top": "Back to top ↑",
   },
 
   fi: {
-    "_title": "Wang Yongzhi — tekoäly- ja ohjelmistokehittäjä, Helsinki",
+    _title: "Wang Yongzhi — tekoäly- ja ohjelmistokehittäjä, Helsinki",
     "nav.work": "Projektit",
     "nav.skills": "Osaaminen",
     "nav.education": "Työkokemus",
     "nav.contact": "Yhteystiedot",
 
-    "hero.available": "Käytettävissä nyt &middot; kokoaikaisesti tammikuusta 2027",
-    "hero.role": "Tekoälykehittäjä <span class=\"sep\">·</span> Backend <span class=\"sep\">·</span> Full&#8209;stack",
-    "hero.lede": "Kymmenen vuotta projektien johtamista, sitten harkittu siirtymä ohjelmistokehitykseen. Rakennan LLM-järjestelmiä alusta loppuun — moniagenttiorkestrointia, semanttista vektorihakua, usean palveluntarjoajan mallireititystä sekä CI/CD- ja laatuportit, jotka pitävät ne rehellisinä. Junior-nimike, takana kymmenen vuoden kokemus toimittamisesta.",
+    "hero.available":
+      "Käytettävissä nyt &middot; kokoaikaisesti tammikuusta 2027",
+    "hero.role":
+      'Tekoälykehittäjä <span class="sep">·</span> Backend <span class="sep">·</span> Full&#8209;stack',
+    "hero.lede":
+      "Kymmenen vuotta projektien johtamista, sitten harkittu siirtymä ohjelmistokehitykseen. Rakennan LLM-järjestelmiä alusta loppuun — moniagenttiorkestrointia, semanttista vektorihakua, usean palveluntarjoajan mallireititystä sekä CI/CD- ja laatuportit, jotka pitävät ne rehellisinä. Junior-nimike, takana kymmenen vuoden kokemus toimittamisesta.",
     "hero.cta1": "Katso projektit",
     "hero.cta2": "Ota yhteyttä",
     "hero.cv": "Lataa CV",
     "hero.loc": "Helsinki, Suomi",
-    "hero.fi": "Suomi (B1)",
+    "hero.fi": "Suomi (A2)",
 
     "stat.ects": "Opintopistettä suoritettu",
     "stat.gpa": "Keskiarvo",
@@ -146,45 +166,59 @@ window.I18N = {
     "stat.pm": "Vuotta projektinjohtoa",
 
     "sec.work": "Valikoituja töitä",
-    "work.title": "Järjestelmiä, jotka olen suunnitellut, rakentanut ja julkaissut.",
+    "work.title":
+      "Järjestelmiä, jotka olen suunnitellut, rakentanut ja julkaissut.",
     "link.live": "Sivusto",
 
     "p1.role": "Ainoa tekijä — tekoälyarkkitehti ja full-stack-kehittäjä",
-    "p1.desc": "Autonominen moniagenttialusta työmarkkinatiedon keräämiseen. Taustatyöntekijät ajavat reaaliaikaisia scrapereita neljällä suomalaisella työpaikkasivustolla, LLM-pohjaista CV:n ja työpaikan yhteensopivuuden pisteytystä, kaksivaiheista itseään kritisoivaa hakemuskirjegeneraattoria sekä syvällisiä yritystutkimusagentteja. Suunnittelin korpuksen semanttisen vektorihaun ja dynaamisen usean palveluntarjoajan LLM-reitityksen ominaisuuskohtaisella mallivalinnalla, Jenkins- ja SonarQube-laatuportin takana.",
+    "p1.desc":
+      "Autonominen moniagenttialusta työmarkkinatiedon keräämiseen. Taustatyöntekijät ajavat reaaliaikaisia scrapereita neljällä suomalaisella työpaikkasivustolla, LLM-pohjaista CV:n ja työpaikan yhteensopivuuden pisteytystä, kaksivaiheista itseään kritisoivaa hakemuskirjegeneraattoria sekä syvällisiä yritystutkimusagentteja. Suunnittelin korpuksen semanttisen vektorihaun ja dynaamisen usean palveluntarjoajan LLM-reitityksen ominaisuuskohtaisella mallivalinnalla, Jenkins- ja SonarQube-laatuportin takana.",
     "p1.stat": "työpaikkailmoitusta kerätty ja pisteytetty LLM:llä",
     "p1.private": "Yksityinen repositorio — esittely pyynnöstä",
 
     "p2.role": "Ainoa tekijä — 43 / 43 committia",
-    "p2.desc": "Interaktiivinen visualisointi Suomen työmarkkinoista, jossa yhdistyvät StatFinin ammattitiedot ja tekoälyaltistuksen pisteytys. Ylläpidin itse taustalla olevan Linux-infrastruktuurin ja monitorointipinon.",
+    "p2.desc":
+      "Interaktiivinen visualisointi Suomen työmarkkinoista, jossa yhdistyvät StatFinin ammattitiedot ja tekoälyaltistuksen pisteytys. Ylläpidin itse taustalla olevan Linux-infrastruktuurin ja monitorointipinon.",
     "p2.stat": "GitHub-tähteä",
 
     "p3.role": "Pääkehittäjä — 183 / 263 committia, neljän hengen tiimi",
-    "p3.desc": "Geminiin perustuva tekoälyavusteinen hakemuskirjegeneraattori. Vastasin frontendistä ja DevOpsista — Vaadin-käyttöliittymästä, Docker-imagesta ja Jenkins-putkesta — ja olin projektin aktiivisin committaaja myös Spring Boot -backendissä. Sovellus sisältää kuuden kielen lokalisoinnin RTL-tuella, JMeter-kuormitustestauksen ja SonarQube-staattisen analyysin portin.",
+    "p3.desc":
+      "Geminiin perustuva tekoälyavusteinen hakemuskirjegeneraattori. Vastasin frontendistä ja DevOpsista — Vaadin-käyttöliittymästä, Docker-imagesta ja Jenkins-putkesta — ja olin projektin aktiivisin committaaja myös Spring Boot -backendissä. Sovellus sisältää kuuden kielen lokalisoinnin RTL-tuella, JMeter-kuormitustestauksen ja SonarQube-staattisen analyysin portin.",
 
-    "p4.role": "Pääkehittäjä ja Scrum Master — 258 / 381 committia, viiden hengen tiimi",
-    "p4.desc": "Suomen työmarkkinoiden scraper ja koostepalvelu, joka kerää ilmoituksia useasta lähteestä tekoälyavusteisella analyysillä. Rakennettu monorepona. Vastasin tiimin Scrum-prosessista kehitystyön ohella.",
+    "p4.role":
+      "Pääkehittäjä ja Scrum Master — 258 / 381 committia, viiden hengen tiimi",
+    "p4.desc":
+      "Suomen työmarkkinoiden scraper ja koostepalvelu, joka kerää ilmoituksia useasta lähteestä tekoälyavusteisella analyysillä. Rakennettu monorepona. Vastasin tiimin Scrum-prosessista kehitystyön ohella.",
 
     "p5.role": "Unity- ja backend-kehittäjä — Junction 2025",
-    "p5.desc": "Selainpohjainen 3D-talousopetuspeli, joka rakennettiin Junction 2025 -hackathonissa kahden hengen tiimissä. Työskentelin pelimekaniikkojen ja backend-integraation parissa, mukaan lukien ShaderLab- ja HLSL-varjostimet.",
+    "p5.desc":
+      "Selainpohjainen 3D-talousopetuspeli, joka rakennettiin Junction 2025 -hackathonissa kahden hengen tiimissä. Työskentelin pelimekaniikkojen ja backend-integraation parissa, mukaan lukien ShaderLab- ja HLSL-varjostimet.",
 
     "p6.role": "Pääkehittäjä — 157 / 271 committia, neljän hengen tiimi",
-    "p6.desc": "Java-pohjainen diskreettitapahtumasimulaatio lentoaseman toiminnasta graafisella käyttöliittymällä. Rakensin simulaatiomoottorin ja backendin tiimin aktiivisimpana committaajana.",
+    "p6.desc":
+      "Java-pohjainen diskreettitapahtumasimulaatio lentoaseman toiminnasta graafisella käyttöliittymällä. Rakensin simulaatiomoottorin ja backendin tiimin aktiivisimpana committaajana.",
 
     "p7.role": "Pelimekaniikat — 91 / 305 committia, neljän hengen tiimi",
-    "p7.desc": "Full-stack-moninpeli, 3D-kauhulautapeli FastAPI-backendillä ja Three.js-renderöinnillä. Pääosin backend-työtä, neljästä tekijästä toiseksi aktiivisimpana.",
+    "p7.desc":
+      "Full-stack-moninpeli, 3D-kauhulautapeli FastAPI-backendillä ja Three.js-renderöinnillä. Pääosin backend-työtä, neljästä tekijästä toiseksi aktiivisimpana.",
 
     "p8.role": "Toistaiseksi ainoa tekijä — 7 / 7 committia",
-    "p8.desc": "Suomen työmarkkinaindikaattoreiden ennustaminen — avoimet työpaikat neljännesvuosittain yhden, kahden ja neljän kvartaalin päähän — Tilastokeskuksen PxWeb-rajapinnasta. Mukana hakukerros, joka selittää tuloksen virallisista tiedotteista sen sijaan että korvaisi luvut. Asetin alussa yhden säännön: hienosäädetyn mallin on voitettava kausinaiivi-, viimeisin arvo-, lineaarinen regressio- ja Prophet-verrokit, tai se ei mene tuotantoon. Jokainen tilannevedos ja mallin ajo kirjoittaa alkuperämanifestin. Datan haku ja validointi ovat valmiit; hienosäätö ja arviointi ovat kesken.",
+    "p8.desc":
+      "Suomen työmarkkinaindikaattoreiden ennustaminen — avoimet työpaikat neljännesvuosittain yhden, kahden ja neljän kvartaalin päähän — Tilastokeskuksen PxWeb-rajapinnasta. Mukana hakukerros, joka selittää tuloksen virallisista tiedotteista sen sijaan että korvaisi luvut. Asetin alussa yhden säännön: hienosäädetyn mallin on voitettava kausinaiivi-, viimeisin arvo-, lineaarinen regressio- ja Prophet-verrokit, tai se ei mene tuotantoon. Jokainen tilannevedos ja mallin ajo kirjoittaa alkuperämanifestin. Datan haku ja validointi ovat valmiit; hienosäätö ja arviointi ovat kesken.",
     "exp.yrs": "vuotta",
     "exp.role": "Projektipäällikkö",
     "exp.org": "Kiina",
-    "exp.note": "Kymmenen vuotta projektien johtamista ennen muuttoani Suomeen ja siirtymistäni ohjelmistokehitykseen. Ansioluetteloni johtamispuoli ei ole uusi: suunnittelu, sidosryhmäviestintä ja aikataulussa toimittaminen ovat asioita, joita tein ammatikseni kymmenen vuotta — siksi otin JobAio-projektissa Scrum Master -roolin sen sijaan että olisin välttänyt sitä.",
-    "shot.jobsresearch": "Ylläpito · monen palveluntarjoajan LLM-moottori kaikkien toimintojen takana",
-    "shot.moneymoves": "Julkaistu versio · Unity 3D -kaupunki ja juokseva saldo",
+    "exp.note":
+      "Kymmenen vuotta projektien johtamista ennen muuttoani Suomeen ja siirtymistäni ohjelmistokehitykseen. Ansioluetteloni johtamispuoli ei ole uusi: suunnittelu, sidosryhmäviestintä ja aikataulussa toimittaminen ovat asioita, joita tein ammatikseni kymmenen vuotta — siksi otin JobAio-projektissa Scrum Master -roolin sen sijaan että olisin välttänyt sitä.",
+    "shot.jobsresearch":
+      "Ylläpito · monen palveluntarjoajan LLM-moottori kaikkien toimintojen takana",
+    "shot.moneymoves":
+      "Julkaistu versio · Unity 3D -kaupunki ja juokseva saldo",
     "shot.fijob": "Live-sivusto · 459 ammattia, koko työllisyyden mukaan",
     "shot.jobaio": "Sovelluksen käyttöliittymä · asetukset ja kielisuodatus",
     "shot.drakula": "Pelinäkymä · Three.js-maapallo ja lentoreitit",
-    "shot.clboost": "Playwrightin päästä päähän -ajo · sovellus oikeasti käytössä",
+    "shot.clboost":
+      "Playwrightin päästä päähän -ajo · sovellus oikeasti käytössä",
     "sec.skills": "Osaaminen",
     "skills.title": "Työkalut, joihin tartun.",
     "sk1.h": "Tekoäly ja koneoppiminen",
@@ -196,7 +230,8 @@ window.I18N = {
 
     "sec.edu": "Työkokemus ja koulutus",
     "edu.title": "Kymmenen vuotta ennen tutkintoa.",
-    "edu.major": "Suuntautuminen: ohjelmistotekniikka · 165 / 240 op · keskiarvo 4,38 / 5,0",
+    "edu.major":
+      "Suuntautuminen: ohjelmistotekniikka · 165 / 240 op · keskiarvo 4,38 / 5,0",
     "edu.selected": "Valikoituja opintojaksoja",
     "c.ml": "Koneoppimisen algoritmit",
     "c.sw": "Ohjelmisto 1 ja 2",
@@ -211,19 +246,22 @@ window.I18N = {
     "c.fin": "Suomi 1–4 (20 op)",
     "edu.voc": "Ammatillinen perustutkinto",
     "edu.voc.org": "Kiina · 4,2 / 5,0",
-    "aw1": "Kokosin tiimin suomalaisten osallistujien kanssa Peikon BIM-metadatahaasteeseen ilman aiempaa kokemusta alalta. Lähes 40 unettoman tunnin aikana selätimme oppimiskäyrän ja sijoituimme kymmenen parhaan joukkoon lähes kahdestasadasta ehdotuksesta.",
-    "aw2": "Palasin toisena vuonna ja toteutin MoneyMoves-pelin — selainpohjaisen 3D-talousopetuspelin — pelimekaniikka- ja backend-kehittäjänä.",
-    "aw3": "Osallistuin Unbreakable Connectivity -haastesarjaan marraskuussa 2024.",
+    aw1: "Kokosin tiimin suomalaisten osallistujien kanssa Peikon BIM-metadatahaasteeseen ilman aiempaa kokemusta alalta. Lähes 40 unettoman tunnin aikana selätimme oppimiskäyrän ja sijoituimme kymmenen parhaan joukkoon lähes kahdestasadasta ehdotuksesta.",
+    aw2: "Palasin toisena vuonna ja toteutin MoneyMoves-pelin — selainpohjaisen 3D-talousopetuspelin — pelimekaniikka- ja backend-kehittäjänä.",
+    aw3: "Osallistuin Unbreakable Connectivity -haastesarjaan marraskuussa 2024.",
     "refs.lbl": "Suosittelijat",
     "refs.note": "Yhteystiedot pyynnöstä.",
 
     "avail.start.k": "Aloitus",
-    "avail.start.v": "Voin aloittaa heti opintojeni ohella — ja kokoaikaisesti tammikuusta 2027.",
+    "avail.start.v":
+      "Voin aloittaa heti opintojeni ohella — ja kokoaikaisesti tammikuusta 2027.",
     "avail.thesis.k": "Opinnäytetyö",
-    "avail.thesis.v": "Kirjoitan opinnäytetyöni tammikuusta 2027 alkaen ja etsin sopivaa aihetta sovelletuista LLM-järjestelmistä — matalan riskin tapa tehdä yhteistyötä ennen kuin kumpikaan sitoutuu.",
+    "avail.thesis.v":
+      "Kirjoitan opinnäytetyöni tammikuusta 2027 alkaen ja etsin sopivaa aihetta sovelletuista LLM-järjestelmistä — matalan riskin tapa tehdä yhteistyötä ennen kuin kumpikaan sitoutuu.",
     "sec.contact": "Yhteystiedot",
     "contact.title": "Otetaan yhteyttä.",
-    "contact.sub": "Etsin harjoittelu-, trainee- tai junior-paikkaa tekoäly-, backend- tai full-stack-kehittäjänä — Helsingissä tai etätyönä EU:n alueella.",
+    "contact.sub":
+      "Etsin harjoittelu-, trainee- tai junior-paikkaa tekoäly-, backend- tai full-stack-kehittäjänä — Helsingissä tai etätyönä EU:n alueella.",
     "contact.wa": "L\u00e4het\u00e4 viesti <i>\u2197</i>",
     "contact.loc": "Sijainti",
     "qr.lbl": "Skannaa toisella laitteella",
@@ -239,9 +277,9 @@ window.I18N = {
     "form.sending": "Lähetetään…",
     "form.ok": "Kiitos — viestisi on matkalla.",
     "form.err": "Jokin meni pieleen. Lähetäthän sähköpostia suoraan.",
-    "form.invalid": "Täytäthän kaikki kentät ja kelvollisen sähköpostiosoitteen."
-,
+    "form.invalid":
+      "Täytäthän kaikki kentät ja kelvollisen sähköpostiosoitteen.",
     "foot.built": "Rakennettu alusta asti · HTML, CSS, vanilla JS · ei kehystä",
-    "foot.top": "Takaisin ylös ↑"
-  }
+    "foot.top": "Takaisin ylös ↑",
+  },
 };
