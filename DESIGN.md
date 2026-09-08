@@ -271,6 +271,14 @@ Do not wrap text sections in cards.
 - Any element wider than its container scrolls inside its own
   `overflow-x: auto` wrapper. The page body never scrolls horizontally.
 - Touch targets ≥ 44px. Nav collapses to the burger below `900px`.
+- **Never put `backdrop-filter` (or `filter`, `transform`, `perspective`) on an
+  element that contains a `position:fixed` child.** Any of those make the element
+  the containing block for fixed descendants, so the mobile menu overlay would
+  size itself to the nav bar instead of the viewport and strand itself on screen
+  once the nav sticks. The nav's blur therefore lives on `.nav::before`.
+- Any overlay that opens must close three ways: the control that opened it, a tap
+  on its own blank area, and `Escape`. It must also release the scroll lock when
+  the viewport crosses back to the desktop layout.
 - Images carry explicit `width`/`height`, `loading="lazy"` (except the first
   above-fold image, which is `fetchpriority="high"`), and `decoding="async"`.
 
