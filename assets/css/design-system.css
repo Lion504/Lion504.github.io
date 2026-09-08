@@ -512,11 +512,16 @@ ul,ol{ margin:0; padding:0; list-style:none; }
 /* ═══ QR codes ═══ */
 .qr{ margin-top:var(--sp-6); }
 .qr__lbl{ color:var(--ink-3); margin-bottom:var(--sp-3); }
-.qr__row{ display:flex; flex-wrap:wrap; gap:var(--sp-4); }
+.qr__row{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:var(--sp-4);
+  max-width:calc(4 * 104px + 3 * var(--sp-4));
+}
 .qr__item a{ display:flex; flex-direction:column; gap:var(--sp-2); align-items:center; }
 .qr__code{
   display:block;
-  width:104px;
+  width:100%;
   background:var(--qr-ground);
   border:1px solid var(--line);
   border-radius:var(--radius);
@@ -726,6 +731,9 @@ a.cline:hover .cline__v{ color:var(--signal); }
 @media (max-width:620px){
   .sec{ padding-block:var(--sp-8); }
   .id{ padding-top:var(--sp-9); }
+  /* Two columns rather than a ragged wrap: four tiles read as an even
+     block, and each one is larger and so easier to scan. */
+  .qr__row{ grid-template-columns:repeat(2,minmax(0,1fr)); max-width:320px; }
   .proof{ grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--sp-5) var(--sp-3); }
   .proj{ grid-template-columns:minmax(0,1fr); gap:var(--sp-3); }
   .proj__shot{ grid-column:1; }

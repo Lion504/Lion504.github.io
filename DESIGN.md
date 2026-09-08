@@ -270,7 +270,12 @@ another device or simply clicks it. Rules:
   modules in both light and dark, because many phone cameras refuse an inverted
   code. These are the only two colours exempt from the dark rendering.
 - Caption each tile with the destination, and keep the plain link above it. The
-  QR supplements the link; it never replaces it.
+  QR supplements the link; it never replaces it. The one exception is the tile
+  for this site: the reader is already on it, so the page itself is the link.
+- Tiles are laid out on a grid, never a wrapping flex row — four tiles must read
+  as an even block (four across, or two by two on a phone), not as three and a
+  stray. Phone tiles fill their column rather than staying at their desktop size,
+  because a larger code is an easier one to scan.
 
 **`.btn`** — `.btn--solid` (one per section, maximum) and `.btn--ghost`.
 Never three buttons in a row.

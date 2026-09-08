@@ -37,6 +37,9 @@ CODES = {
     # publish the phone number in scannable plain text. Revoking the link in
     # WhatsApp invalidates this code — regenerate here if that ever happens.
     "whatsapp": "https://wa.me/qr/T5G4UJ4FHHBJJ1",
+    # The site itself, for handing the page from a laptop screen to a phone.
+    # Must stay identical to the canonical URL in index.html's <head>.
+    "site": "https://lion504.github.io/",
 }
 
 # Error correction M tolerates ~15% damage — enough for a screen or a printed
