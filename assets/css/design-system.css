@@ -40,6 +40,11 @@
   --gut:  clamp(20px, 5vw, 80px);
   --maxw: 1340px;
 
+  /* How far a hover surface may bleed outside its column. Capped at the
+     gutter: a wider bleed hangs past the viewport edge on small screens,
+     where --gut bottoms out at 20px. */
+  --bleed: min(var(--sp-4), var(--gut));
+
   /* ── media frames: every shot renders at the same ratio ── */
   --ratio-shot:     16 / 10;
   --ratio-portrait: 3 / 4;
@@ -375,8 +380,8 @@ ul,ol{ margin:0; padding:0; list-style:none; }
   grid-template-columns:auto minmax(0,1fr);
   gap:var(--sp-5);
   padding-block:var(--sp-7);
-  padding-inline:var(--sp-4);
-  margin-inline:calc(-1 * var(--sp-4));
+  padding-inline:var(--bleed);
+  margin-inline:calc(-1 * var(--bleed));
   border-top:1px solid var(--line);
   position:relative;
 }

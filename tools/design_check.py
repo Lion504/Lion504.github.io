@@ -123,6 +123,13 @@ def check_stylesheet(fail):
                  "its position:fixed children and strands the mobile menu — put it "
                  "on a pseudo-element (DESIGN.md §6)")
 
+    for m in re.finditer(r"margin-inline\s*:\s*calc\(\s*-1\s*\*\s*(var\([^)]*\))\s*\)", body):
+        if "--bleed" not in m.group(1):
+            fail(STYLESHEET.name,
+                 f"negative margin-inline of {m.group(1)} can exceed --gut on a "
+                 "phone and push the row past the viewport; use var(--bleed) "
+                 "(DESIGN.md §6)")
+
     if not re.search(r"img\s*,\s*video\s*\{[^}]*height\s*:\s*auto", css):
         fail(STYLESHEET.name,
              "the img/video reset must set height:auto, or width/height "
