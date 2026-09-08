@@ -171,6 +171,33 @@ Every margin, padding and gap resolves to one of them.
   `@media (prefers-reduced-motion: reduce)`. Video autoplay is suppressed there
   and the poster frame stands.
 
+#### Hover
+
+Hover is feedback, not entertainment. There are **four gestures**, and a page
+uses them rather than inventing a fifth:
+
+| Gesture | Distance | Where |
+|---|---|---|
+| Colour shift | — | Row numbers, chips, grade rows, contact keys, captions |
+| Underline wipe | — | Nav links, project links, capability headings |
+| Lift | `--hover-lift` 2px up | Buttons and chips — things you can press |
+| Nudge | `--hover-nudge` 4px toward what it points at | Arrows, contact values, back-to-top |
+
+Plus one exception: a **slow zoom** to `--hover-zoom` (1.04) on media, and only
+inside a frame that already clips it. Never on a bare image.
+
+Two rules govern all of it:
+
+- **The row answers as a whole.** Hovering anywhere in a project entry responds
+  once — the number takes the signal colour, the frame border darkens, the shot
+  zooms. Six separate hover targets inside one row is noise.
+- **Colour responds everywhere a pointer exists; movement asks permission.**
+  Colour and wipe gestures live in `@media (hover:hover)`. Every gesture that
+  moves something lives in `@media (hover:hover) and
+  (prefers-reduced-motion: no-preference)`, so a reader who asked for less motion
+  still gets the feedback without the travel. Neither applies on touch, where a
+  stuck hover state reads as a bug.
+
 ---
 
 ## 5. Components
@@ -285,6 +312,10 @@ Recurring generated-design failures. Do not produce these.
 13. **"Currently learning" sections.** Ship it, then list it.
 14. **Icon-only links.** Every link has a text label; the arrow is a suffix.
 15. **Placeholder content shipped.** No lorem, no `#` hrefs, no "Project Three".
+16. **Hover theatrics.** Bounce, spring, rotation, glow, drop shadows blooming
+    on hover, cards tilting toward the cursor, text scaling up, colour cycling.
+    Four gestures exist (§4, Hover); anything else is a page showing off rather
+    than answering. Movement of more than `--hover-nudge` is always wrong.
 
 ---
 

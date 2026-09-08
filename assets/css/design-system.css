@@ -48,6 +48,11 @@
   --ease:   cubic-bezier(.22,.61,.36,1);
   --t-fast: 180ms;
   --t-slow: 520ms;
+
+  /* ── hover displacement: two distances, nothing between ── */
+  --hover-lift:  2px;
+  --hover-nudge: 4px;
+  --hover-zoom:  1.04;
 }
 
 @media (prefers-color-scheme: dark){
@@ -531,6 +536,100 @@ a.cline:hover .cline__v{ color:var(--signal); }
 }
 .foot__top{ color:var(--ink); }
 .foot__top:hover{ color:var(--signal); }
+
+/* ═══════════════════════════════════════════════════════════════════
+   HOVER VOCABULARY (DESIGN.md §4, Motion)
+   Four gestures only: colour shift, underline wipe, 2px lift,
+   4px nudge — plus a slow zoom inside a media frame. Colour responses
+   apply wherever a pointer exists; movement is suppressed for anyone
+   who asked for less of it.
+   ═══════════════════════════════════════════════════════════════════ */
+
+@media (hover:hover){
+
+  /* — colour: the row answers as a whole — */
+  .proj{ transition:border-color var(--t-fast) var(--ease); }
+  .proj__no{ transition:color var(--t-fast) var(--ease); }
+  .proj:hover .proj__no{ color:var(--signal); }
+  .proj__shot .card{ transition:border-color var(--t-fast) var(--ease); }
+  .proj:hover .proj__shot .card{ border-color:var(--ink-3); }
+
+  .chips li{
+    transition:color var(--t-fast) var(--ease),
+               border-color var(--t-fast) var(--ease),
+               transform var(--t-fast) var(--ease);
+  }
+  .chips li:hover{ color:var(--ink); border-color:var(--ink); }
+
+  .grades li{ transition:color var(--t-fast) var(--ease); }
+  .grades li:hover{ color:var(--ink); }
+  .grades li:hover b{ color:var(--signal); }
+
+  a.cline .cline__k{ transition:color var(--t-fast) var(--ease); }
+  a.cline:hover .cline__k{ color:var(--signal); }
+
+  /* — underline wipe: nav and section rules — */
+  .nav__links a{ position:relative; }
+  .nav__links a::after{
+    content:""; position:absolute; left:0; right:0; bottom:0;
+    height:1px; background:var(--signal);
+    transform:scaleX(0); transform-origin:left;
+    transition:transform var(--t-fast) var(--ease);
+  }
+  .nav__links a:hover::after{ transform:scaleX(1); }
+
+  .skill h3{ position:relative; transition:color var(--t-fast) var(--ease); }
+  .skill h3::after{
+    content:""; position:absolute; left:0; right:0; bottom:-1px;
+    height:1px; background:var(--signal);
+    transform:scaleX(0); transform-origin:left;
+    transition:transform var(--t-slow) var(--ease);
+  }
+  .skill:hover h3{ color:var(--ink); }
+  .skill:hover h3::after{ transform:scaleX(1); }
+
+  .proj__links a{ position:relative; }
+  .proj__links a::after{
+    content:""; position:absolute; left:0; right:0; bottom:-1px;
+    height:1px; background:var(--signal);
+    transform:scaleX(0); transform-origin:left;
+    transition:transform var(--t-fast) var(--ease);
+  }
+  .proj__links a:hover::after{ transform:scaleX(1); }
+}
+
+@media (hover:hover) and (prefers-reduced-motion: no-preference){
+
+  /* — lift: things you can press — */
+  .btn{ transition:background var(--t-fast) var(--ease),
+                   color var(--t-fast) var(--ease),
+                   border-color var(--t-fast) var(--ease),
+                   transform var(--t-fast) var(--ease); }
+  .btn:hover{ transform:translateY(calc(-1 * var(--hover-lift))); }
+  .chips li:hover{ transform:translateY(calc(-1 * var(--hover-lift))); }
+
+  /* — nudge: arrows and values move the way they point — */
+  .btn svg{ transition:transform var(--t-fast) var(--ease); }
+  .btn:hover svg{ transform:translateX(var(--hover-nudge)); }
+
+  a.cline .cline__v{
+    display:inline-block;
+    transition:color var(--t-fast) var(--ease), transform var(--t-fast) var(--ease);
+  }
+  a.cline:hover .cline__v{ transform:translateX(var(--hover-nudge)); }
+
+  .foot__top{ display:inline-block; transition:color var(--t-fast) var(--ease),
+                                               transform var(--t-fast) var(--ease); }
+  .foot__top:hover{ transform:translateY(calc(-1 * var(--hover-nudge))); }
+
+  /* — zoom: only inside a frame that already clips — */
+  .proj__shot img,
+  .proj__shot video,
+  .id__portrait img{ transition:transform var(--t-slow) var(--ease); }
+  .proj:hover .proj__shot img,
+  .proj:hover .proj__shot video,
+  .id__portrait:hover img{ transform:scale(var(--hover-zoom)); }
+}
 
 /* ═══ responsive — two breakpoints only (DESIGN.md §6) ═══ */
 @media (max-width:900px){
