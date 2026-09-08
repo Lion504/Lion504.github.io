@@ -470,7 +470,8 @@ ul,ol{ margin:0; padding:0; list-style:none; }
 @media (max-width:760px){
   .proj__shot{ grid-column:1; }   /* the row collapses to one column here */
 }
-.proj__shot a{
+.proj__shot a,
+.proj__shot .shot__frame{
   display:block; overflow:hidden;
   border:1px solid var(--line); border-radius:3px;
   background:var(--ink-2);
@@ -486,6 +487,7 @@ ul,ol{ margin:0; padding:0; list-style:none; }
   transition:filter .7s var(--ease), transform 1s var(--ease);
 }
 .proj__shot a:hover img,
+.proj__shot .shot__frame:hover img,
 .proj__shot a:hover video{
   filter:grayscale(0%) contrast(1) brightness(1.04);
   transform:scale(1.03);
