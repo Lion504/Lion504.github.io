@@ -70,7 +70,19 @@
     document.body.style.overflow = open ? 'hidden' : '';
   });
   $$('.nav__links a').forEach(function (a) { a.addEventListener('click', closeMenu); });
+
+  /* Tapping the blank area of the overlay closes it. The overlay fills the
+     screen, so "outside the menu" is the overlay's own background — a tap that
+     lands on the panel itself rather than on one of its links. */
+  links.addEventListener('click', function (e) { if (e.target === links) closeMenu(); });
+
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
+
+  /* Crossing back to the desktop layout with the menu open would otherwise
+     leave the page scroll-locked with no visible way to release it. */
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 900 && links.classList.contains('is-open')) closeMenu();
+  });
 
   /* ═══ Scroll reveal ═══ */
   var reveals = $$('.reveal');

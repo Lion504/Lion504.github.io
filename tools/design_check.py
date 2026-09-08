@@ -115,6 +115,14 @@ def check_stylesheet(fail):
     for m in re.finditer(r"#[0-9a-fA-F]{3,8}\b", body):
         fail(STYLESHEET.name, f"hard-coded colour outside the token layer: {m.group(0)}")
 
+    for m in re.finditer(r"([^{}]+)\{([^}]*)\}", css):
+        selector, block = m.group(1).strip().splitlines()[-1].strip(), m.group(2)
+        if "backdrop-filter" in block and selector.startswith(".nav") and "::" not in selector:
+            fail(STYLESHEET.name,
+                 f"backdrop-filter on {selector!r} makes it the containing block for "
+                 "its position:fixed children and strands the mobile menu — put it "
+                 "on a pseudo-element (DESIGN.md §6)")
+
     if not re.search(r"img\s*,\s*video\s*\{[^}]*height\s*:\s*auto", css):
         fail(STYLESHEET.name,
              "the img/video reset must set height:auto, or width/height "
