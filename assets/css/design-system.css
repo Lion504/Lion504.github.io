@@ -56,6 +56,11 @@
   --hover-ground: rgba(20,20,26,.035);
 
   --radius: 6px;
+
+  /* QR tiles never follow the theme: many phone cameras reject an inverted
+     code, so these two are defined once and never overridden in dark. */
+  --qr-ground: #FFFFFF;
+  --qr-ink:    #14141A;
 }
 
 @media (prefers-color-scheme: dark){
@@ -499,6 +504,22 @@ ul,ol{ margin:0; padding:0; list-style:none; }
 .refs b{ color:var(--ink); font-weight:500; }
 .refs span{ color:var(--ink-3); }
 
+/* ═══ QR codes ═══ */
+.qr{ margin-top:var(--sp-6); }
+.qr__lbl{ color:var(--ink-3); margin-bottom:var(--sp-3); }
+.qr__row{ display:flex; flex-wrap:wrap; gap:var(--sp-4); }
+.qr__item a{ display:flex; flex-direction:column; gap:var(--sp-2); align-items:center; }
+.qr__code{
+  display:block;
+  width:104px;
+  background:var(--qr-ground);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:var(--sp-2);
+}
+.qr__code img{ width:100%; height:auto; }
+.qr__cap{ color:var(--ink-3); }
+
 /* ═══ contact ═══ */
 .contact{
   display:grid;
@@ -601,6 +622,11 @@ a.cline:hover .cline__v{ color:var(--signal); }
   .grades li:hover{ color:var(--ink); }
   .grades li:hover b{ color:var(--signal); }
 
+  .qr__code{ transition:border-color var(--t-fast) var(--ease); }
+  .qr__cap{ transition:color var(--t-fast) var(--ease); }
+  .qr__item a:hover .qr__code{ border-color:var(--signal); }
+  .qr__item a:hover .qr__cap{ color:var(--signal); }
+
   a.cline .cline__k{ transition:color var(--t-fast) var(--ease); }
   a.cline:hover .cline__k{ color:var(--signal); }
 
@@ -643,6 +669,8 @@ a.cline:hover .cline__v{ color:var(--signal); }
                    transform var(--t-fast) var(--ease); }
   .btn:hover{ transform:translateY(calc(-1 * var(--hover-lift))); }
   .chips li:hover{ transform:translateY(calc(-1 * var(--hover-lift))); }
+  .qr__item a{ transition:transform var(--t-fast) var(--ease); }
+  .qr__item a:hover{ transform:translateY(calc(-1 * var(--hover-lift))); }
 
   /* — nudge: arrows and values move the way they point — */
   .btn svg{ transition:transform var(--t-fast) var(--ease); }
