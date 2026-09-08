@@ -40,6 +40,10 @@
   --gut:  clamp(20px, 5vw, 80px);
   --maxw: 1340px;
 
+  /* ── media frames: every shot renders at the same ratio ── */
+  --ratio-shot:     16 / 10;
+  --ratio-portrait: 3 / 4;
+
   /* ── motion ── */
   --ease:   cubic-bezier(.22,.61,.36,1);
   --t-fast: 180ms;
@@ -82,7 +86,7 @@ body{
   overflow-x:hidden;
 }
 
-img,video{ max-width:100%; display:block; }
+img,video{ max-width:100%; height:auto; display:block; }
 a{ color:inherit; text-decoration:none; }
 h1,h2,h3{ margin:0; color:var(--ink); font-weight:400; letter-spacing:-.02em; }
 p{ margin:0; max-width:var(--measure); }
@@ -284,7 +288,12 @@ ul,ol{ margin:0; padding:0; list-style:none; }
 }
 
 .id__portrait{ margin:0; }
-.id__portrait img{ width:100%; height:auto; }
+.id__portrait .card{ aspect-ratio:var(--ratio-portrait); }
+.id__portrait img{
+  width:100%; height:100%;
+  object-fit:cover;
+  object-position:top center;
+}
 .portrait__cap{
   display:flex; justify-content:space-between; gap:var(--sp-3);
   margin-top:var(--sp-3);
@@ -312,8 +321,8 @@ ul,ol{ margin:0; padding:0; list-style:none; }
 /* ═══ proof strip ═══ */
 .proof{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-  gap:var(--sp-5);
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:var(--sp-5) var(--sp-4);
   margin-top:var(--sp-8);
   padding-top:var(--sp-6);
   border-top:1px solid var(--line);
@@ -387,6 +396,13 @@ ul,ol{ margin:0; padding:0; list-style:none; }
   border:1px solid var(--line);
   border-radius:6px;
   overflow:hidden;
+}
+.proj__shot .card{ aspect-ratio:var(--ratio-shot); }
+.proj__shot img,
+.proj__shot video{
+  width:100%; height:100%;
+  object-fit:cover;
+  object-position:top center;
 }
 .proj__shot figcaption{
   margin-top:var(--sp-3);
@@ -540,6 +556,7 @@ a.cline:hover .cline__v{ color:var(--signal); }
 @media (max-width:620px){
   .sec{ padding-block:var(--sp-8); }
   .id{ padding-top:var(--sp-9); }
+  .proof{ grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--sp-5) var(--sp-3); }
   .proj{ grid-template-columns:minmax(0,1fr); gap:var(--sp-3); }
   .proj__shot{ grid-column:1; }
   .id__cta .btn{ width:100%; }

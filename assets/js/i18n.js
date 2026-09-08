@@ -21,6 +21,7 @@ window.I18N = {
     "stat.gpa": "Current GPA",
     "stat.proj": "Shipped projects",
     "stat.hack": "Hackathons",
+    "stat.pm": "Years project management",
 
     "sec.work": "Selected work",
     "work.title": "Systems I designed, built and shipped.",
@@ -135,6 +136,7 @@ window.I18N = {
     "stat.gpa": "Keskiarvo",
     "stat.proj": "Julkaistua projektia",
     "stat.hack": "Hackathonia",
+    "stat.pm": "Vuotta projektinjohtoa",
 
     "sec.work": "Valikoituja töitä",
     "work.title": "Järjestelmiä, jotka olen suunnitellut, rakentanut ja julkaissut.",

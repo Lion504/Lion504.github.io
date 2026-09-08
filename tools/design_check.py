@@ -115,6 +115,11 @@ def check_stylesheet(fail):
     for m in re.finditer(r"#[0-9a-fA-F]{3,8}\b", body):
         fail(STYLESHEET.name, f"hard-coded colour outside the token layer: {m.group(0)}")
 
+    if not re.search(r"img\s*,\s*video\s*\{[^}]*height\s*:\s*auto", css):
+        fail(STYLESHEET.name,
+             "the img/video reset must set height:auto, or width/height "
+             "attributes distort every screenshot (DESIGN.md §5)")
+
     for m in re.finditer(r"(?:margin|padding|gap)[a-z-]*\s*:\s*([^;{]+);", body):
         for token in m.group(1).split():
             if re.fullmatch(r"-?\d+px", token) and token not in SPACING_SCALE:

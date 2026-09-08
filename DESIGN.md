@@ -180,7 +180,8 @@ The vocabulary is deliberately small. These are all of it.
 **`.tag`** — availability pill. One per page, in the identity block.
 
 **`.proof`** / **`.proof__item`** — the proof strip. Big mono number in `--signal`,
-mono caption under it. Three to five items. Every number must be verifiable.
+mono caption under it. Three to five items on **one row** at tablet width and
+above; three per row on a phone. Every number must be verifiable.
 
 **`.sec`** / **`.sec__head`** / **`.sec__label`** / **`.sec__title`** / **`.sec__sub`** —
 section scaffolding. `.sec--alt` puts the section on `--paper-3`.
@@ -200,6 +201,15 @@ appear in this fixed order, and an entry omits a field rather than reordering:
 8. `.proj__links` — live link first, repo second. A private repo says so in
    `.lock` rather than showing a dead link.
 9. `.proj__shot` — screenshot or clip, with a `figcaption` naming what is shown.
+
+**Media frames.** Source screenshots arrive at whatever aspect the capture
+happened to be. They must never render at those raw sizes: every `.proj__shot`
+frame is `--ratio-shot` and the portrait is `--ratio-portrait`, with the media
+`object-fit: cover` from the top. A column of shots at six different heights
+reads as six different levels of care. Media still carries its true intrinsic
+`width`/`height` in the markup so the browser can reserve space — which means the
+reset must keep `height: auto`, or those attributes win and every shot renders
+distorted.
 
 **`.chips`** — inventory list. Never more than 14 per group; if more are needed,
 the grouping is wrong.
@@ -284,7 +294,8 @@ Recurring generated-design failures. Do not produce these.
 checked without judgement — hard-coded colours and font sizes outside the token
 layer, missing `alt` text, heading-level skips, `data-i18n` keys missing from a
 dictionary, `#` hrefs, banned words from §1 and §8, spacing values off the scale,
-and more than one `h1`.
+more than one `h1`, and a reset that lets `width`/`height` attributes distort
+media.
 
 Run it before publishing:
 
