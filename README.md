@@ -51,6 +51,57 @@ submission is a background `fetch`, so a challenge has nowhere to render.
 `assets/css/design-system.css`. Everything else derives from those tokens, so
 change them there rather than anywhere else.
 
+## Analytics
+
+Self-hosted [Umami](https://umami.is) — cookieless, no third party, and the
+data stays on your own server. Nothing loads until `ANALYTICS_HOST` and
+`ANALYTICS_ID` are both set at the top of `assets/js/main.js`, and the script is
+never injected on `localhost`, so local previews are not counted.
+
+**It must be served over HTTPS.** This site is HTTPS, so a script from an
+`http://` host is blocked as mixed content and you will silently get no data. A
+bare IP will not do — give the instance a domain and let Coolify issue the
+certificate.
+
+Coolify: **New Resource → Umami** (one-click; it provisions PostgreSQL too),
+give it a subdomain, then log in with `admin` / `umami` and change the password
+immediately. Without Coolify:
+
+```yaml
+services:
+  umami:
+    image: ghcr.io/umami-software/umami:postgresql-latest
+    environment:
+      DATABASE_URL: postgresql://umami:umami@db:5432/umami
+      DATABASE_TYPE: postgresql
+      APP_SECRET: change-me
+    depends_on: [db]
+    ports: ["3000:3000"]
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: umami
+      POSTGRES_USER: umami
+      POSTGRES_PASSWORD: umami
+    volumes: [umami-db:/var/lib/postgresql/data]
+volumes:
+  umami-db:
+```
+
+Then in Umami: **Settings → Websites → Add**, domain `lion504.github.io`. It
+gives you a website ID — that and the instance URL are the two values above.
+
+To keep your own visits out of the numbers, run this once in the browser
+console on the live site:
+
+```js
+localStorage.setItem('umami.disabled', 1)
+```
+
+Some ad blockers block any script named `script.js` from a host called
+`analytics.*`. If your own visits vanish entirely, that is usually why — Umami
+lets you serve the script under a different name.
+
 **The CV PDF is not published on this site.** If you decide to publish one in
 future, run a new export through the redaction tool first:
 

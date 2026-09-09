@@ -339,6 +339,13 @@ Non-negotiable on every page:
 - No external JS or CSS beyond the Google Fonts stylesheet. The contact form's
   POST to Formspree is the site's only other third-party request, and it happens
   only when a visitor submits the form — never on load.
+- **Analytics are self-hosted or absent.** No third-party tracker, tag manager or
+  counter badge, and nothing that sets a cookie or would require a consent
+  banner. The measurement script is served from a first-party host over HTTPS,
+  is skipped on `localhost`, and is injected only when configured — an
+  unconfigured site must load nothing at all.
+- Visitor counts are never displayed to visitors. The site's claims are things a
+  reader can check; a traffic number is neither checkable nor about the work.
 - Any path that can fail must leave the reader somewhere to go. "Email me
   directly" without the address is a dead end; the failure state carries the
   address as a link. No framework, no
