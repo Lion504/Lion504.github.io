@@ -98,7 +98,17 @@ def i18n_dictionaries():
                     break
             i += 1
         body = src[m.end():i]
-        dicts[lang] = set(re.findall(r"""['"]([\w.\-_]+)['"]\s*:""", body))
+        # Keys may be quoted ("foo.bar": ...) or bare identifiers (aw1: ...) —
+        # both are valid JS. Anchored to the start of a line so a colon inside
+        # a translated string is never mistaken for a key.
+        dicts[lang] = set(
+            m.group(1) or m.group(2)
+            for m in re.finditer(
+                r"""^\s*(?:['"]([\w.\-]+)['"]|([A-Za-z_$][\w$]*))\s*:""",
+                body,
+                re.M,
+            )
+        )
     return dicts
 
 
