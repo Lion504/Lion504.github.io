@@ -8,6 +8,18 @@
   var FORM_ENDPOINT = 'https://formspree.io/f/xvkovqld';
   var EMAIL = 'Lehtonen6677@gmail.com';
 
+  /* ── Analytics ──────────────────────────────────────────────────────
+     Self-hosted Umami. Both values come from your own instance, so the
+     site still makes no third-party request on load — the script is
+     served from your server, not someone else's.
+
+       ANALYTICS_HOST = 'https://analytics.example.com'   (no trailing /)
+       ANALYTICS_ID   = the website ID Umami shows in Settings
+
+     Leave either empty and no script is injected at all. See README. */
+  var ANALYTICS_HOST = '';
+  var ANALYTICS_ID   = '';
+
   var $  = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
 
@@ -192,6 +204,24 @@
       sayFailed(t('form.err'));
     });
   });
+
+  /* ═══ Analytics ═══
+     Injected rather than written into the markup, so an unconfigured site
+     loads nothing and a local preview is never counted. Umami reads its
+     own data attributes off the script tag, so this is equivalent to a
+     hard-coded tag — minus shipping a placeholder. */
+  (function analytics() {
+    if (!ANALYTICS_HOST || !ANALYTICS_ID) return;
+
+    var host = location.hostname;
+    if (host === 'localhost' || host === '127.0.0.1' || host === '') return;
+
+    var s = document.createElement('script');
+    s.defer = true;
+    s.src = ANALYTICS_HOST.replace(/\/+$/, '') + '/script.js';
+    s.setAttribute('data-website-id', ANALYTICS_ID);
+    document.head.appendChild(s);
+  })();
 
   /* ═══ Footer year ═══ */
   $('#yr').textContent = String(new Date().getFullYear());
