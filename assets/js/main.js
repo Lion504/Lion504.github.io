@@ -223,6 +223,43 @@
     document.head.appendChild(s);
   })();
 
+  /* ═══ Visit counter ═══
+     A free, no-signup counter (abacus). Three deliberate constraints:
+
+     - It fails invisibly. If the service is slow, down, or gone for good,
+       the footer simply omits the line. A stuck 0 or a NaN in the footer
+       would be worse than no counter at all.
+     - It counts a visit, not a keypress. After the first hit of a session
+       it reads with /get/ instead of /hit/, so reloading the page does not
+       inflate the number.
+     - It is skipped on localhost, so development never reaches the count. */
+  (function visits() {
+    var box = document.getElementById('hits');
+    var out = document.getElementById('hitsN');
+    if (!box || !out) return;
+
+    var host = location.hostname;
+    if (host === 'localhost' || host === '127.0.0.1' || host === '') return;
+
+    var counted = null;
+    try { counted = sessionStorage.getItem('wy-counted'); } catch (e) { /* private mode */ }
+
+    var url = 'https://abacus.jasoncameron.dev/' +
+              (counted ? 'get' : 'hit') + '/lion504-github-io/home';
+
+    fetch(url).then(function (res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    }).then(function (data) {
+      if (typeof data.value !== 'number') throw new Error('unexpected payload');
+      try { sessionStorage.setItem('wy-counted', '1'); } catch (e) { /* ignore */ }
+      out.textContent = data.value.toLocaleString();
+      box.hidden = false;
+    }).catch(function () {
+      /* counter unavailable — the footer stays as it was */
+    });
+  })();
+
   /* ═══ Footer year ═══ */
   $('#yr').textContent = String(new Date().getFullYear());
 })();

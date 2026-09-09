@@ -51,6 +51,17 @@ submission is a background `fetch`, so a challenge has nowhere to render.
 `assets/css/design-system.css`. Everything else derives from those tokens, so
 change them there rather than anywhere else.
 
+## Visit counter
+
+The footer count comes from [abacus](https://abacus.jasoncameron.dev) — free, no
+signup, no cookies. The namespace and key are in the `visits` block of
+`assets/js/main.js`; changing the key starts a fresh count, and deleting the
+block removes the feature cleanly.
+
+It counts one visit per browser session, not per page load, and is skipped on
+`localhost`. If the service ever disappears the footer line simply does not
+appear — nothing else breaks.
+
 ## Analytics
 
 Self-hosted [Umami](https://umami.is) — cookieless, no third party, and the

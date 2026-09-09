@@ -137,6 +137,7 @@ window.I18N = {
     "form.invalid": "Please fill in every field with a valid email.",
 
     "foot.built": "Built from scratch · HTML, CSS, vanilla JS · no framework",
+    "foot.visits": "Visits",
     "foot.top": "Back to top ↑",
   },
 
@@ -280,6 +281,7 @@ window.I18N = {
     "form.invalid":
       "Täytäthän kaikki kentät ja kelvollisen sähköpostiosoitteen.",
     "foot.built": "Rakennettu alusta asti · HTML, CSS, vanilla JS · ei kehystä",
+    "foot.visits": "Käynnit",
     "foot.top": "Takaisin ylös ↑",
   },
 };

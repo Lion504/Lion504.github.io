@@ -336,16 +336,24 @@ Non-negotiable on every page:
   phone number as surely as printing it would.
 - All translatable strings carry `data-i18n` keys present in both `en` and `fi`
   dictionaries. Adding copy without its Finnish counterpart is an incomplete change.
-- No external JS or CSS beyond the Google Fonts stylesheet. The contact form's
-  POST to Formspree is the site's only other third-party request, and it happens
-  only when a visitor submits the form — never on load.
+- No external JS or CSS beyond the Google Fonts stylesheet. Two other
+  third-party requests exist and no more may be added without a reason written
+  here: the contact form's POST to Formspree, which happens only on submit, and
+  the footer's visit counter, which is the only one that runs on load.
 - **Analytics are self-hosted or absent.** No third-party tracker, tag manager or
   counter badge, and nothing that sets a cookie or would require a consent
   banner. The measurement script is served from a first-party host over HTTPS,
   is skipped on `localhost`, and is injected only when configured — an
   unconfigured site must load nothing at all.
-- Visitor counts are never displayed to visitors. The site's claims are things a
-  reader can check; a traffic number is neither checkable nor about the work.
+- The footer shows a visit count. This is the owner's call, made knowing the
+  trade-off: unlike everything else on the site, the number is not checkable and
+  can be inflated by anyone who reloads. It therefore stays in the footer, in
+  meta type, and never becomes a claim in the proof strip, which is reserved for
+  numbers a reader could verify.
+- Any counter must **fail invisibly**. If the service is slow, down, or
+  discontinued, the line is omitted entirely — a stuck `0`, a `NaN` or a spinner
+  in the footer is worse than no counter. It must also skip `localhost`, and
+  count a visit rather than a page load, so a reload does not inflate it.
 - Any path that can fail must leave the reader somewhere to go. "Email me
   directly" without the address is a dead end; the failure state carries the
   address as a link. No framework, no
