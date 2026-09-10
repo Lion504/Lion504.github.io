@@ -87,7 +87,6 @@ window.I18N = {
     "directory.experience": "Project delivery, software engineering and the path between them.",
     "directory.capabilities": "The tools behind the systems I build.",
     "directory.contact": "Have a role, a project or a question in mind?",
-    "directory.credit": "Interaction inspired by <a href=\"https://ansyn.me/\" target=\"_blank\" rel=\"noopener\">Ansyn</a>. Built with HTML, CSS and JavaScript.",
 
     "opening.role": "AI & software engineering",
     "opening.location": "Helsinki, Finland",
@@ -494,7 +493,6 @@ window.I18N = {
     "directory.experience": "Projektien johtamista, ohjelmistokehitystä ja matka niiden välillä.",
     "directory.capabilities": "Työkalut rakentamieni järjestelmien taustalla.",
     "directory.contact": "Onko mielessäsi työpaikka, projekti tai kysymys?",
-    "directory.credit": "Vuorovaikutuksen esikuvana <a href=\"https://ansyn.me/\" target=\"_blank\" rel=\"noopener\">Ansyn</a>. Toteutus: HTML, CSS ja JavaScript.",
 
     "opening.role": "Tekoäly ja ohjelmistokehitys",
     "opening.location": "Helsinki, Suomi",
