@@ -43,7 +43,7 @@ The homepage and menu interactions are inspired by [Ansyn](https://ansyn.me/):
 a round trigger opens a curved sliding drawer; section titles reveal images on
 hover/focus and link to dedicated pages. The navy/slate palette and teal accents
 carry forward the earlier Brittany Chiang-inspired design. Implementation,
-content and illustrative preview diagrams are our own. Attribution is in the footer.
+content and illustrative preview diagrams are our own.
 
 `DESIGN.md` is the guidance file for this site — brand voice, information
 architecture, the token and component vocabulary, and the anti-patterns to
