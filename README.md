@@ -79,14 +79,14 @@ change them there rather than anywhere else.
 
 ## Visit counter
 
-The sidebar count comes from [abacus](https://abacus.jasoncameron.dev) — free, no
+The footer count comes from [abacus](https://abacus.jasoncameron.dev) — free, no
 signup, no cookies. The namespace and key are in the `visits` block of
 `assets/js/main.js`; changing the key starts a fresh count, and deleting the
 block removes the feature cleanly.
 
 It counts once per browser session when sessionStorage is available. Local previews
 use the read-only `/get/` endpoint and label the total as excluding the preview.
-The count is visible in the sidebar, with an explicit unavailable state on timeout
+The count is visible at the end of every page, with an explicit unavailable state on timeout
 or errors. It measures sessions rather than unique people.
 
 ## Analytics
