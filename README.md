@@ -1,16 +1,36 @@
 # lion504.github.io
 
+Version **2.0.0** · [Release history](CHANGELOG.md)
+
 Personal site of **Wang Yongzhi** — AI &amp; software engineer, Helsinki.
 Live at **https://lion504.github.io**
 
-Hand-built static site. No framework, no build step, no dependencies.
+Hand-built static site. No framework or build step. The globe uses pinned geographic helpers and map data hosted with the site.
 
 ```
 DESIGN.md                     how pages on this site are designed — read first
-index.html                    markup + content (EN inline, FI swapped at runtime)
+index.html                    Think / Build / Ship opening + interactive globe + title index
+about.html / work.html / projects.html  profile, featured projects and project archive
+ai-systems.html / experience.html / capabilities.html  full section details
+contact.html                  contact form, links and QR codes
 assets/css/design-system.css  the token vocabulary DESIGN.md describes
 assets/js/i18n.js             EN / FI dictionary — edit copy here
-assets/js/main.js             language toggle, nav, scroll reveal, contact form
+assets/js/main.js             language toggle, project video, contact form
+assets/js/motion.js           scroll entrances, pointer effects, reading progress
+assets/js/navigation.js       curved modal drawer and title preview interactions
+assets/js/kinetic.js          three-phase animated process and typography opening
+assets/js/earth.js            draggable globe, location cards and local clocks
+assets/js/vendor/             pinned D3 geographic helpers and TopoJSON, with licenses
+assets/data/                  local Natural Earth country data and attribution
+tools/build_earth_fallback.cjs  regenerates the static globe fallback
+assets/js/explore.js          accessible JobAI architecture explorer
+assets/js/gallery.js          full-size screenshot viewer and focus restoration
+homelab.html                 self-hosted Ubuntu environment and monitoring evidence
+notes.html                   engineering notes index
+jobai-evaluation.html        evaluation and data provenance note
+jobsresearch-decisions.html  matching and applicant workflow note
+clboost-beyond-generation.html  generation, editing and localization note
+fijobmaps-data.html           Finnish data pipeline, provenance and treemap decisions
 assets/img/                   portrait, OG card, favicon
 tools/design_check.py         mechanically enforces the checkable DESIGN.md rules
 tools/make_qr.py              regenerates the contact QR codes (needs `segno`)
@@ -18,6 +38,12 @@ tools/redact_cv.py            strips referee emails out of a freshly exported CV
 ```
 
 ## Design
+
+The homepage and menu interactions are inspired by [Ansyn](https://ansyn.me/):
+a round trigger opens a curved sliding drawer; section titles reveal images on
+hover/focus and link to dedicated pages. The navy/slate palette and teal accents
+carry forward the earlier Brittany Chiang-inspired design. Implementation,
+content and illustrative preview diagrams are our own. Attribution is in the footer.
 
 `DESIGN.md` is the guidance file for this site — brand voice, information
 architecture, the token and component vocabulary, and the anti-patterns to
@@ -36,7 +62,7 @@ the check follow.
 
 ## Editing
 
-**Text** — change it in `index.html` (English) *and* in the matching key in
+**Text** — change it in the relevant HTML page (English) *and* in the matching key in
 `assets/js/i18n.js`, or the toggle will put the old wording back.
 
 **Contact form** — posts to the [Formspree](https://formspree.io) endpoint in
@@ -53,14 +79,15 @@ change them there rather than anywhere else.
 
 ## Visit counter
 
-The footer count comes from [abacus](https://abacus.jasoncameron.dev) — free, no
+The sidebar count comes from [abacus](https://abacus.jasoncameron.dev) — free, no
 signup, no cookies. The namespace and key are in the `visits` block of
 `assets/js/main.js`; changing the key starts a fresh count, and deleting the
 block removes the feature cleanly.
 
-It counts one visit per browser session, not per page load, and is skipped on
-`localhost`. If the service ever disappears the footer line simply does not
-appear — nothing else breaks.
+It counts once per browser session when sessionStorage is available. Local previews
+use the read-only `/get/` endpoint and label the total as excluding the preview.
+The count is visible in the sidebar, with an explicit unavailable state on timeout
+or errors. It measures sessions rather than unique people.
 
 ## Analytics
 
@@ -140,3 +167,11 @@ python3 -m http.server 8000
 ## Deploy
 
 Push to `main`. GitHub Pages serves the root of the branch — no action, no build.
+
+## Featured projects
+
+JobsResearch, CLboost, Fi-Job-Maps and the self-hosted Linux lab are the four featured projects. Other projects remain in
+five native expandable archive rows. Larger explanations live on separate
+engineering-note pages; preserve evidence, contribution context and source links
+when updating them. CLboost's recording has manual playback controls. Screenshot
+links open a full-size dialog with JavaScript and the original image without it.

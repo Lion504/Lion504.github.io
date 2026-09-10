@@ -1,429 +1,164 @@
-# DESIGN.md
-
-Guidance for building pages on this site — for humans and for agents.
-
-Load this file together with the stylesheet it describes:
-
-- Guidance: `https://lion504.github.io/DESIGN.md`
-- Stylesheet: `https://lion504.github.io/assets/css/design-system.css`
-
-Build with the class names and tokens documented below. Do not invent new
-typography, spacing or colour values. If a page needs something the vocabulary
-does not have, add it here first, then to the stylesheet — in that order.
-
----
-
-## 1. Brand
-
-This is the personal site of **Wang Yongzhi**, a software engineering student in
-Helsinki looking for an AI engineering internship or junior role. The reader is
-almost always a hiring manager or engineer with about ninety seconds and a stack
-of other tabs open.
-
-The brand position is **evidence over adjectives**. Every claim on this site is
-either a number that can be checked, a link that can be opened, or a screenshot
-of the thing running. The design has one job: make the evidence easy to find and
-hard to mistake for decoration.
-
-Voice:
-
-- First person, past or present tense, no hedging. "I built the routing layer",
-  not "was involved in building".
-- Numbers carry the sentence. `183 of 263 commits` beats "major contributor".
-- Name the constraint, not the triumph. "The fine-tuned model has to beat four
-  baselines or it does not ship" is the brand. "Cutting-edge AI solutions" is not.
-- No exclamation marks. No "passionate", "innovative", "leveraging", "seamless",
-  "journey", "excited to share".
-- British-leaning spelling is used throughout (`visualiser`, `internationalisation`).
-  Keep it consistent within a page.
-
-Tone in three words: **precise, unadorned, confident**.
-
----
-
-## 2. Information architecture
-
-Pages follow one shape: **claim → evidence → route to contact**.
-
-The canonical order for the main page, and the default for any new page:
-
-1. **Identity block** — who, what, where, and availability. One sentence of what
-   the work actually is. Never longer than four lines of prose.
-2. **Proof strip** — three to five checkable numbers, immediately after identity.
-   These exist so a skimmer who reads nothing else still leaves with facts.
-3. **Selected work** — the spine of the site. Reverse chronological, most
-   significant project first, numbered. Each entry carries the same fields in the
-   same order so entries can be compared vertically (see §5, Project entry).
-4. **Capabilities** — grouped tool inventory. Reference material, not a pitch.
-   Placed *after* work: it answers "with what", which is only interesting once
-   the reader believes the "what".
-5. **Experience & education** — including the ten years before the degree.
-   Two columns: the linear career on the left, awards and references on the right.
-6. **Contact** — one clear route, plus the alternatives. It also answers the two
-   questions a hiring reader has before they can act: **when can this person
-   start**, and **what is the low-risk way to try them**. Both are stated as
-   dates, never as "available immediately" in the abstract — a named month is
-   something a hiring manager can put in a calendar; an adjective is not.
-
-Rules:
-
-- Sections are numbered `01`–`0n` in the label and in the nav. The numbering is
-  the reader's progress bar; keep it visible in both places.
-- Never open a page with capabilities, education, or a mission statement.
-- One page, one spine. Do not add a second parallel navigation.
-- Anything that cannot be shown or checked belongs in prose in an existing
-  section, not in a new section of its own.
-
-### Framing the reader's job
-
-Before writing a section, state in one line what the reader should be able to do
-after reading it. If the line is "understand that he is enthusiastic", cut the
-section. Valid lines look like: "decide whether the JobsResearch architecture is
-relevant to our stack", "check the commit share is real", "send an email".
-
----
-
-## 3. Layout
-
-- Single column of content, max width `--maxw` (1340px), gutters `--gut`
-  (`clamp(20px, 5vw, 80px)`). Content never touches the viewport edge.
-- A 12-column grid is available (`.grid`) for anything that needs alignment
-  across rows. Use it or use flow — do not nest arbitrary percentage widths.
-- **Vertical rhythm is the primary structural tool.** Sections are separated by
-  `--sp-9`; blocks within a section by `--sp-6`; lines within a block by `--sp-3`.
-  Nothing between those steps.
-- Section heads are two lines: a mono label with its number, then the section
-  title. The title is a full sentence ending in a full stop — it makes an
-  assertion rather than naming a category ("Systems I designed, built and
-  shipped." not "Projects").
-- Media sits to the right of its text at desktop width and below it on mobile.
-  Media is never full-bleed and never decorative: every image is a screenshot of
-  a real artefact with a caption naming what is on screen.
-- Hairline rules (`--line`) separate; whitespace groups. Prefer whitespace.
-  Never both a rule and a card border around the same content.
-
----
-
-## 4. Design system
-
-### Colour
-
-Light ground, ink text, one signal colour. The signal colour marks exactly four
-things: the active/available state, the numeric emphasis in the proof strip,
-interactive elements under hover or focus, and the block the pointer is currently
-resting in. Nothing else may use it — in particular it is never used to decorate
-static text.
-
-| Token | Value | Use |
-|---|---|---|
-| `--paper` | `#F7F5F1` | Page ground |
-| `--paper-2` | `#FFFFFF` | Raised surface (media frames, form fields) |
-| `--paper-3` | `#EDEAE3` | Alternate section band |
-| `--hover-ground` | `rgba(20,20,26,.035)` | The block the pointer rests in |
-| `--ink` | `#14141A` | Primary text, headings |
-| `--ink-2` | `#4A4A52` | Body prose |
-| `--ink-3` | `#8A8880` | Meta, captions, disabled |
-| `--signal` | `#B4482A` | See the three uses above |
-| `--line` | `rgba(20,20,26,.12)` | Hairline rules, borders |
-| `--line-soft` | `rgba(20,20,26,.06)` | Internal dividers |
-
-A dark rendering is supported through the same tokens under
-`@media (prefers-color-scheme: dark)`. Never define a colour only inside the dark
-block, and never hard-code a hex value in page markup.
-
-Contrast floor: body text ≥ 4.5:1, meta text ≥ 4.5:1 at its used size, large
-headings ≥ 3:1. `--ink-3` on `--paper` is the lightest permitted text pairing.
-
-### Type
-
-Three families, each with one job:
-
-- `--ff-display` — **Instrument Serif**. Headings only: `h1`, `.sec__title`,
-  project names. Never for body, never for UI.
-- `--ff-body` — **Inter**. All prose and UI. Weights 300/400/500 only.
-- `--ff-mono` — **JetBrains Mono**. Labels, numbers, dates, captions, chips.
-  Uppercase with `.14em` tracking at 11px via `.mono`.
-
-Scale (all fluid, all defined as tokens — do not write raw `font-size` in a page):
-
-| Token | Clamp | Use |
-|---|---|---|
-| `--fs-display` | `clamp(3.2rem, 9vw, 7.5rem)` | Name, once per page |
-| `--fs-h2` | `clamp(1.9rem, 3.6vw, 3.1rem)` | Section titles |
-| `--fs-h3` | `clamp(1.25rem, 2vw, 1.6rem)` | Project and entry names |
-| `--fs-lede` | `clamp(1.05rem, 1.5vw, 1.3rem)` | Opening paragraph only |
-| `--fs-body` | `1rem` | Prose |
-| `--fs-meta` | `.8125rem` | Secondary lines |
-| `--fs-mono` | `.6875rem` | `.mono` labels |
-
-Measure: prose caps at `68ch` (`--measure`). Lede caps at `52ch`. A paragraph
-wider than its measure is a bug, not a style choice.
-
-Headings never exceed three lines at any viewport. Body copy is never centred;
-only the section head of a `sec--center` may be.
-
-### Spacing
-
-Only these steps exist: `--sp-1` 4px, `--sp-2` 8px, `--sp-3` 16px, `--sp-4` 24px,
-`--sp-5` 32px, `--sp-6` 48px, `--sp-7` 64px, `--sp-8` 96px, `--sp-9` 128px.
-Every margin, padding and gap resolves to one of them.
-
-### Motion
-
-- One transition curve: `--ease` `cubic-bezier(.22,.61,.36,1)`.
-- Two durations: `--t-fast` 180ms for hover/focus, `--t-slow` 520ms for reveals.
-- Entry animation is a single 12px rise with opacity, applied via `.reveal`.
-  Stagger only within the first viewport.
-- Everything above collapses to no motion under
-  `@media (prefers-reduced-motion: reduce)`. Video autoplay is suppressed there
-  and the poster frame stands.
-
-#### Hover
-
-Hover is feedback, not entertainment. There are **four gestures**, and a page
-uses them rather than inventing a fifth:
-
-| Gesture | Distance | Where |
-|---|---|---|
-| Colour shift | — | Row numbers, chips, grade rows, contact keys, captions |
-| Block response | — | The whole entry the pointer rests in (see below) |
-| Underline wipe | — | Nav links, project links, capability headings |
-| Lift | `--hover-lift` 2px up | Buttons and chips — things you can press |
-| Nudge | `--hover-nudge` 4px toward what it points at | Arrows, contact values, back-to-top |
-
-Plus one exception: a **slow zoom** to `--hover-zoom` (1.04) on media, and only
-inside a frame that already clips it. Never on a bare image.
-
-Two rules govern all of it:
-
-- **The row answers as a whole.** Hovering anywhere in a project entry responds
-  once, as a single block: the ground lifts to `--hover-ground`, a 2px signal
-  rule wipes down the left edge, the index and the project name take the signal
-  colour, the frame border darkens and the shot zooms. Six separate hover targets
-  inside one row is noise.
-- **The response cannot depend on the media.** Not every entry carries a
-  screenshot, and an entry without one must react exactly as legibly as an entry
-  with one. Anything keyed only to `.proj__shot` leaves the text-only entries
-  feeling dead — check a media-less block before calling a hover change done.
-- **Colour responds everywhere a pointer exists; movement asks permission.**
-  Colour and wipe gestures live in `@media (hover:hover)`. Every gesture that
-  moves something lives in `@media (hover:hover) and
-  (prefers-reduced-motion: no-preference)`, so a reader who asked for less motion
-  still gets the feedback without the travel. Neither applies on touch, where a
-  stuck hover state reads as a bug.
-
----
-
-## 5. Components
-
-The vocabulary is deliberately small. These are all of it.
-
-**`.tag`** — availability pill. One per page, in the identity block.
-
-**`.proof`** / **`.proof__item`** — the proof strip. Big mono number in `--signal`,
-mono caption under it. Three to five items on **one row** at tablet width and
-above; three per row on a phone. Every number must be verifiable.
-
-**`.sec`** / **`.sec__head`** / **`.sec__label`** / **`.sec__title`** / **`.sec__sub`** —
-section scaffolding. `.sec--alt` puts the section on `--paper-3`.
-
-**Project entry** — `.proj`, with `.proj--shot` when it carries media. Fields
-appear in this fixed order, and an entry omits a field rather than reordering:
-
-1. `.proj__no` — the index, mono.
-2. `h3` — project name, display face.
-3. `.proj__when` — date range, mono.
-4. `.proj__role` — role and commit share, mono. This is the credibility line;
-   it is never vague. Either give a countable share or say "sole author".
-5. `.proj__desc` — 40–90 words. What it does, then what *I* specifically built.
-   The second half of the paragraph must be first-person and specific.
-6. `.proj__stat` — optional single headline number.
-7. `.chips` — stack, in dependency order (language → framework → data → infra).
-8. `.proj__links` — live link first, repo second. A private repo says so in
-   `.lock` rather than showing a dead link.
-9. `.proj__shot` — screenshot or clip, with a `figcaption` naming what is shown.
-
-**Media frames.** Source screenshots arrive at whatever aspect the capture
-happened to be. They must never render at those raw sizes: every `.proj__shot`
-frame is `--ratio-shot` and the portrait is `--ratio-portrait`, with the media
-`object-fit: cover` from the top. A column of shots at six different heights
-reads as six different levels of care. Media still carries its true intrinsic
-`width`/`height` in the markup so the browser can reserve space — which means the
-reset must keep `height: auto`, or those attributes win and every shot renders
-distorted.
-
-**`.chips`** — inventory list. Never more than 14 per group; if more are needed,
-the grouping is wrong.
-
-**`.entry`** — timeline item for experience, education and awards. Same field
-order as a project: when, name, org, note.
-
-**`.facts`** / **`.fact`** — the availability block at the top of Contact. A mono
-key over a plain-language value. Reserved for facts that determine whether the
-reader can act at all: start date, thesis window. Never used for a pitch.
-
-**`.cline`** — a contact row: mono key, value. Email is first.
-
-**`.qr`** — QR tiles in the contact section, under the contact rows. Each tile
-links to the same URL it encodes, so it works whether the reader scans it from
-another device or simply clicks it. Rules:
-
-- **A QR may only encode a URL already published as a link on the page.** A QR
-  is not obfuscation — a scraper decodes one as easily as a phone does. If a
-  detail is not safe printed in plain text beside the code, it is not safe inside
-  it (see §7).
-- Codes are committed SVGs generated by `tools/make_qr.py`, never fetched from a
-  QR service: a remote image would leak every visitor to a third party.
-- **Tiles never follow the theme.** They sit on `--qr-ground` with `--qr-ink`
-  modules in both light and dark, because many phone cameras refuse an inverted
-  code. These are the only two colours exempt from the dark rendering.
-- Caption each tile with the destination, and keep the plain link above it. The
-  QR supplements the link; it never replaces it. The one exception is the tile
-  for this site: the reader is already on it, so the page itself is the link.
-- Tiles are laid out on a grid, never a wrapping flex row — four tiles must read
-  as an even block (four across, or two by two on a phone), not as three and a
-  stray. Phone tiles fill their column rather than staying at their desktop size,
-  because a larger code is an easier one to scan.
-
-**`.btn`** — `.btn--solid` (one per section, maximum) and `.btn--ghost`.
-Never three buttons in a row.
-
-**`.card`** — a raised surface. Used only for media frames and the contact form.
-Do not wrap text sections in cards.
-
----
-
-## 6. Responsiveness
-
-- Breakpoints: `900px` (two-column → one) and `620px` (compact). No others.
-- Design the 380px rendering first; the desktop layout is the enhancement.
-- Any element wider than its container scrolls inside its own
-  `overflow-x: auto` wrapper. The page body never scrolls horizontally.
-- A surface that bleeds outside its column — a hover tint, a full-width band —
-  bleeds by `--bleed`, never by a raw spacing step. `--gut` bottoms out at 20px
-  on a phone, so a fixed 24px bleed hangs 4px past the viewport on every row.
-  `body { overflow-x: hidden }` hides that but does not fix it; measure
-  `scrollWidth` against `clientWidth` at 375px rather than trusting the clip.
-- Touch targets ≥ 44px. Nav collapses to the burger below `900px`.
-- **Never put `backdrop-filter` (or `filter`, `transform`, `perspective`) on an
-  element that contains a `position:fixed` child.** Any of those make the element
-  the containing block for fixed descendants, so the mobile menu overlay would
-  size itself to the nav bar instead of the viewport and strand itself on screen
-  once the nav sticks. The nav's blur therefore lives on `.nav::before`.
-- Any overlay that opens must close three ways: the control that opened it, a tap
-  on its own blank area, and `Escape`. It must also release the scroll lock when
-  the viewport crosses back to the desktop layout.
-- Images carry explicit `width`/`height`, `loading="lazy"` (except the first
-  above-fold image, which is `fetchpriority="high"`), and `decoding="async"`.
-
----
-
-## 7. Publishing standards
-
-Non-negotiable on every page:
-
-- One `h1`. Heading levels never skip.
-- Every image has a descriptive `alt` naming what is *in* the screenshot, not
-  the project name again.
-- Visible focus ring on every interactive element (`:focus-visible`, 2px `--signal`).
-- A `.skip` link to `#main` is the first focusable element.
-- `lang` attribute set, and kept in sync by the language toggle.
-- Title, meta description, canonical, OG image present.
-- No public phone number, no downloadable CV, no third-party contact details.
-  References are named; their contact details are "available on request".
-- The same applies to anything encoded in a QR code, an image, or a `mailto:`
-  parameter. Encoding is not redaction: a `wa.me/<number>` code publishes the
-  phone number as surely as printing it would.
-- All translatable strings carry `data-i18n` keys present in both `en` and `fi`
-  dictionaries. Adding copy without its Finnish counterpart is an incomplete change.
-- No external JS or CSS beyond the Google Fonts stylesheet. Two other
-  third-party requests exist and no more may be added without a reason written
-  here: the contact form's POST to Formspree, which happens only on submit, and
-  the footer's visit counter, which is the only one that runs on load.
-- **Analytics are self-hosted or absent.** No third-party tracker, tag manager or
-  counter badge, and nothing that sets a cookie or would require a consent
-  banner. The measurement script is served from a first-party host over HTTPS,
-  is skipped on `localhost`, and is injected only when configured — an
-  unconfigured site must load nothing at all.
-- The footer shows a visit count. This is the owner's call, made knowing the
-  trade-off: unlike everything else on the site, the number is not checkable and
-  can be inflated by anyone who reloads. It therefore stays in the footer, in
-  meta type, and never becomes a claim in the proof strip, which is reserved for
-  numbers a reader could verify.
-- Any counter must **fail invisibly**. If the service is slow, down, or
-  discontinued, the line is omitted entirely — a stuck `0`, a `NaN` or a spinner
-  in the footer is worse than no counter. It must also skip `localhost`, and
-  count a visit rather than a page load, so a reload does not inflate it.
-- Any path that can fail must leave the reader somewhere to go. "Email me
-  directly" without the address is a dead end; the failure state carries the
-  address as a link. No framework, no
-  build step — the site is hand-written HTML, CSS and vanilla JS, and the footer
-  says so.
-
----
-
-## 8. Anti-patterns
-
-Recurring generated-design failures. Do not produce these.
-
-1. **The gradient hero.** Purple-to-blue washes, mesh gradients, glowing orbs,
-   animated blobs. The ground is flat paper.
-2. **Glassmorphism everywhere.** Backdrop blur is permitted on the stuck nav and
-   nowhere else.
-3. **Card soup.** Every block in a rounded, shadowed, bordered box. Cards are for
-   media frames and the form.
-4. **Emoji as iconography.** 🚀 in a heading, ✨ in a bullet. None.
-5. **Decorative stock imagery.** Unsplash desks, abstract 3D shapes, AI-generated
-   illustration. Every image is a screenshot of something real.
-6. **Unverifiable superlatives.** "Passionate", "cutting-edge", "10x",
-   "revolutionary", "world-class". If it cannot be checked, cut it.
-7. **Skill percentage bars.** "Python 87%" is invented precision. Chips only.
-8. **Centred body prose.** Centring is for the section head of a `sec--center`.
-9. **Tables that ignore the available width.** A table or code block must fill or
-   scroll its container, never overflow the page.
-10. **Two competing accent colours.** One signal colour, three permitted uses.
-11. **Text on a busy image.** Captions sit outside the frame.
-12. **A carousel.** Work is a list. Lists are scannable; carousels hide items.
-13. **"Currently learning" sections.** Ship it, then list it.
-14. **Icon-only links.** Every link has a text label; the arrow is a suffix.
-15. **Placeholder content shipped.** No lorem, no `#` hrefs, no "Project Three".
-16. **Hover theatrics.** Bounce, spring, rotation, glow, drop shadows blooming
-    on hover, cards tilting toward the cursor, text scaling up, colour cycling.
-    Four gestures exist (§4, Hover); anything else is a page showing off rather
-    than answering. Movement of more than `--hover-nudge` is always wrong.
-
----
-
-## 9. Deterministic checks
-
-`tools/design_check.py` mechanically enforces the parts of this file that can be
-checked without judgement — hard-coded colours and font sizes outside the token
-layer, missing `alt` text, heading-level skips, `data-i18n` keys missing from a
-dictionary, `#` hrefs, banned words from §1 and §8, spacing values off the scale,
-more than one `h1`, and a reset that lets `width`/`height` attributes distort
-media.
-
-Run it before publishing:
-
-```bash
-python3 tools/design_check.py
-```
-
-A non-zero exit means the page is not ready. Fix the page, not the check —
-unless the rule itself turned out to be wrong, in which case change §1–§8 first
-and let the check follow.
-
----
-
-## 10. Changing this file
-
-The file stays useful by being corrected against real output, not by being
-complete in the abstract. When a generated page is wrong:
-
-1. Write down the specific complaint ("the role line was vague", "it invented a
-   third colour").
-2. Decide where it belongs: a rule here, an addition to the stylesheet, or a
-   deterministic check.
-3. Encode it in exactly one of those places.
-4. Watch whether the same complaint recurs. If it does, the rule was too soft —
-   make it a check.
+# Portfolio design
+
+## Reference and direction
+
+The current navigation and homepage composition follow the interaction pattern of
+[Ansyn](https://ansyn.me/): a round menu trigger, a right-side panel with a curved
+entry edge, and large index rows with image previews. The reference was visually
+inspected on 10 September 2026. This is our own HTML, CSS and JavaScript; source
+code, biography, project assets and branding are not copied. The navy, slate and
+teal palette carries forward the earlier Brittany Chiang-inspired portfolio.
+
+## Structure
+
+The homepage has the Think / Build / Ship opening, an interactive Earth section, and eight title-only section links:
+About, Work, More projects, AI systems, Experience, Capabilities, Notes, Contact.
+There is no permanently visible profile column. Hover or keyboard focus reveals
+a preview; fine-pointer movement shifts it within the row. Touch devices show
+small static previews and follow each link on the first tap. Use the owner's real
+portrait and product media, or clearly illustrative typography/diagrams. Never
+invent product screenshots or new factual claims for a preview.
+
+Each index link leads to a real static HTML detail page. About retains the profile,
+portrait, availability and languages. Work contains four featured projects and
+links to their case studies. More projects retains the five archive entries.
+AI systems retains the interactive architecture and baseline sandbox. Experience
+retains education, dates, grades, hackathons and references. Capabilities retains
+the toolkit. Notes retains all four existing engineering articles. Contact retains
+the existing form, links, availability information and four QR codes.
+
+The shared fixed header has a monogram home link, index link and round menu button. Do not repeat the full name in the header; the homepage carries it as a small signature. The
+native modal dialog slides from the right, with an animated curved leading edge,
+staggered links and a dimmed backdrop. The menu contains all section links,
+language controls, social links and the existing visit count. Its interior scrolls
+on short screens, with the close control remaining visible. Escape, the close
+button and the backdrop dismiss it; focus returns to the trigger. Native modal
+behavior contains keyboard focus. Without JS, the index link remains available.
+
+All detail and note pages use the same menu and provide a route back to the index.
+Keep all routes directly loadable on GitHub Pages, with no server-side router.
+Preserve valid fragment targets when moving content to another page. Detail pages
+have one h1 and properly nested subheadings. No Chinese characters appear in copy.
+
+## Tokens
+
+Declare all colours and font sizes in the stylesheet token layer.
+
+- Ground `--paper`: #0F172A; surface `--paper-2`: #17243B.
+- Raised / hover ground `--paper-3`: #19263D.
+- Primary text `--ink`: #E2E8F0; body `--ink-2`: #A3AFC4.
+- Secondary text `--ink-3`: #94A3B8; accent `--signal`: #5EEAD4.
+- Accent ground `--signal-ground`: rgba(45,212,191,.10).
+- The navy theme is intentional in both system appearances, matching the reference.
+- Inter for name, headings and prose; JetBrains Mono for indices and dates.
+- Profile name 32–40px fluid, role 20px, body 16px, project prose 14px, meta 12px.
+- Spacing tokens: 4, 8, 16, 24, 32, 48, 64, 96, 128px.
+- Rounded corners are restrained (6px); pill radius applies only to technology tags.
+- Screenshots fill the project width at their natural aspect ratio; never stretch source UI.
+- QR tiles always remain white. Preserve real intrinsic media dimensions.
+
+## Motion
+
+Reference-led motion is part of the page: navigation rules extend on focus,
+hover or active section; rows gain a subtle surface; project titles and arrows
+respond; screenshots zoom gently. Retain staggered scroll entrances, pointer
+response on buttons, small image tilt and a restrained pointer spotlight.
+Use at most 2px row travel and .4 degree row tilt, 1.5 degree image tilt, 4px
+button attraction. Native scrolling, no scroll interception or custom cursor.
+
+Content is visible without JavaScript. Entry animations only begin on intersection
+and do not retain animation styles after completion. Batch pointer input in one
+requestAnimationFrame and stop rendering while idle. Reset on pointer exit,
+scroll, resize, blur and preference changes. Respect prefers-reduced-motion,
+cancel in-flight animations and pause video when that setting changes. Ambient animation is limited to the opening and Earth canvases, pauses offscreen or in a hidden tab, and has visible pause controls. Keyboard focus must remain visible and readable.
+
+## Content and accessibility
+
+Preserve dates, contribution counts, ownership, links, references, work-in-progress
+status and original meaning. All new/edited strings must have EN and FI copies.
+One h1, semantic section h2s, descriptive media alt, first-focusable skip link,
+44px links/controls, native form validation, proper language state, no placeholders.
+Body/meta contrast >=4.5:1. Screenshots and text must not overflow at 320px.
+
+## Existing integrations
+
+Keep the static GitHub Pages architecture, existing Formspree endpoint, optional
+self-hosted analytics, local-preview exclusions, and existing visit counter.
+Keep the canonical and social image. Do not add public phone numbers, CV downloads
+or third-party reference contact details. Form failure includes a direct email.
+No externally hosted runtime scripts. The Earth section uses pinned, locally hosted D3 geographic helpers and TopoJSON with locally stored Natural Earth data. Licenses and versions are included beside the assets. Google Fonts remains in use.
+
+## Verification
+
+Run `python3 tools/design_check.py` and JS syntax checks. Inspect desktop and
+mobile, both languages, section navigation, hover/reset and local media loading.
+Do not send a real enquiry during testing. Local work does not publish the site.
+
+## Engineering notes and explorer
+
+The JobAI explorer explains four stages: data, forecasting, evaluation and sourced
+explanations. It is explicitly an architecture walkthrough, not a live model run.
+The evaluation stage includes a browser-only baseline sandbox with explicitly
+illustrative quarterly values. A cutoff slider and method selector update the
+forecast and absolute error; this is not project evaluation evidence.
+Use accessible tabs with arrow/Home/End keys; without JavaScript all panels remain
+readable through anchor links. Respect reduced motion when changing stages.
+
+Longer project material belongs on separate static article pages, linked from the
+homepage and notes.html. Distinguish implemented functionality, planned work and
+unmeasured results. Do not invent benchmark wins or personal design decisions.
+Articles and controls have both English and Finnish copy. Featured projects link
+to their matching article; notes.html also retains the JobAI research note.
+
+The visit count is available inside the navigation drawer. Local previews read the existing total
+without incrementing it; the live site counts a session once where sessionStorage
+is available. Show an honest unavailable state on errors. This is a session count,
+not a measurement of unique people. Leave the existing counter namespace intact.
+
+## Kinetic opening
+
+Think. Build. Ship. is the oversized, three-line headline. English and Finnish
+word lengths have separate fluid type scales. The owner's name is a small link
+above the headline, alongside the role; the top bar contains only the wy. monogram.
+
+Words enter through a staggered vertical mask. A local Canvas field changes from
+an idea-like ring to a cube structure and then flowing signal lines. The active
+word and matching process step share a teal accent. Steps can be selected by mouse
+or keyboard, which pauses the cycle. A visible pause/resume control covers both
+ambient motion and text entrances. Rendering uses a glyph atlas, 30fps cap and
+1.5 device pixel ratio, with fewer points on mobile. Pause, an open drawer,
+offscreen, hidden-tab and reduced-motion states stop the animation. Reduced motion
+retains static typography and allows deliberate step selection. Without JS the
+whole heading and process remain visible, with inactive step controls disabled.
+The opening footer contains one full-width link to the Earth section; do not add the old AI agents, Search systems or Product delivery shortcuts. Native scrolling leads into the Earth section and then the title index.
+
+## Earth section
+
+An orthographic globe highlights Shanghai, Bangkok and Helsinki, chosen by the
+owner. Only Helsinki is described as the current base; no other residence or travel
+history is implied. Country outlines come from the local 110m Natural Earth dataset.
+City pins use approximate city-centre coordinates and open native detail cards with
+time-zone-aware clocks, coordinates and map links. Cards remain usable without JS.
+
+Drag, arrow keys and explicit rotation controls explore the globe. Selecting a city
+turns toward it; reset restores a view containing all three cities. Deliberate rotation
+pauses ambient motion. Reduced motion disables automatic movement and animated
+camera travel. Rendering is capped at 30fps and 1.5 DPR, and pauses with the menu,
+offscreen, hidden tab or an open city card (after camera travel completes). Vertical
+touch scrolling remains native. Map data loads near the viewport; a geographic SVG
+remains visible on failure and without JavaScript. Rebuild it with
+`node tools/build_earth_fallback.cjs` after changing geographic data or map colours.
+
+## Linux lab project
+
+The fourth featured project is the owner's self-hosted Linux environment, linked
+to homelab.html. Its authentic dashboard image was supplied by the owner and is
+captioned as an August 2026 snapshot. Service badges in that image are historical.
+Describe third-party applications as software the owner hosts and operates, never
+as products they authored. Do not add public links to private administration UIs.
+
+A read-only check on 10 September 2026 established Ubuntu 24.04 LTS, x86-64,
+12 logical CPUs and about 31 GiB of usable OS-reported memory through Prometheus.
+Grafana, Node Exporter and Prometheus scrape targets were up, and the Coolify login
+endpoint responded. This does not establish application-wide uptime, backup
+restoration, hardening or alert response. Keep those distinctions in project copy.

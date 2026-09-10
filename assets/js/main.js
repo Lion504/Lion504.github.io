@@ -39,7 +39,9 @@
     });
 
     document.documentElement.lang = next;
-    if (dict._title) document.title = dict._title;
+    var pageTitle = document.body.getAttribute('data-title-key');
+    if (pageTitle && dict[pageTitle]) document.title = dict[pageTitle] + ' — Wang Yongzhi';
+    else if (dict._title) document.title = dict._title;
 
     $$('.lang__btn').forEach(function (b) {
       var on = b.getAttribute('data-lang') === next;
@@ -48,6 +50,7 @@
     });
 
     try { localStorage.setItem('wy-lang', next); } catch (e) { /* private mode */ }
+    document.dispatchEvent(new Event('portfolio:language'));
   }
 
   $$('.lang__btn').forEach(function (b) {
@@ -61,61 +64,6 @@
     if ((navigator.language || '').toLowerCase().indexOf('fi') === 0) applyLang('fi');
   })();
 
-  /* ═══ Sticky nav ═══ */
-  var nav = $('#nav');
-  var onScroll = function () { nav.classList.toggle('is-stuck', window.scrollY > 24); };
-  onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
-
-  /* ═══ Mobile menu ═══ */
-  var burger = $('.burger');
-  var links  = $('.nav__links');
-  function closeMenu() {
-    links.classList.remove('is-open');
-    burger.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
-  }
-  burger.addEventListener('click', function () {
-    var open = links.classList.toggle('is-open');
-    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-    document.body.style.overflow = open ? 'hidden' : '';
-  });
-  $$('.nav__links a').forEach(function (a) { a.addEventListener('click', closeMenu); });
-
-  /* Tapping the blank area of the overlay closes it. The overlay fills the
-     screen, so "outside the menu" is the overlay's own background — a tap that
-     lands on the panel itself rather than on one of its links. */
-  links.addEventListener('click', function (e) { if (e.target === links) closeMenu(); });
-
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
-
-  /* Crossing back to the desktop layout with the menu open would otherwise
-     leave the page scroll-locked with no visible way to release it. */
-  window.addEventListener('resize', function () {
-    if (window.innerWidth > 900 && links.classList.contains('is-open')) closeMenu();
-  });
-
-  /* ═══ Scroll reveal ═══ */
-  var reveals = $$('.reveal');
-  if (!('IntersectionObserver' in window)) {
-    reveals.forEach(function (el) { el.classList.add('is-in'); });
-  } else {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (!en.isIntersecting) return;
-        en.target.classList.add('is-in');
-        io.unobserve(en.target);
-      });
-    }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
-
-    reveals.forEach(function (el, i) {
-      // stagger only within the first screen, so later sections land promptly
-      var top = el.getBoundingClientRect().top;
-      if (top < window.innerHeight) el.style.setProperty('--d', (i * 90) + 'ms');
-      io.observe(el);
-    });
-  }
-
   /* ═══ Project video: play only while on screen ═══
      preload="none" in the markup, so the file is not fetched at all unless
      the row is actually reached. Honours prefers-reduced-motion, where the
@@ -124,13 +72,17 @@
     var vids = $$('.proj__shot video');
     if (!vids.length) return;
 
-    var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (still || !('IntersectionObserver' in window)) return;
+    var preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (!('IntersectionObserver' in window)) return;
 
     var vo = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         var v = en.target;
-        if (en.isIntersecting) {
+        if (v.hasAttribute('data-user-playback')) {
+          if (!en.isIntersecting) v.pause();
+          return;
+        }
+        if (en.isIntersecting && !preference.matches) {
           if (v.preload === 'none') v.preload = 'auto';
           var p = v.play();
           if (p && p.catch) p.catch(function () { /* autoplay refused; poster stands */ });
@@ -141,6 +93,13 @@
     }, { threshold: 0.35 });
 
     vids.forEach(function (v) { vo.observe(v); });
+    preference.addEventListener('change', function () {
+      vids.forEach(function (v) {
+        v.pause();
+        vo.unobserve(v);
+        vo.observe(v);
+      });
+    });
   })();
 
   /* ═══ Contact form ═══ */
@@ -169,7 +128,7 @@
     status.appendChild(a);
   }
 
-  form.addEventListener('submit', function (e) {
+  if (form) form.addEventListener('submit', function (e) {
     e.preventDefault();
 
     if (!form.checkValidity()) { say(t('form.invalid'), 'err'); return; }
@@ -223,43 +182,41 @@
     document.head.appendChild(s);
   })();
 
-  /* ═══ Visit counter ═══
-     A free, no-signup counter (abacus). Three deliberate constraints:
-
-     - It fails invisibly. If the service is slow, down, or gone for good,
-       the footer simply omits the line. A stuck 0 or a NaN in the footer
-       would be worse than no counter at all.
-     - It counts a visit, not a keypress. After the first hit of a session
-       it reads with /get/ instead of /hit/, so reloading the page does not
-       inflate the number.
-     - It is skipped on localhost, so development never reaches the count. */
+  /* Read the existing total in local previews; count once per session on the live site.
+     This service measures sessions, not verified unique people. */
   (function visits() {
-    var box = document.getElementById('hits');
-    var out = document.getElementById('hitsN');
+    var box = $('#hits'), out = $('#hitsN'), note = $('#hitsNote');
     if (!box || !out) return;
-
     var host = location.hostname;
-    if (host === 'localhost' || host === '127.0.0.1' || host === '') return;
-
+    var preview = host === 'localhost' || host === '127.0.0.1' || host === '[::1]' || host === '';
+    var state = 'loading', total = null;
+    function render() {
+      out.textContent = total === null ? t('counter.' + state) : total.toLocaleString(lang);
+      if (note) note.textContent = preview ? t('counter.preview') : t('counter.sessions');
+    }
+    document.addEventListener('portfolio:language', render);
+    render();
     var counted = null;
     try { counted = sessionStorage.getItem('wy-counted'); } catch (e) { /* private mode */ }
-
     var url = 'https://abacus.jasoncameron.dev/' +
-              (counted ? 'get' : 'hit') + '/lion504-github-io/home';
-
-    fetch(url).then(function (res) {
+      ((preview || counted) ? 'get' : 'hit') + '/lion504-github-io/home';
+    var controller = new AbortController();
+    var timeout = setTimeout(function () { controller.abort(); }, 6000);
+    fetch(url, { signal: controller.signal }).then(function (res) {
       if (!res.ok) throw new Error('HTTP ' + res.status);
       return res.json();
     }).then(function (data) {
-      if (typeof data.value !== 'number') throw new Error('unexpected payload');
-      try { sessionStorage.setItem('wy-counted', '1'); } catch (e) { /* ignore */ }
-      out.textContent = data.value.toLocaleString();
-      box.hidden = false;
+      if (!Number.isSafeInteger(data.value) || data.value < 0) throw new Error('unexpected payload');
+      if (!preview) {
+        try { sessionStorage.setItem('wy-counted', '1'); } catch (e) { /* private mode */ }
+      }
+      total = data.value;
+      state = 'ready';
     }).catch(function () {
-      /* counter unavailable — the footer stays as it was */
-    });
+      state = 'unavailable';
+    }).finally(function () { clearTimeout(timeout); render(); });
   })();
 
   /* ═══ Footer year ═══ */
-  $('#yr').textContent = String(new Date().getFullYear());
+  if ($('#yr')) $('#yr').textContent = String(new Date().getFullYear());
 })();
