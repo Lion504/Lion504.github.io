@@ -110,7 +110,7 @@ unmeasured results. Do not invent benchmark wins or personal design decisions.
 Articles and controls have both English and Finnish copy. Featured projects link
 to their matching article; notes.html also retains the JobAI research note.
 
-The visit count is available inside the navigation drawer. Local previews read the existing total
+The visit count is visible in the footer on every page. Local previews read the existing total
 without incrementing it; the live site counts a session once where sessionStorage
 is available. Show an honest unavailable state on errors. This is a session count,
 not a measurement of unique people. Leave the existing counter namespace intact.
