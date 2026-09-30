@@ -348,7 +348,7 @@ window.I18N = {
     "exp.note":
       "A decade running project delivery before I moved to Finland and into software engineering. The management half of my CV is not new: planning, stakeholder communication and shipping to a deadline are things I did professionally for ten years — which is why I took the Scrum Master role on JobAio rather than avoiding it.",
     "int.role": "Software Engineering Intern",
-    "int.org": "Metropolia Software Factory",
+    "int.org": "Metropolia SW Factory",
     "int.note": "I joined in September 2026 on a team building a Unity digital twin of a real innovation-lab space, with an AI assistant behind it. I am still learning the codebase, so I am not claiming any part of it yet; this entry will gain specifics as I ship them.",
     "shot.jobsresearch":
       "Admin · the multi-provider LLM engine behind every feature",
@@ -771,7 +771,7 @@ window.I18N = {
     "exp.note":
       "Kymmenen vuotta projektien johtamista ennen muuttoani Suomeen ja siirtymistäni ohjelmistokehitykseen. Ansioluetteloni johtamispuoli ei ole uusi: suunnittelu, sidosryhmäviestintä ja aikataulussa toimittaminen ovat asioita, joita tein ammatikseni kymmenen vuotta — siksi otin JobAio-projektissa Scrum Master -roolin sen sijaan että olisin välttänyt sitä.",
     "int.role": "Ohjelmistokehityksen harjoittelija",
-    "int.org": "Metropolia Software Factory",
+    "int.org": "Metropolia SW Factory",
     "int.note": "Aloitin syyskuussa 2026 tiimissä, joka rakentaa Unity-digitaalista kaksosta todellisesta innovaatiotilasta tekoälyavustajan kanssa. Opettelen vielä koodikantaa, joten en väitä vielä mitään sen osaa omakseni; tämä kohta täsmentyy sitä mukaa kun julkaisen jotain.",
     "shot.jobsresearch":
       "Ylläpito · monen palveluntarjoajan LLM-moottori kaikkien toimintojen takana",
