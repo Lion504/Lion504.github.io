@@ -288,6 +288,13 @@ button,a,input,textarea{-webkit-tap-highlight-color:transparent;}
 .journal__status{font-size:var(--fs-caption);color:var(--signal);margin-top:var(--sp-4);}
 .note__flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--sp-2);margin-block:var(--sp-6);}
 .note__flow li{display:flex;align-items:center;justify-content:center;min-height:80px;padding:var(--sp-3);border:1px solid var(--line);background:var(--paper-2);border-radius:var(--radius);font-size:var(--fs-meta);color:var(--signal);text-align:center;}
+/* Chart figures inside an article. Unlike .proj__shot they keep their own aspect
+   ratio: a chart cropped to a fixed frame loses its axes and its legend. */
+.note__fig{margin:var(--sp-7) 0 0;}
+.note__fig .card{aspect-ratio:auto;}
+.note__fig .card img{width:100%;height:auto;object-fit:contain;}
+.note__fig figcaption{margin-top:var(--sp-3);max-width:68ch;color:var(--ink-3);}
+.note__fig+.journal__body section:first-child{margin-top:var(--sp-7);}
 .journal__body{max-width:68ch;}
 .journal__body section{margin-top:var(--sp-6);}
 .journal__body h2{font-size:var(--fs-role);line-height:1.4;margin-bottom:var(--sp-3);}
