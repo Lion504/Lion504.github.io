@@ -282,6 +282,7 @@ button,a,input,textarea{-webkit-tap-highlight-color:transparent;}
 .journal__nav>a,.journal__footer>a{display:inline-flex;align-items:center;min-height:44px;color:var(--signal);}
 .journal{padding-block:var(--sp-6);}
 .journal__head{margin-bottom:var(--sp-6);}
+.notfound-links{display:flex;flex-wrap:wrap;gap:var(--sp-3);}
 .journal__head>.mono{color:var(--signal);margin-bottom:var(--sp-4);}
 .journal h1{font-size:clamp(2rem,5vw,3rem);line-height:1.12;letter-spacing:-.04em;max-width:22ch;}
 .journal__deck{font-size:var(--fs-role);line-height:1.6;margin-top:var(--sp-4);}
@@ -552,6 +553,7 @@ html.menu-open{overflow:hidden;}
 .detail-main>.sec{padding-bottom:var(--sp-6);scroll-margin-top:var(--sp-7);}
 .detail-main .proj,.detail-main .system-panel{scroll-margin-top:var(--sp-8);}
 .detail-main .sec__head{margin-bottom:var(--sp-6);}
+.detail-main #work .sec__head{margin-bottom:var(--sp-5);}
 .detail-title{font-size:var(--fs-detail);line-height:1.08;letter-spacing:-.055em;max-width:16ch;}
 .detail-role{font-size:var(--fs-role);margin-top:var(--sp-4);color:var(--signal);}
 .detail-main .sec__sub{font-size:var(--fs-role);}

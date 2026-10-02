@@ -6,7 +6,7 @@
      to '' the form still works, falling back to opening the visitor's own
      mail client with the message pre-filled. Nothing breaks either way. */
   var FORM_ENDPOINT = 'https://formspree.io/f/xvkovqld';
-  var EMAIL = 'Lehtonen6677@gmail.com';
+  var EMAIL = 'lehtonen6677@gmail.com';
 
   /* ── Analytics ──────────────────────────────────────────────────────
      Self-hosted Umami. Both values come from your own instance, so the

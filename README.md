@@ -13,6 +13,8 @@ index.html                    Think / Build / Ship opening + interactive globe +
 about.html / work.html / projects.html  profile, featured projects and project archive
 ai-systems.html / experience.html / capabilities.html  full section details
 contact.html                  contact form, links and QR codes
+404.html                      custom not-found page (root-absolute URLs, noindex)
+sitemap.xml / robots.txt      search-engine discovery; refresh sitemap lastmod dates when pages change
 assets/css/design-system.css  the token vocabulary DESIGN.md describes
 assets/js/i18n.js             EN / FI dictionary — edit copy here
 assets/js/main.js             language toggle, project video, contact form

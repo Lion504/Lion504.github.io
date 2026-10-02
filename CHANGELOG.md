@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+- Added a custom **404 page** in the site style, with root-absolute URLs so it works at any path, `noindex`, and English/Finnish copy.
+- Added `sitemap.xml` (every public page, with last-modified dates) and `robots.txt`.
+- Corrected the About call to action to say the **four** featured projects.
+- Lowercased the contact email address everywhere it appears.
+- Tightened the spacing under the Work heading so the first project starts above the fold on short and mobile screens.
+
 ## 2.0.0 — 2026-09-10
 
 - Replaced the name-led opening with an animated **Think. Build. Ship.** composition and a small personal signature.
