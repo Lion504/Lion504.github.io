@@ -7,6 +7,7 @@
 - Corrected the About call to action to say the **four** featured projects.
 - Lowercased the contact email address everywhere it appears.
 - Tightened the spacing under the Work heading so the first project starts above the fold on short and mobile screens.
+- Added **structured data** (schema.org `ProfilePage` / `Person`) to the homepage: name, job title, Metropolia, Helsinki and LinkedIn/GitHub profiles, so search engines can connect them.
 
 ## 2.0.0 — 2026-09-10
 
