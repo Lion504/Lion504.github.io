@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Turned on **self-hosted Umami analytics** (cookieless). The tracker loads from the owner's Umami instance over HTTPS through Tailscale Funnel, only on the live site; local previews are never counted. Bumped `main.js` to `v=2.0.3` on every page.
+
 - Updated the site to the **19 October 2026 CV**: machine learning engineering student and degree, forward-deployed engineer (FDE) added to the roles sought, 9 projects, **Digital Twin Architecture Trainee** (09/2026 – present), a vocational diploma in Software Technology, and Finnish at a conversational level (CEFR A2), 20 ECTS.
 - JobsResearch: built with a team of **8 AI agents** in builder, reviewer, verifier and coordinator roles under a written loop engineering process; the role line now reads "8-agent AI team manager".
 - The presentation to Metropolia's President and CEO now records selection as the **only student** to present in the leadership session (Experience and the JobsResearch case study).

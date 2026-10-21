@@ -101,7 +101,8 @@ never injected on `localhost`, so local previews are not counted.
 **It must be served over HTTPS.** This site is HTTPS, so a script from an
 `http://` host is blocked as mixed content and you will silently get no data. A
 bare IP will not do — give the instance a domain and let Coolify issue the
-certificate.
+certificate. Tailscale Funnel also works without a domain: publish only Umami's
+port (for example 8443), never the port your dashboard uses.
 
 Coolify: **New Resource → Umami** (one-click; it provisions PostgreSQL too),
 give it a subdomain, then log in with `admin` / `umami` and change the password

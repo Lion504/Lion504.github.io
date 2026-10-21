@@ -17,8 +17,8 @@
        ANALYTICS_ID   = the website ID Umami shows in Settings
 
      Leave either empty and no script is injected at all. See README. */
-  var ANALYTICS_HOST = '';
-  var ANALYTICS_ID   = '';
+  var ANALYTICS_HOST = 'https://timoserver.tailca12c6.ts.net:8443';
+  var ANALYTICS_ID   = 'ccf081bf-63d7-406e-93f5-9820f7a96d48';
 
   var $  = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
