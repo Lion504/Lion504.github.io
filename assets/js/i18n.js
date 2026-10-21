@@ -166,9 +166,9 @@ window.I18N = {
     "case.jobsresearch-decisions.h1": "What the evidence establishes",
     "case.jobsresearch-decisions.p1": "Since July 2026 the platform has collected 100,000+ postings from five sources, and 8,000+ have been analysed against a CV. This demonstrates processing scope, not match accuracy. A useful walkthrough should inspect a posting, its score and explanation, and the available follow-up actions together. The repository is private, so a guided walkthrough is the route to deeper implementation review.",
     "case.jobsresearch-decisions.h2": "How it was built",
-    "case.jobsresearch-decisions.p2": "I built JobsResearch with a role-based team of AI agents — builder, reviewer, verifier and coordinator — working under a written engineering process. From August to October 2026 that came to about 4,700 commits and 1,500 merged pull requests (counted on 9 October 2026). Every code change passes automated tests and a Jenkins + SonarQube quality gate. The counts describe throughput; the tests and the gate are what hold each change to a standard.",
+    "case.jobsresearch-decisions.p2": "I built JobsResearch with a team of 8 AI agents in builder, reviewer, verifier and coordinator roles, working under a written loop engineering process. From August to October 2026 that came to about 4,700 commits and 1,500 merged pull requests (counted on 9 October 2026). Every code change passes automated tests and a Jenkins + SonarQube quality gate. The counts describe throughput; the tests and the gate are what hold each change to a standard.",
     "case.jobsresearch-decisions.h3": "Presentation to Metropolia's President and CEO (Oct 2026)",
-    "case.jobsresearch-decisions.p3": "Selected by the School of ICT and Industrial Management to present JobsResearch to President and CEO Marko Hakovirta, school leadership, teachers and students.",
+    "case.jobsresearch-decisions.p3": "Selected by the School of ICT and Industrial Management as the only student to present in the leadership session. Presented JobsResearch, a job-market platform I built with a team of 8 AI agents, to President and CEO Marko Hakovirta, school leadership and teachers.",
     "case.clboost-beyond-generation.h0": "Where the responsibilities sit",
     "case.clboost-beyond-generation.p0": "Vaadin provides the server-side Java interface, Spring Boot hosts the application, and Spring AI connects to Gemini. The documented generation path loads a profile, parses the uploaded CV, calls the AI service and presents an editable result. Docker packages the application; Jenkins and SonarQube support the delivery and quality workflow.",
     "case.clboost-beyond-generation.h1": "What the demonstration establishes",
@@ -284,7 +284,7 @@ window.I18N = {
     "lab.3.output": "A planned explanation layer with traceable sources. It cannot establish forecast accuracy by itself.",
     "nav.lab": "AI systems",
     "about.background": "Ten years in project delivery taught me to turn complex requirements into working software. Now I apply that experience to AI products, from model integration to deployment.",
-    "about.intro": "I’m a software engineering student at <strong>Metropolia UAS in Helsinki</strong>, focused on applied AI, backend systems and full-stack development. I build the whole system: agents, semantic search, model routing, and the pipelines that ship it.",
+    "about.intro": "I’m a machine learning engineering student at <strong>Metropolia UAS in Helsinki</strong>, focused on applied AI, backend systems and full-stack development. I build the whole system: agents, semantic search, model routing, and the pipelines that ship it.",
     "profile.tagline": "I build AI agents, search systems and the infrastructure that brings them to life.",
     "sec.about": "About",
     "nav.about": "About",
@@ -305,7 +305,7 @@ window.I18N = {
     "hero.cta2": "Get in touch",
     "hero.cv": "Download CV",
     "hero.loc": "Helsinki, Finland",
-    "hero.fi": "FI: working level (CEFR A2), 20 ECTS",
+    "hero.fi": "FI: conversational (CEFR A2), 20\u00a0ECTS",
 
     "stat.ects": "ECTS completed",
     "stat.grad": "Expected graduation",
@@ -318,16 +318,16 @@ window.I18N = {
     "work.title": "Ideas into working software.",
     "link.live": "Live site",
 
-    "p1.role": "Sole author — AI Systems Architect &amp; Full-stack",
+    "p1.role": "Sole author — 8-agent AI team manager, AI Systems Architect &amp; Full-stack",
     "p1.stat": "postings scraped and LLM-scored to date",
     "p1.private": "Private repo — walkthrough available on request",
 
-    "p2.role": "Sole author — 45 of 45 commits · 14 GitHub stars",
+    "p2.role": "Sole author, full-stack developer &amp; data engineer — 45 of 45 commits · 14 GitHub stars",
     "p2.desc":
       "An interactive visualiser of the Finnish job market, combining StatFin occupational data with AI-exposure scoring. I self-hosted the supporting Linux infrastructure and the observability stack behind it.",
     "p2.stat": "GitHub stars",
 
-    "p3.role": "Lead contributor — 183 of 263 commits, team of four",
+    "p3.role": "Frontend &amp; DevOps Lead — 183 of 263 commits, team of four",
     "p3.desc":
       "A Gemini-powered cover-letter generator in six languages, including right-to-left support. I led frontend and DevOps: the Vaadin interface, Docker image and Jenkins pipeline. I also contributed across the Spring Boot backend, with JMeter load tests and SonarQube quality checks.",
 
@@ -356,7 +356,7 @@ window.I18N = {
     "exp.org": "China",
     "exp.note":
       "A decade running project delivery before I moved to Finland and into software engineering. The management half of my CV is not new: planning, stakeholder communication and shipping to a deadline are things I did professionally for ten years — which is why I took the Scrum Master role on JobAio rather than avoiding it.",
-    "int.role": "Software Engineering Intern",
+    "int.role": "Digital Twin Architecture Trainee",
     "int.org": "Metropolia SW Factory",
     "int.note": "I joined in September 2026 on a team building a Unity digital twin of a real innovation-lab space, with an AI assistant behind it. The project had gone untouched for two years, so my work so far is the groundwork: cleaning up the repository, building an architecture map, setting up an automated testing system in CI and writing the documentation it was missing.",
     "shot.jobsresearch":
@@ -392,10 +392,10 @@ window.I18N = {
     "c.eth": "Ethical Hacking",
     "c.stat": "Probability &amp; Statistics",
     "c.fin": "Finnish 1–4 (20 ECTS)",
-    "edu.voc": "Vocational School Diploma",
+    "edu.voc": "Vocational School Diploma in Software Technology",
     "edu.voc.org": "China · 4.25 / 5.0",
     "aw0.h": "Presentation to Metropolia's President and CEO",
-    aw0: "Selected by the School of ICT and Industrial Management to present JobsResearch to President and CEO Marko Hakovirta, school leadership, teachers and students.",
+    aw0: "Selected by the School of ICT and Industrial Management as the only student to present in the leadership session. Presented JobsResearch, a job-market platform I built with a team of 8 AI agents, to President and CEO Marko Hakovirta, school leadership and teachers.",
     aw1: "Formed a team with Finnish participants for Peikko's BIM metadata challenge with zero prior domain experience. Over nearly forty sleepless hours we climbed the learning curve and finished in the top ten of nearly two hundred submissions.",
     aw2: "Returned for a second year and delivered MoneyMoves — a browser-based 3D finance-education game — as gameplay and backend developer.",
     aw3: "Competed in the Unbreakable Connectivity track, November 2024.",
@@ -408,7 +408,7 @@ window.I18N = {
     "sec.contact": "Contact",
     "contact.title": "Let's talk.",
     "contact.sub":
-      "I'm looking for a junior or graduate position as an AI engineer, backend or full-stack developer from January 2027 — in Helsinki or remote across the EU.",
+      "I'm looking for a junior or graduate position as an AI engineer, forward-deployed engineer (FDE), backend or full-stack developer from January 2027 — in Helsinki or remote across the EU.",
     "contact.wa": "Message me <i>\u2197</i>",
     "contact.loc": "Location",
     "qr.lbl": "Scan to connect",
@@ -596,9 +596,9 @@ window.I18N = {
     "case.jobsresearch-decisions.h1": "Mitä näyttö osoittaa",
     "case.jobsresearch-decisions.p1": "Heinäkuusta 2026 lähtien alusta on kerännyt yli 100 000 ilmoitusta viidestä lähteestä, ja yli 8 000 on arvioitu CV:tä vasten. Se kuvaa käsittelyn laajuutta, ei osuvuuden tarkkuutta. Hyödyllisessä esittelyssä tarkastellaan yhdessä ilmoitusta, pisteitä, perustelua ja jatkotoimia. Koodivarasto on yksityinen, joten tarkempi toteutuksen arviointi onnistuu ohjatulla esittelyllä.",
     "case.jobsresearch-decisions.h2": "Miten se rakennettiin",
-    "case.jobsresearch-decisions.p2": "Rakensin JobsResearchin roolipohjaisen tekoälyagenttitiimin kanssa — rakentaja, arvioija, varmentaja ja koordinaattori — kirjatun kehitysprosessin mukaisesti. Elo–lokakuussa 2026 kertyi noin 4 700 committia ja 1 500 yhdistettyä pull requestia (laskettu 9.10.2026). Jokainen koodimuutos läpäisee automaattiset testit sekä Jenkins- ja SonarQube-laatuportin. Määrät kuvaavat työtahtia; testit ja laatuportti pitävät jokaisen muutoksen tasolla.",
+    "case.jobsresearch-decisions.p2": "Rakensin JobsResearchin kahdeksan tekoälyagentin tiimin kanssa, jonka roolit ovat rakentaja, arvioija, varmentaja ja koordinaattori, kirjatun loop engineering -prosessin mukaisesti. Elo–lokakuussa 2026 kertyi noin 4 700 committia ja 1 500 yhdistettyä pull requestia (laskettu 9.10.2026). Jokainen koodimuutos läpäisee automaattiset testit sekä Jenkins- ja SonarQube-laatuportin. Määrät kuvaavat työtahtia; testit ja laatuportti pitävät jokaisen muutoksen tasolla.",
     "case.jobsresearch-decisions.h3": "Esitys Metropolian rehtorille ja toimitusjohtajalle (lokakuu 2026)",
-    "case.jobsresearch-decisions.p3": "Metropolian School of ICT and Industrial Management valitsi minut esittelemään JobsResearchin. Yleisössä olivat rehtori ja toimitusjohtaja Marko Hakovirta, osaamisalueen johto, opettajat ja opiskelijat.",
+    "case.jobsresearch-decisions.p3": "Metropolian School of ICT and Industrial Management valitsi minut ainoana opiskelijana esiintymään johdon tilaisuudessa. Esittelin JobsResearchin, jonka rakensin kahdeksan tekoälyagentin tiimin kanssa. Yleisössä olivat rehtori ja toimitusjohtaja Marko Hakovirta, osaamisalueen johto ja opettajat.",
     "case.clboost-beyond-generation.h0": "Vastuiden jakautuminen",
     "case.clboost-beyond-generation.p0": "Vaadin tuottaa palvelinpuolen Java-käyttöliittymän, Spring Boot isännöi sovellusta ja Spring AI yhdistää Geminiin. Dokumentoitu tuottamispolku lataa profiilin, jäsentää ladatun CV:n, kutsuu tekoälypalvelua ja esittää muokattavan tuloksen. Docker paketoi sovelluksen; Jenkins ja SonarQube tukevat julkaisu- ja laatutyönkulkua.",
     "case.clboost-beyond-generation.h1": "Mitä esittely osoittaa",
@@ -714,7 +714,7 @@ window.I18N = {
     "lab.3.output": "Suunniteltu selityskerros jäljitettävine lähteineen. Se ei yksin osoita ennusteen tarkkuutta.",
     "nav.lab": "Tekoäly",
     "about.background": "Kymmenen vuotta projektitoimituksissa opetti muuttamaan monimutkaiset vaatimukset toimiviksi ohjelmistoiksi. Nyt sovellan kokemusta tekoälytuotteisiin mallien integroinnista julkaisuun.",
-    "about.intro": "Opiskelen ohjelmistotekniikkaa <strong>Metropolia-ammattikorkeakoulussa Helsingissä</strong>. Keskityn soveltavaan tekoälyyn, backend-järjestelmiin ja full-stack-kehitykseen. Rakennan kokonaisia järjestelmiä: agentteja, semanttista hakua, mallireititystä ja julkaisuputkia.",
+    "about.intro": "Opiskelen koneoppimisinsinööriksi <strong>Metropolia-ammattikorkeakoulussa Helsingissä</strong>. Keskityn soveltavaan tekoälyyn, backend-järjestelmiin ja full-stack-kehitykseen. Rakennan kokonaisia järjestelmiä: agentteja, semanttista hakua, mallireititystä ja julkaisuputkia.",
     "profile.tagline": "Rakennan tekoälyagentteja, hakujärjestelmiä ja niitä tukevan infrastruktuurin.",
     "sec.about": "Esittely",
     "nav.about": "Esittely",
@@ -736,7 +736,7 @@ window.I18N = {
     "hero.cta2": "Ota yhteyttä",
     "hero.cv": "Lataa CV",
     "hero.loc": "Helsinki, Suomi",
-    "hero.fi": "FI: perustaso (CEFR A2), 20 op",
+    "hero.fi": "FI: perustaso (CEFR A2), 20\u00a0op",
 
     "stat.ects": "Opintopistettä suoritettu",
     "stat.grad": "Arvioitu valmistuminen",
@@ -750,16 +750,16 @@ window.I18N = {
       "Ideoista toimiviksi ohjelmistoiksi.",
     "link.live": "Sivusto",
 
-    "p1.role": "Ainoa tekijä — tekoälyarkkitehti ja full-stack-kehittäjä",
+    "p1.role": "Ainoa tekijä — 8 tekoälyagentin tiimin vetäjä, tekoälyarkkitehti ja full-stack-kehittäjä",
     "p1.stat": "työpaikkailmoitusta kerätty ja pisteytetty LLM:llä",
     "p1.private": "Yksityinen repositorio — esittely pyynnöstä",
 
-    "p2.role": "Ainoa tekijä — 45 / 45 committia · 14\u00a0GitHub-\u2060tähteä",
+    "p2.role": "Ainoa tekijä, full-stack-kehittäjä ja datainsinööri — 45 / 45 committia · 14 GitHub-⁠tähteä",
     "p2.desc":
       "Interaktiivinen visualisointi Suomen työmarkkinoista, jossa yhdistyvät StatFinin ammattitiedot ja tekoälyaltistuksen pisteytys. Ylläpidin itse taustalla olevan Linux-infrastruktuurin ja monitorointipinon.",
     "p2.stat": "GitHub-tähteä",
 
-    "p3.role": "Pääkehittäjä — 183 / 263 committia, neljän hengen tiimi",
+    "p3.role": "Frontend- ja DevOps-vetäjä — 183 / 263 committia, neljän hengen tiimi",
     "p3.desc":
       "Gemini-pohjainen hakemuskirjegeneraattori kuudella kielellä, myös oikealta vasemmalle kirjoitettavilla kielillä. Vastasin frontendistä ja DevOpsista: Vaadin-käyttöliittymästä, Docker-imagesta ja Jenkins-putkesta. Kehitin myös Spring Boot -backendiä. Laatua varmistavat JMeter-kuormitustestit ja SonarQube-tarkistukset.",
 
@@ -788,7 +788,7 @@ window.I18N = {
     "exp.org": "Kiina",
     "exp.note":
       "Kymmenen vuotta projektien johtamista ennen muuttoani Suomeen ja siirtymistäni ohjelmistokehitykseen. Ansioluetteloni johtamispuoli ei ole uusi: suunnittelu, sidosryhmäviestintä ja aikataulussa toimittaminen ovat asioita, joita tein ammatikseni kymmenen vuotta — siksi otin JobAio-projektissa Scrum Master -roolin sen sijaan että olisin välttänyt sitä.",
-    "int.role": "Ohjelmistokehityksen harjoittelija",
+    "int.role": "Digital Twin Architecture Trainee",
     "int.org": "Metropolia SW Factory",
     "int.note": "Aloitin syyskuussa 2026 tiimissä, joka rakentaa Unity-digitaalista kaksosta todellisesta innovaatiotilasta tekoälyavustajan kanssa. Projektiin ei ollut koskettu kahteen vuoteen, joten työni on toistaiseksi pohjatyötä: siivoan koodivarastoa, rakennan arkkitehtuurikarttaa, pystytän automaattisen testausjärjestelmän CI-putkeen ja kirjoitan puuttuvan dokumentaation.",
     "shot.jobsresearch":
@@ -826,10 +826,10 @@ window.I18N = {
     "c.eth": "Eettinen hakkerointi",
     "c.stat": "Todennäköisyyslaskenta ja tilastotiede",
     "c.fin": "Suomi 1–4 (20 op)",
-    "edu.voc": "Ammatillinen perustutkinto",
+    "edu.voc": "Ammatillinen perustutkinto, ohjelmistotekniikka",
     "edu.voc.org": "Kiina · 4,25 / 5,0",
     "aw0.h": "Esitys Metropolian rehtorille ja toimitusjohtajalle",
-    aw0: "Metropolian School of ICT and Industrial Management valitsi minut esittelemään JobsResearchin. Yleisössä olivat rehtori ja toimitusjohtaja Marko Hakovirta, osaamisalueen johto, opettajat ja opiskelijat.",
+    aw0: "Metropolian School of ICT and Industrial Management valitsi minut ainoana opiskelijana esiintymään johdon tilaisuudessa. Esittelin JobsResearchin, jonka rakensin kahdeksan tekoälyagentin tiimin kanssa. Yleisössä olivat rehtori ja toimitusjohtaja Marko Hakovirta, osaamisalueen johto ja opettajat.",
     aw1: "Kokosin tiimin suomalaisten osallistujien kanssa Peikon BIM-metadatahaasteeseen ilman aiempaa kokemusta alalta. Lähes 40 unettoman tunnin aikana selätimme oppimiskäyrän ja sijoituimme kymmenen parhaan joukkoon lähes kahdestasadasta ehdotuksesta.",
     aw2: "Palasin toisena vuonna ja toteutin MoneyMoves-pelin — selainpohjaisen 3D-talousopetuspelin — pelimekaniikka- ja backend-kehittäjänä.",
     aw3: "Osallistuin Unbreakable Connectivity -haastesarjaan marraskuussa 2024.",
@@ -842,7 +842,7 @@ window.I18N = {
     "sec.contact": "Yhteystiedot",
     "contact.title": "Otetaan yhteyttä.",
     "contact.sub":
-      "Etsin junior- tai graduate-paikkaa tekoäly-, backend- tai full-stack-kehittäjänä tammikuusta 2027 alkaen — Helsingissä tai etätyönä EU:n alueella.",
+      "Etsin junior- tai graduate-paikkaa tekoäly-, backend- tai full-stack-kehittäjänä tai forward deployed engineerinä (FDE) tammikuusta 2027 alkaen — Helsingissä tai etätyönä EU:n alueella.",
     "contact.wa": "L\u00e4het\u00e4 viesti <i>\u2197</i>",
     "contact.loc": "Sijainti",
     "qr.lbl": "Skannaa ja ota yhteyttä",

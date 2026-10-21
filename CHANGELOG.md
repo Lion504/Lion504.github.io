@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Updated the site to the **19 October 2026 CV**: machine learning engineering student and degree, forward-deployed engineer (FDE) added to the roles sought, 9 projects, **Digital Twin Architecture Trainee** (09/2026 – present), a vocational diploma in Software Technology, and Finnish at a conversational level (CEFR A2), 20 ECTS.
+- JobsResearch: built with a team of **8 AI agents** in builder, reviewer, verifier and coordinator roles under a written loop engineering process; the role line now reads "8-agent AI team manager".
+- The presentation to Metropolia's President and CEO now records selection as the **only student** to present in the leadership session (Experience and the JobsResearch case study).
+- Project role titles: CLboost "Frontend & DevOps Lead"; Fi-Job-Maps "full-stack developer & data engineer".
+- Capabilities: added MCP, Codex, Google Cloud and MATLAB.
 - Expanded **Capabilities** with skills the project pages already show: LLM fine-tuning (LoRA / QLoRA, PEFT, Hugging Face transformers, Unsloth, TRL), model evaluation against baselines, time-series forecasting, role-based AI agent teams, Claude Code, rule-based LLM guardrails, Prometheus, Portainer, GitHub, SQLAlchemy, data visualisation and Playwright E2E testing.
 - Merged the Gemini, OpenAI and OpenRouter chips into one API chip that also lists Claude, and added a **Ways of working** group (project management, Agile / Scrum, security fundamentals, legacy-code documentation, architecture mapping, UML, i18n). Testing & Quality now lists testing only.
 - Bumped `i18n.js` to `v=2.0.4` on every page.
