@@ -162,3 +162,11 @@ A read-only check on 10 September 2026 established Ubuntu 24.04 LTS, x86-64,
 Grafana, Node Exporter and Prometheus scrape targets were up, and the Coolify login
 endpoint responded. This does not establish application-wide uptime, backup
 restoration, hardening or alert response. Keep those distinctions in project copy.
+
+## Print and contact conveniences
+
+Print uses a white background and dark text, hides navigation and interactive
+controls, exposes all architecture panels and archive entries, and includes
+external text-link destinations. Restore disclosure state after printing.
+The contact email has a keyboard-accessible copy action with bilingual success
+and failure feedback.

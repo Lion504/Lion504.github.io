@@ -2,6 +2,9 @@
    send this link to anyone. Anything you change, change it only here. */
 window.I18N = {
   en: {
+    "contact.copy": "Copy email",
+    "contact.copied": "Email copied.",
+    "contact.copyFailed": "Could not copy. Select and copy the email address above.",
     "feature.homelab.name": "Self-hosted Linux lab",
     "feature.homelab.title": "A place to deploy, monitor and run my own services",
     "feature.homelab.role": "Personal infrastructure · Linux administration & self-hosting",
@@ -426,6 +429,9 @@ window.I18N = {
   },
 
   fi: {
+    "contact.copy": "Kopioi sähköpostiosoite",
+    "contact.copied": "Sähköpostiosoite kopioitu.",
+    "contact.copyFailed": "Kopiointi ei onnistunut. Valitse ja kopioi yllä oleva sähköpostiosoite.",
     "feature.homelab.name": "Oma Linux-palvelinympäristö",
     "feature.homelab.title": "Ympäristö omien palvelujen julkaisuun, valvontaan ja käyttöön",
     "feature.homelab.role": "Oma infrastruktuuri · Linux-ylläpito ja itse isännöidyt palvelut",

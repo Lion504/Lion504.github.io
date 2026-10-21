@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Added print styling, including expanded project entries and external link destinations.
+- Added an email copy button with English/Finnish success and failure feedback.
+
 - Added a custom **404 page** in the site style, with root-absolute URLs so it works at any path, `noindex`, and English/Finnish copy.
 - Added `sitemap.xml` (every public page, with last-modified dates) and `robots.txt`.
 - Corrected the About call to action to say the **four** featured projects.

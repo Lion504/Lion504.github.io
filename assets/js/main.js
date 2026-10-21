@@ -102,6 +102,44 @@
     });
   })();
 
+  /* Copy is an enhancement; the mail link remains usable without JavaScript. */
+  (function copyEmail() {
+    var button = $('#copy-email'), output = $('#copy-status');
+    if (!button || !output) return;
+    var resultKey = '';
+    button.hidden = false;
+    document.addEventListener('portfolio:language', function () {
+      output.textContent = resultKey ? t(resultKey) : '';
+    });
+    button.addEventListener('click', async function () {
+      button.disabled = true;
+      try {
+        await navigator.clipboard.writeText(EMAIL);
+        resultKey = 'contact.copied';
+      } catch (error) {
+        resultKey = 'contact.copyFailed';
+      } finally {
+        output.textContent = t(resultKey);
+        button.disabled = false;
+      }
+    });
+  })();
+
+  /* Print all archive entries, then restore the reader's disclosure state. */
+  (function printDetails() {
+    var closed = [];
+    window.addEventListener('beforeprint', function () {
+      $$('details:not([open])').forEach(function (detail) {
+        closed.push(detail);
+        detail.open = true;
+      });
+    });
+    window.addEventListener('afterprint', function () {
+      closed.forEach(function (detail) { detail.open = false; });
+      closed = [];
+    });
+  })();
+
   /* ═══ Contact form ═══ */
   var form   = $('#contactForm');
   var status = $('#formStatus');
