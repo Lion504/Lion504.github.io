@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Expanded **Capabilities** with skills the project pages already show: LLM fine-tuning (LoRA / QLoRA, PEFT, Hugging Face transformers, Unsloth, TRL), model evaluation against baselines, time-series forecasting, role-based AI agent teams, Claude Code, rule-based LLM guardrails, Prometheus, Portainer, GitHub, SQLAlchemy, data visualisation and Playwright E2E testing.
+- Merged the Gemini, OpenAI and OpenRouter chips into one API chip that also lists Claude, and added a **Ways of working** group (project management, Agile / Scrum, security fundamentals, legacy-code documentation, architecture mapping, UML, i18n). Testing & Quality now lists testing only.
+- Bumped `i18n.js` to `v=2.0.4` on every page.
+
 - Updated the positioning to match the October 2026 CV: seeking a **junior or graduate position** as an AI engineer, backend or full-stack developer from January 2027 (homepage description and Contact, English and Finnish).
 - Updated study progress on Experience to **171 / 240 ECTS** and added **expected graduation December 2026**. Removed the Contact thesis row, which conflicted with that date.
 - Corrected the vocational diploma grade to 4.25 / 5.0.

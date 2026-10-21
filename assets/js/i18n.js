@@ -374,6 +374,7 @@ window.I18N = {
     "sk4.h": "DevOps &amp; Infrastructure",
     "sk5.h": "Data &amp; Backend",
     "sk6.h": "Testing &amp; Quality",
+    "sk7.h": "Ways of working",
 
     "sec.edu": "Experience &amp; education",
     "edu.title": "Ten years before the degree.",
@@ -807,6 +808,7 @@ window.I18N = {
     "sk4.h": "DevOps ja infrastruktuuri",
     "sk5.h": "Data ja backend",
     "sk6.h": "Testaus ja laatu",
+    "sk7.h": "Työtavat",
 
     "sec.edu": "Työkokemus ja koulutus",
     "edu.title": "Kymmenen vuotta ennen tutkintoa.",
