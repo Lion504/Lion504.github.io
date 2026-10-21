@@ -307,6 +307,7 @@ window.I18N = {
     "hero.loc": "Helsinki, Finland",
     "hero.fi": "FI: working level (CEFR A2), 20 ECTS",
 
+    "stat.ects": "ECTS completed",
     "stat.grad": "Expected graduation",
     "stat.gpa": "Current GPA",
     "stat.proj": "Projects built & in progress",
@@ -321,7 +322,7 @@ window.I18N = {
     "p1.stat": "postings scraped and LLM-scored to date",
     "p1.private": "Private repo — walkthrough available on request",
 
-    "p2.role": "Sole author — 45 of 45 commits",
+    "p2.role": "Sole author — 45 of 45 commits · 14 GitHub stars",
     "p2.desc":
       "An interactive visualiser of the Finnish job market, combining StatFin occupational data with AI-exposure scoring. I self-hosted the supporting Linux infrastructure and the observability stack behind it.",
     "p2.stat": "GitHub stars",
@@ -357,7 +358,7 @@ window.I18N = {
       "A decade running project delivery before I moved to Finland and into software engineering. The management half of my CV is not new: planning, stakeholder communication and shipping to a deadline are things I did professionally for ten years — which is why I took the Scrum Master role on JobAio rather than avoiding it.",
     "int.role": "Software Engineering Intern",
     "int.org": "Metropolia SW Factory",
-    "int.note": "I joined in September 2026 on a team building a Unity digital twin of a real innovation-lab space, with an AI assistant behind it. I am still learning the codebase, so I am not claiming any part of it yet; this entry will gain specifics as I ship them.",
+    "int.note": "I joined in September 2026 on a team building a Unity digital twin of a real innovation-lab space, with an AI assistant behind it. The project had gone untouched for two years, so my work so far is the groundwork: cleaning up the repository, building an architecture map, setting up an automated testing system in CI and writing the documentation it was missing.",
     "shot.jobsresearch":
       "Admin · the multi-provider LLM engine behind every feature",
     "shot.moneymoves": "Live build · Unity 3D city with a running balance",
@@ -377,7 +378,7 @@ window.I18N = {
     "sec.edu": "Experience &amp; education",
     "edu.title": "Ten years before the degree.",
     "edu.major":
-      "Professional major: Software Engineering · Expected graduation: December 2026 · GPA 4.38 / 5.0",
+      "Professional major: Software Engineering · 171 / 240 ECTS · Expected graduation: December 2026 · GPA 4.38 / 5.0",
     "edu.selected": "Selected coursework",
     "c.ml": "Machine Learning Algorithms",
     "c.sw": "Software 1 &amp; 2",
@@ -391,7 +392,7 @@ window.I18N = {
     "c.stat": "Probability &amp; Statistics",
     "c.fin": "Finnish 1–4 (20 ECTS)",
     "edu.voc": "Vocational School Diploma",
-    "edu.voc.org": "China · 4.2 / 5.0",
+    "edu.voc.org": "China · 4.25 / 5.0",
     "aw0.h": "Presentation to Metropolia's President and CEO",
     aw0: "Selected by the School of ICT and Industrial Management to present JobsResearch to President and CEO Marko Hakovirta, school leadership, teachers and students.",
     aw1: "Formed a team with Finnish participants for Peikko's BIM metadata challenge with zero prior domain experience. Over nearly forty sleepless hours we climbed the learning curve and finished in the top ten of nearly two hundred submissions.",
@@ -736,6 +737,7 @@ window.I18N = {
     "hero.loc": "Helsinki, Suomi",
     "hero.fi": "FI: perustaso (CEFR A2), 20 op",
 
+    "stat.ects": "Opintopistettä suoritettu",
     "stat.grad": "Arvioitu valmistuminen",
     "stat.gpa": "Keskiarvo",
     "stat.proj": "Valmiit ja keskeneräiset projektit",
@@ -751,7 +753,7 @@ window.I18N = {
     "p1.stat": "työpaikkailmoitusta kerätty ja pisteytetty LLM:llä",
     "p1.private": "Yksityinen repositorio — esittely pyynnöstä",
 
-    "p2.role": "Ainoa tekijä — 45 / 45 committia",
+    "p2.role": "Ainoa tekijä — 45 / 45 committia · 14\u00a0GitHub-\u2060tähteä",
     "p2.desc":
       "Interaktiivinen visualisointi Suomen työmarkkinoista, jossa yhdistyvät StatFinin ammattitiedot ja tekoälyaltistuksen pisteytys. Ylläpidin itse taustalla olevan Linux-infrastruktuurin ja monitorointipinon.",
     "p2.stat": "GitHub-tähteä",
@@ -787,7 +789,7 @@ window.I18N = {
       "Kymmenen vuotta projektien johtamista ennen muuttoani Suomeen ja siirtymistäni ohjelmistokehitykseen. Ansioluetteloni johtamispuoli ei ole uusi: suunnittelu, sidosryhmäviestintä ja aikataulussa toimittaminen ovat asioita, joita tein ammatikseni kymmenen vuotta — siksi otin JobAio-projektissa Scrum Master -roolin sen sijaan että olisin välttänyt sitä.",
     "int.role": "Ohjelmistokehityksen harjoittelija",
     "int.org": "Metropolia SW Factory",
-    "int.note": "Aloitin syyskuussa 2026 tiimissä, joka rakentaa Unity-digitaalista kaksosta todellisesta innovaatiotilasta tekoälyavustajan kanssa. Opettelen vielä koodikantaa, joten en väitä vielä mitään sen osaa omakseni; tämä kohta täsmentyy sitä mukaa kun julkaisen jotain.",
+    "int.note": "Aloitin syyskuussa 2026 tiimissä, joka rakentaa Unity-digitaalista kaksosta todellisesta innovaatiotilasta tekoälyavustajan kanssa. Projektiin ei ollut koskettu kahteen vuoteen, joten työni on toistaiseksi pohjatyötä: siivoan koodivarastoa, rakennan arkkitehtuurikarttaa, pystytän automaattisen testausjärjestelmän CI-putkeen ja kirjoitan puuttuvan dokumentaation.",
     "shot.jobsresearch":
       "Ylläpito · monen palveluntarjoajan LLM-moottori kaikkien toimintojen takana",
     "shot.moneymoves":
@@ -809,7 +811,7 @@ window.I18N = {
     "sec.edu": "Työkokemus ja koulutus",
     "edu.title": "Kymmenen vuotta ennen tutkintoa.",
     "edu.major":
-      "Suuntautuminen: ohjelmistotekniikka · arvioitu valmistuminen joulukuussa 2026 · keskiarvo 4,38 / 5,0",
+      "Suuntautuminen: ohjelmistotekniikka · 171 / 240 op · arvioitu valmistuminen joulukuussa 2026 · keskiarvo 4,38 / 5,0",
     "edu.selected": "Valikoituja opintojaksoja",
     "c.ml": "Koneoppimisen algoritmit",
     "c.sw": "Ohjelmisto 1 ja 2",
@@ -823,7 +825,7 @@ window.I18N = {
     "c.stat": "Todennäköisyyslaskenta ja tilastotiede",
     "c.fin": "Suomi 1–4 (20 op)",
     "edu.voc": "Ammatillinen perustutkinto",
-    "edu.voc.org": "Kiina · 4,2 / 5,0",
+    "edu.voc.org": "Kiina · 4,25 / 5,0",
     "aw0.h": "Esitys Metropolian rehtorille ja toimitusjohtajalle",
     aw0: "Metropolian School of ICT and Industrial Management valitsi minut esittelemään JobsResearchin. Yleisössä olivat rehtori ja toimitusjohtaja Marko Hakovirta, osaamisalueen johto, opettajat ja opiskelijat.",
     aw1: "Kokosin tiimin suomalaisten osallistujien kanssa Peikon BIM-metadatahaasteeseen ilman aiempaa kokemusta alalta. Lähes 40 unettoman tunnin aikana selätimme oppimiskäyrän ja sijoituimme kymmenen parhaan joukkoon lähes kahdestasadasta ehdotuksesta.",
