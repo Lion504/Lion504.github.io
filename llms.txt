@@ -1,0 +1,39 @@
+# Wang Yongzhi
+
+> AI engineer in Helsinki, Finland, and machine learning engineering student at Metropolia University of Applied Sciences (171/240 ECTS, graduating December 2026). Builds LLM agent systems, semantic search, fine-tuned forecasting models and the CI/CD and quality gates around them. Open to junior or graduate roles as an AI engineer, forward-deployed engineer (FDE), backend or full-stack developer from January 2027, in Helsinki or remote in the EU.
+
+Key facts:
+
+- Location: Helsinki, Finland
+- Languages: English (fluent), Mandarin (native), Finnish (conversational, CEFR A2)
+- Background: ten years of project management before moving into software engineering
+- Current role: Digital Twin Architecture Trainee, Metropolia SW Factory (since September 2026)
+- October 2026: selected as the only student to present JobsResearch to Metropolia's President and CEO in the leadership session
+- Hackathons: 7th place at Junction 2024 (top 10 of nearly 200 submissions); Junction 2025; ULTRAHACK 2024
+- Contact: https://lion504.github.io/contact.html, https://www.linkedin.com/in/lion504, https://github.com/Lion504
+
+## Projects
+
+- [JobsResearch case study](https://lion504.github.io/jobsresearch-decisions.html): AI job-matching platform; 100,000+ postings from five sources, LLM fit scores capped by deterministic eligibility rules, built with a team of 8 AI agents (~4,700 commits, 1,500 merged pull requests, Aug–Oct 2026)
+- [JobAI evaluation](https://lion504.github.io/jobai-evaluation.html): forecasting Finnish job vacancies with a Qwen3-4B QLoRA adapter, tested against four baselines with time-based splits
+- [Fi-Job-Maps case study](https://lion504.github.io/fijobmaps-data.html): Finnish labour market as an explorable treemap with AI-exposure estimates; live map at https://lion504.github.io/Fi-Job-Maps/
+- [CLboost case study](https://lion504.github.io/clboost-beyond-generation.html): AI cover-letter generator in six languages including right-to-left; frontend and DevOps lead
+- [Self-hosted Linux lab](https://lion504.github.io/homelab.html): Ubuntu home lab for self-hosted applications, deployments and monitoring
+- [More projects](https://lion504.github.io/projects.html): JobAio, MoneyMoves, Airport Simulation, Drakula-v2
+
+## About
+
+- [About](https://lion504.github.io/about.html)
+- [Experience and education](https://lion504.github.io/experience.html)
+- [Capabilities](https://lion504.github.io/capabilities.html): Python, Java, TypeScript, LLM fine-tuning (LoRA/QLoRA), RAG, multi-agent systems, MCP, Docker, Jenkins, SonarQube, PostgreSQL
+
+## Suomeksi
+
+- [Etusivu](https://lion504.github.io/fi/): sama sivusto suomeksi
+- [Projektit](https://lion504.github.io/fi/work.html)
+- [Yhteystiedot](https://lion504.github.io/fi/contact.html)
+
+## Optional
+
+- [Engineering notes](https://lion504.github.io/notes.html)
+- [AI systems walkthrough](https://lion504.github.io/ai-systems.html)

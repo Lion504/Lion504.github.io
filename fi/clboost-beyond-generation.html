@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="fi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>CLboost: tekoälyhakemuskirjeet kuudella kielellä — projektikuvaus</title><meta content="Miten CLboost muuttaa Gemini-luonnoksen muokattavaksi hakemuskirjeeksi kuudella kielellä, myös oikealta vasemmalle kirjoitettavilla, Docker- ja Jenkins-putkella." name="description"/>
+<link href="https://lion504.github.io/fi/clboost-beyond-generation.html" rel="canonical"/>
+<!-- seo:start -->
+<link href="https://lion504.github.io/clboost-beyond-generation.html" hreflang="en" rel="alternate"/>
+<link href="https://lion504.github.io/fi/clboost-beyond-generation.html" hreflang="fi" rel="alternate"/>
+<link href="https://lion504.github.io/clboost-beyond-generation.html" hreflang="x-default" rel="alternate"/>
+<meta content="article" property="og:type"/>
+<meta content="Wang Yongzhi" property="og:site_name"/>
+<meta content="CLboost: tekoälyhakemuskirjeet kuudella kielellä — projektikuvaus" property="og:title"/>
+<meta content="Miten CLboost muuttaa Gemini-luonnoksen muokattavaksi hakemuskirjeeksi kuudella kielellä, myös oikealta vasemmalle kirjoitettavilla, Docker- ja Jenkins-putkella." property="og:description"/>
+<meta content="https://lion504.github.io/fi/clboost-beyond-generation.html" property="og:url"/>
+<meta content="https://lion504.github.io/assets/img/og.jpg" property="og:image"/>
+<meta content="fi_FI" property="og:locale"/>
+<meta content="en_US" property="og:locale:alternate"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://lion504.github.io/fi/clboost-beyond-generation.html#webpage",
+      "url": "https://lion504.github.io/fi/clboost-beyond-generation.html",
+      "name": "CLboost: tekoälyhakemuskirjeet kuudella kielellä — projektikuvaus",
+      "description": "Miten CLboost muuttaa Gemini-luonnoksen muokattavaksi hakemuskirjeeksi kuudella kielellä, myös oikealta vasemmalle kirjoitettavilla, Docker- ja Jenkins-putkella.",
+      "inLanguage": "fi",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://lion504.github.io/#website",
+        "url": "https://lion504.github.io/",
+        "name": "Wang Yongzhi"
+      },
+      "breadcrumb": {
+        "@id": "https://lion504.github.io/fi/clboost-beyond-generation.html#breadcrumb"
+      },
+      "about": {
+        "@id": "https://lion504.github.io/#person"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lion504.github.io/fi/clboost-beyond-generation.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Etusivu",
+          "item": "https://lion504.github.io/fi/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tuote jatkuu tekstin tuottamisen jälkeen",
+          "item": "https://lion504.github.io/fi/clboost-beyond-generation.html"
+        }
+      ]
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://lion504.github.io/fi/clboost-beyond-generation.html#article",
+      "headline": "Tuote jatkuu tekstin tuottamisen jälkeen",
+      "description": "Miten CLboost muuttaa Gemini-luonnoksen muokattavaksi hakemuskirjeeksi kuudella kielellä, myös oikealta vasemmalle kirjoitettavilla, Docker- ja Jenkins-putkella.",
+      "url": "https://lion504.github.io/fi/clboost-beyond-generation.html",
+      "inLanguage": "fi",
+      "image": "https://lion504.github.io/assets/img/og.jpg",
+      "datePublished": "2026-09-10",
+      "dateModified": "2026-10-21",
+      "author": {
+        "@type": "Person",
+        "@id": "https://lion504.github.io/#person",
+        "name": "Wang Yongzhi",
+        "url": "https://lion504.github.io/"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://lion504.github.io/fi/clboost-beyond-generation.html#webpage"
+      }
+    }
+  ]
+}
+</script>
+<!-- seo:end -->
+<link href="../assets/img/favicon.svg?v=20260910-1" rel="icon" type="image/svg+xml"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="../assets/css/design-system.css?v=2.0.2" rel="stylesheet"/>
+<meta content="2.0.0" name="application-version"/></head><body class="detail-page article-page" data-title-key="note.clboost-beyond-generation.title"><a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="site-top"><a aria-label="Wang Yongzhi — home" class="site-brand" href="index.html"><span aria-hidden="true" class="site-brand__mark">wy.</span></a><div class="site-header__actions"><a class="site-index-link" data-i18n="menu.index" href="index.html#directory">Hakemisto</a><a class="menu-fallback" data-i18n="menu.open" href="index.html#directory">Avaa valikko</a><button aria-controls="site-menu" aria-expanded="false" aria-haspopup="dialog" class="menu-toggle" hidden="" type="button"><span class="sr-only" data-i18n="menu.open">Avaa valikko</span><span aria-hidden="true" class="menu-toggle__lines"></span></button></div></header>
+<dialog aria-labelledby="menu-title" class="drawer" id="site-menu"><div class="drawer__surface"><div class="drawer__top"><p class="mono" data-i18n="menu.navigation" id="menu-title">Navigointi</p><button autofocus="" class="drawer__close" type="button"><span class="sr-only" data-i18n="menu.close">Sulje valikko</span><span aria-hidden="true">×</span></button></div><nav aria-label="Main navigation" class="drawer__links"><a href="index.html"><span aria-hidden="true" class="drawer__index">00</span><span data-i18n="menu.home">Etusivu</span><span aria-hidden="true" class="drawer__dot"></span></a><a href="about.html"><span aria-hidden="true" class="drawer__index">01</span><span data-i18n="nav.about">Esittely</span><span aria-hidden="true" class="drawer__dot"></span></a><a href="work.html"><span aria-hidden="true" class="drawer__index">02</span><span data-i18n="nav.work">Projektit</span><span aria-hidden="true" class="drawer__dot"></span></a><a href="projects.html"><span aria-hidden="true" class="drawer__index">03</span><span data-i18n="archive.title">Muita projekteja</span><span aria-hidden="true" class="drawer__dot"></span></a><a href="ai-systems.html"><span aria-hidden="true" class="drawer__index">04</span><span data-i18n="nav.lab">Tekoäly</span><span aria-hidden="true" class="drawer__dot"></span></a><a href="experience.html"><span aria-hidden="true" class="drawer__index">05</span><span data-i18n="nav.education">Työkokemus</span><span aria-hidden="true" class="drawer__dot"></span></a><a href="capabilities.html"><span aria-hidden="true" class="drawer__index">06</span><span data-i18n="nav.skills">Osaaminen</span><span aria-hidden="true" class="drawer__dot"></span></a><a href="notes.html"><span aria-hidden="true" class="drawer__index">07</span><span data-i18n="nav.notes">Muistiinpanot</span><span aria-hidden="true" class="drawer__dot"></span></a><a href="contact.html"><span aria-hidden="true" class="drawer__index">08</span><span data-i18n="nav.contact">Yhteystiedot</span><span aria-hidden="true" class="drawer__dot"></span></a></nav><div class="drawer__bottom"><div class="drawer__language"><span class="mono" data-i18n="menu.language">Kieli</span><div aria-label="Language" class="lang" role="group"><button aria-pressed="false" class="lang__btn" data-lang="en" type="button">EN</button><span class="lang__sep">/</span><button aria-pressed="true" class="lang__btn is-active" data-lang="fi" type="button">FI</button></div></div><div class="drawer__social"><a href="https://github.com/Lion504" rel="noopener" target="_blank">GitHub ↗</a><a href="https://linkedin.com/in/lion504" rel="noopener" target="_blank">LinkedIn ↗</a><a data-i18n="nav.contact" href="contact.html">Yhteystiedot</a></div></div></div></dialog>
+<main class="journal" id="main"><article><header class="journal__head"><p class="mono">CLboost / <span data-i18n="notes.title">Tekniset muistiinpanot</span></p><h1 data-i18n="note.clboost-beyond-generation.title">Tuote jatkuu tekstin tuottamisen jälkeen</h1><p class="journal__deck" data-i18n="note.clboost-beyond-generation.deck">Monikielinen hakemuskirjeen työnkulku profiilitiedoista muokattavaan tulokseen.</p><p class="journal__status" data-i18n="note.clboost-beyond-generation.status">Tiimiprojekti · päävastuu frontendistä ja DevOpsista</p></header><figure class="proj__shot">
+<div class="card">
+<video aria-label="Screen recording: the cover-letter form filled in and a letter generated" controls="" data-user-playback="" height="450" muted="" playsinline="" poster="../assets/img/work/clboost.jpg" preload="none" src="../assets/video/clboost.webm" width="800"></video>
+</div>
+<figcaption class="mono" data-i18n="shot.clboost">Playwrightin päästä päähän -ajo · sovellus oikeasti käytössä</figcaption>
+</figure><ol aria-label="Workflow" class="note__flow"><li data-i18n="note.clboost-beyond-generation.flow0">Profiili + CV</li><li data-i18n="note.clboost-beyond-generation.flow1">Gemini</li><li data-i18n="note.clboost-beyond-generation.flow2">Muokkaus</li><li data-i18n="note.clboost-beyond-generation.flow3">Vienti</li></ol><div class="journal__body"><section><h2 data-i18n="note.clboost-beyond-generation.h0">Ongelma</h2><p data-i18n="note.clboost-beyond-generation.p0">CLboost auttaa hakijoita luomaan hakemuskirjeitä Geminillä. Pääpanokseni oli frontendissä ja DevOpsissa, ja osallistuin myös Spring Boot -backendiin. Kehitystyö ulottuu tekstipyynnön ulkopuolelle: käyttäjän on annettava taustatiedot, tarkistettava tulos ja saatava se mukaansa.</p></section><section><h2 data-i18n="note.clboost-beyond-generation.h1">Muokattava tulos</h2><p data-i18n="note.clboost-beyond-generation.p1">Dokumentoitu työnkulku hakee profiilin, jäsentää viimeksi ladatun CV:n ja välittää yhdistetyn sisällön tekoälypalvelulle. Tuotettu kirje näkyy editorissa ja tallentuu Word-tiedostoksi. Muokkaus kuuluu työnkulkuun; tuotettua tekstiä ei käsitellä lopullisena.</p></section><section><h2 data-i18n="note.clboost-beyond-generation.h2">Kieli muuttaa myös asettelua</h2><p data-i18n="note.clboost-beyond-generation.p2">Käyttöliittymä tukee englantia, suomea, portugalia, kiinaa, urdua ja persiaa. Vaadinin lokalisointipalvelu käsittelee käännösresurssit. Urdu ja persia edellyttävät myös oikealta vasemmalle etenevää asettelua: dokumentin suunta, komponenttien kulku ja kohdennetut CSS-säännöt toimivat yhdessä.</p></section><section><h2 data-i18n="note.clboost-beyond-generation.h3">Testisuunnitelma ja tulos erikseen</h2><p data-i18n="note.clboost-beyond-generation.p3">Koodivarasto sisältää yksikkötestejä, kattavuustyökaluja, staattista analyysiä ja JMeter-navigointitestisuunnitelman. Ne kertovat laadun tarkistamisesta, mutta eivät yksin todista tuotantokapasiteettia tai viivettä. Etusivulla on tallennettu sovelluksen päästä päähän -esittely.</p></section><section><h2 data-i18n="case.contribution">Oma panokseni ja teknologiat</h2><p class="proj__role mono" data-i18n="p3.role">Frontend- ja DevOps-vetäjä — 183 / 263 committia, neljän hengen tiimi</p><ul class="chips">
+<li>Java</li>
+<li>Spring Boot</li>
+<li>Vaadin</li>
+<li>Gemini</li>
+<li>Docker</li>
+<li>Jenkins</li>
+<li>SonarQube</li>
+<li>JMeter</li>
+<li>i18n / RTL</li>
+</ul></section><section><h2 data-i18n="case.clboost-beyond-generation.h0">Vastuiden jakautuminen</h2><p data-i18n="case.clboost-beyond-generation.p0">Vaadin tuottaa palvelinpuolen Java-käyttöliittymän, Spring Boot isännöi sovellusta ja Spring AI yhdistää Geminiin. Dokumentoitu tuottamispolku lataa profiilin, jäsentää ladatun CV:n, kutsuu tekoälypalvelua ja esittää muokattavan tuloksen. Docker paketoi sovelluksen; Jenkins ja SonarQube tukevat julkaisu- ja laatutyönkulkua.</p></section><section><h2 data-i18n="case.clboost-beyond-generation.h1">Mitä esittely osoittaa</h2><p data-i18n="case.clboost-beyond-generation.p1">Tallenne seuraa sovellusta lomakkeen täytöstä tekstin tuottamiseen. Se näyttää päästä päähän -polun tuotteessa, ja koodivarasto avaa toteutuksen sekä testausjärjestelyn. Kuusi käyttöliittymäkieltä ja RTL-asettelut kuvaavat tuotteen laajuutta; ne eivät ole väitteitä jokaisen tuotetun kirjeen laadusta.</p></section><section class="note__sources"><h2 data-i18n="notes.source">Lähteet ja projektin tausta</h2><a href="https://github.com/Lion504/CLboost#readme" rel="noopener" target="_blank">CLboost README ↗</a></section></div></article></main>
+<footer class="site-footer"><a class="site-footer__back" data-i18n="directory.back" href="index.html#directory">← Kaikki osiot</a><p>© <span id="yr">2026</span> Wang Yongzhi</p><div class="hits" id="hits" role="status"><p><span aria-hidden="true" class="dot"></span><span data-i18n="foot.visits">Käynnit</span> <strong data-i18n="counter.loading" id="hitsN">Ladataan…</strong></p><p class="hits__note" id="hitsNote"></p></div></footer>
+<script src="../assets/js/i18n.js?v=2.0.4"></script><script src="../assets/js/main.js?v=2.0.4"></script><script src="../assets/js/gallery.js?v=2.0.0"></script><script src="../assets/js/explore.js?v=2.0.0"></script><script src="../assets/js/motion.js?v=2.0.0"></script><script src="../assets/js/navigation.js?v=2.0.0"></script></body></html>

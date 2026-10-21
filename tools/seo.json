@@ -1,0 +1,159 @@
+{
+  "_comment": "Search and social metadata per page. Edit here, then run: python3 tools/build_pages.py",
+  "pages": {
+    "index": {
+      "type": "home",
+      "en": {
+        "title": "Wang Yongzhi — AI Engineer & Software Developer, Helsinki",
+        "description": "Helsinki-based AI engineer and ML engineering student at Metropolia, building LLM agents, semantic search and CI/CD. Open to junior AI, FDE, backend and full-stack roles from January 2027."
+      },
+      "fi": {
+        "title": "Wang Yongzhi — tekoälykehittäjä, Helsinki",
+        "description": "Tekoälykehittäjä Helsingistä. Opiskelen koneoppimisinsinööriksi Metropoliassa ja rakennan LLM-agentteja, semanttista hakua ja CI/CD-putkia. Avoin junior-tehtäville tammikuusta 2027."
+      }
+    },
+    "about": {
+      "type": "profile",
+      "en": {
+        "title": "About Wang Yongzhi — AI engineer in Helsinki",
+        "description": "Machine learning engineering student at Metropolia in Helsinki with ten years of project management behind me. I build AI agents, semantic search and the pipelines that ship them."
+      },
+      "fi": {
+        "title": "Esittely — Wang Yongzhi, tekoälykehittäjä Helsingissä",
+        "description": "Opiskelen koneoppimisinsinööriksi Metropoliassa, ja taustallani on kymmenen vuotta projektinjohtoa. Rakennan tekoälyagentteja, semanttista hakua ja julkaisuputkia."
+      }
+    },
+    "work": {
+      "type": "collection",
+      "en": {
+        "title": "Selected work — AI agents, data and DevOps | Wang Yongzhi",
+        "description": "Four featured builds: JobsResearch (AI job matching over 100,000+ postings), CLboost, Fi-Job-Maps and a self-hosted Linux lab, each with a case study."
+      },
+      "fi": {
+        "title": "Projektit — tekoälyagentit, data ja DevOps | Wang Yongzhi",
+        "description": "Neljä nostoa: JobsResearch (tekoälypohjainen työpaikkojen arviointi, yli 100 000 ilmoitusta), CLboost, Fi-Job-Maps ja oma Linux-palvelinympäristö."
+      }
+    },
+    "projects": {
+      "type": "collection",
+      "en": {
+        "title": "More projects — Wang Yongzhi, AI engineer in Helsinki",
+        "description": "Five more builds: JobAI forecasting with a fine-tuned Qwen3-4B model, JobAio, MoneyMoves from Junction 2025, an airport simulation and Drakula-v2."
+      },
+      "fi": {
+        "title": "Muita projekteja — Wang Yongzhi, tekoälykehittäjä",
+        "description": "Viisi muuta projektia: JobAI-ennusteet hienosäädetyllä Qwen3-4B-mallilla, JobAio, MoneyMoves (Junction 2025), lentoasemasimulaatio ja Drakula-v2."
+      }
+    },
+    "ai-systems": {
+      "type": "page",
+      "en": {
+        "title": "AI systems walkthrough — how a forecast earns trust | Wang Yongzhi",
+        "description": "An interactive walkthrough of the JobAI workflow: data, forecast and evaluation, plus a sandbox comparing forecasting methods as the training cutoff moves."
+      },
+      "fi": {
+        "title": "Tekoälyjärjestelmät — miten ennuste ansaitsee luottamuksen | Wang Yongzhi",
+        "description": "Interaktiivinen läpikäynti JobAI-työnkulusta: data, ennuste ja arviointi sekä hiekkalaatikko, jossa ennustemenetelmiä verrataan opetusjakson rajaa siirtämällä."
+      }
+    },
+    "experience": {
+      "type": "page",
+      "en": {
+        "title": "Experience & education — Wang Yongzhi, Helsinki",
+        "description": "171/240 ECTS in machine learning engineering at Metropolia (graduating December 2026), a digital twin traineeship, ten years of project management and hackathon results."
+      },
+      "fi": {
+        "title": "Työkokemus ja koulutus — Wang Yongzhi, Helsinki",
+        "description": "171/240 opintopistettä koneoppimisinsinöörin opinnoista Metropoliassa (valmistun joulukuussa 2026), digitaalisen kaksosen harjoittelu, kymmenen vuotta projektinjohtoa ja hackathonit."
+      }
+    },
+    "capabilities": {
+      "type": "page",
+      "en": {
+        "title": "Capabilities — Python, LLMs, RAG and DevOps | Wang Yongzhi",
+        "description": "Skills used in real projects: Python, Java, TypeScript, LLM fine-tuning (LoRA/QLoRA), RAG, multi-agent systems, MCP, Docker, Jenkins, PostgreSQL and more."
+      },
+      "fi": {
+        "title": "Osaaminen — Python, LLM:t, RAG ja DevOps | Wang Yongzhi",
+        "description": "Oikeissa projekteissa käytetty osaaminen: Python, Java, TypeScript, LLM-hienosäätö (LoRA/QLoRA), RAG, moniagenttijärjestelmät, MCP, Docker, Jenkins, PostgreSQL ja muuta."
+      }
+    },
+    "contact": {
+      "type": "contact",
+      "en": {
+        "title": "Contact Wang Yongzhi — junior AI engineer in Helsinki",
+        "description": "Hiring a junior or graduate AI engineer, FDE, backend or full-stack developer in Helsinki or remote in the EU from January 2027? Reach me by email, LinkedIn or GitHub."
+      },
+      "fi": {
+        "title": "Yhteystiedot — Wang Yongzhi, junior-tekoälykehittäjä Helsingissä",
+        "description": "Etsitkö junior- tai graduate-tekoälykehittäjää, backend- tai full-stack-kehittäjää Helsinkiin tai etätyöhön EU:ssa tammikuusta 2027? Ota yhteyttä sähköpostilla, LinkedInissä tai GitHubissa."
+      }
+    },
+    "notes": {
+      "type": "collection",
+      "en": {
+        "title": "Engineering notes — Wang Yongzhi",
+        "description": "Short project notes on data, models and the decisions behind each build: JobsResearch, CLboost, Fi-Job-Maps and JobAI."
+      },
+      "fi": {
+        "title": "Tekniset muistiinpanot — Wang Yongzhi",
+        "description": "Lyhyet projektimuistiinpanot datasta, malleista ja kunkin projektin päätöksistä: JobsResearch, CLboost, Fi-Job-Maps ja JobAI."
+      }
+    },
+    "jobsresearch-decisions": {
+      "type": "article",
+      "en": {
+        "title": "JobsResearch: AI job matching with explanations — case study",
+        "description": "How JobsResearch scores 100,000+ job postings against a CV: an LLM judges fit and eligibility rules cap the score. Built with an 8-agent AI team."
+      },
+      "fi": {
+        "title": "JobsResearch: perusteltu tekoälyarvio työpaikoista — projektikuvaus",
+        "description": "Miten JobsResearch arvioi yli 100 000 työpaikkailmoitusta CV:tä vasten: kielimalli arvioi sopivuuden ja kelpoisuussäännöt rajaavat pisteet. Rakennettu 8 tekoälyagentin tiimillä."
+      }
+    },
+    "clboost-beyond-generation": {
+      "type": "article",
+      "en": {
+        "title": "CLboost: AI cover letters in six languages — case study",
+        "description": "How CLboost turns a Gemini draft into an editable cover letter in six languages, including right-to-left, with a Docker and Jenkins delivery pipeline."
+      },
+      "fi": {
+        "title": "CLboost: tekoälyhakemuskirjeet kuudella kielellä — projektikuvaus",
+        "description": "Miten CLboost muuttaa Gemini-luonnoksen muokattavaksi hakemuskirjeeksi kuudella kielellä, myös oikealta vasemmalle kirjoitettavilla, Docker- ja Jenkins-putkella."
+      }
+    },
+    "fijobmaps-data": {
+      "type": "article",
+      "en": {
+        "title": "Fi-Job-Maps: Finland's job market as an explorable map — case study",
+        "description": "How Fi-Job-Maps turns Statistics Finland occupation data into an explorable treemap with AI-exposure estimates and traceable totals."
+      },
+      "fi": {
+        "title": "Fi-Job-Maps: Suomen työmarkkinat tutkittavana karttana — projektikuvaus",
+        "description": "Miten Fi-Job-Maps tekee Tilastokeskuksen ammattidatasta tutkittavan puukartan, jossa on tekoälyaltistusarviot ja jäljitettävät kokonaismäärät."
+      }
+    },
+    "jobai-evaluation": {
+      "type": "article",
+      "en": {
+        "title": "JobAI: forecasting Finnish job vacancies with a fine-tuned LLM",
+        "description": "A Qwen3-4B QLoRA adapter forecasting Finnish job vacancies, tested against four baselines with time-based splits: where it won, where it did not, and why."
+      },
+      "fi": {
+        "title": "JobAI: Suomen avointen työpaikkojen ennustaminen kielimallilla",
+        "description": "Qwen3-4B-QLoRA-adapteri ennustaa Suomen avoimia työpaikkoja, ja sitä verrataan neljään vertailumenetelmään ajallisilla jaoilla: missä se voitti ja missä ei."
+      }
+    },
+    "homelab": {
+      "type": "article",
+      "en": {
+        "title": "Self-hosted Linux lab — Ubuntu, Docker and monitoring | Wang Yongzhi",
+        "description": "My Ubuntu home lab for self-hosted applications, deployments and monitoring: the platform, the services it runs and what it shows about operating real systems."
+      },
+      "fi": {
+        "title": "Oma Linux-palvelinympäristö — Ubuntu, Docker ja valvonta | Wang Yongzhi",
+        "description": "Ubuntu-kotilaboratorioni itse ylläpidetyille sovelluksille, julkaisuille ja valvonnalle: alusta, sillä ajettavat palvelut ja mitä se kertoo oikeiden järjestelmien ylläpidosta."
+      }
+    }
+  }
+}

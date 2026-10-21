@@ -65,7 +65,17 @@ the check follow.
 ## Editing
 
 **Text** — change it in the relevant HTML page (English) *and* in the matching key in
-`assets/js/i18n.js`, or the toggle will put the old wording back.
+`assets/js/i18n.js`, or the toggle will put the old wording back. Then run:
+
+```bash
+python3 tools/build_pages.py
+```
+
+It regenerates the Finnish pages in `fi/` (the Finnish strings baked into the
+markup, so search engines and AI crawlers can read them), each page's title,
+description, `hreflang`, social preview tags and structured data, and
+`sitemap.xml`. Titles and descriptions live in `tools/seo.json`. Never edit
+`fi/` by hand; it is overwritten. Needs Node.js to read `i18n.js`.
 
 **Contact form** — posts to the [Formspree](https://formspree.io) endpoint in
 `FORM_ENDPOINT` at the top of `assets/js/main.js`, which forwards to the address

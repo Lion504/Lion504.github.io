@@ -23,8 +23,13 @@
   var $  = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
 
-  /* ═══ i18n ═══ */
+  /* ═══ i18n ═══
+     Each page exists in English and, under /fi/, in Finnish with the strings
+     already in the markup (tools/build_pages.py). The served language and its
+     title are what search engines index, so they are kept as authored. */
   var lang = 'en';
+  var pageLang = document.documentElement.lang === 'fi' ? 'fi' : 'en';
+  var pageTitle = document.title;
 
   function applyLang(next) {
     var dict = window.I18N && window.I18N[next];
@@ -39,8 +44,9 @@
     });
 
     document.documentElement.lang = next;
-    var pageTitle = document.body.getAttribute('data-title-key');
-    if (pageTitle && dict[pageTitle]) document.title = dict[pageTitle] + ' — Wang Yongzhi';
+    var titleKey = document.body.getAttribute('data-title-key');
+    if (next === pageLang) document.title = pageTitle;
+    else if (titleKey && dict[titleKey]) document.title = dict[titleKey] + ' — Wang Yongzhi';
     else if (dict._title) document.title = dict._title;
 
     $$('.lang__btn').forEach(function (b) {
@@ -53,11 +59,24 @@
     document.dispatchEvent(new Event('portfolio:language'));
   }
 
+  /* The toggle opens the other language's page when there is one; the path
+     is taken from the hreflang link so it also works in a local preview. */
   $$('.lang__btn').forEach(function (b) {
-    b.addEventListener('click', function () { applyLang(b.getAttribute('data-lang')); });
+    b.addEventListener('click', function () {
+      var next = b.getAttribute('data-lang');
+      var alt = document.querySelector('link[rel="alternate"][hreflang="' + next + '"]');
+      var path = alt ? new URL(alt.href).pathname : '';
+      if (next !== pageLang && path && path !== location.pathname) {
+        try { localStorage.setItem('wy-lang', next); } catch (e) { /* private mode */ }
+        location.href = path + location.hash;
+        return;
+      }
+      applyLang(next);
+    });
   });
 
   (function initLang() {
+    if (pageLang === 'fi') { applyLang('fi'); return; }
     var saved = null;
     try { saved = localStorage.getItem('wy-lang'); } catch (e) { /* ignore */ }
     if (saved === 'fi' || saved === 'en') { applyLang(saved); return; }

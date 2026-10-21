@@ -88,6 +88,16 @@ Keep the canonical and social image. Do not add public phone numbers, CV downloa
 or third-party reference contact details. Form failure includes a direct email.
 No externally hosted runtime scripts. The Earth section uses pinned, locally hosted D3 geographic helpers and TopoJSON with locally stored Natural Earth data. Licenses and versions are included beside the assets. Google Fonts remains in use.
 
+## Languages and search
+
+English pages are the source. `fi/` holds generated Finnish copies with the
+`i18n.js` strings in the markup, `lang="fi"` and Finnish titles from
+`tools/seo.json`; `tools/build_pages.py` writes them, the `<!-- seo -->` head
+block, and the sitemap. The toggle opens the other language's page; the served
+language keeps its authored title. `llms.txt` is a hand-written fact sheet for
+AI assistants: keep it consistent with the pages. The 404 page stays English
+with the runtime toggle, since GitHub Pages serves one 404 for every path.
+
 ## Verification
 
 Run `python3 tools/design_check.py` and JS syntax checks. Inspect desktop and

@@ -1,59 +1,199 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://lion504.github.io/</loc>
     <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/"/>
+  </url>
+  <url>
+    <loc>https://lion504.github.io/fi/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/"/>
   </url>
   <url>
     <loc>https://lion504.github.io/about.html</loc>
     <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/about.html"/>
   </url>
   <url>
-    <loc>https://lion504.github.io/ai-systems.html</loc>
-    <lastmod>2026-10-01</lastmod>
-  </url>
-  <url>
-    <loc>https://lion504.github.io/capabilities.html</loc>
+    <loc>https://lion504.github.io/fi/about.html</loc>
     <lastmod>2026-10-21</lastmod>
-  </url>
-  <url>
-    <loc>https://lion504.github.io/clboost-beyond-generation.html</loc>
-    <lastmod>2026-10-21</lastmod>
-  </url>
-  <url>
-    <loc>https://lion504.github.io/contact.html</loc>
-    <lastmod>2026-10-21</lastmod>
-  </url>
-  <url>
-    <loc>https://lion504.github.io/experience.html</loc>
-    <lastmod>2026-10-21</lastmod>
-  </url>
-  <url>
-    <loc>https://lion504.github.io/fijobmaps-data.html</loc>
-    <lastmod>2026-10-21</lastmod>
-  </url>
-  <url>
-    <loc>https://lion504.github.io/homelab.html</loc>
-    <lastmod>2026-10-01</lastmod>
-  </url>
-  <url>
-    <loc>https://lion504.github.io/jobai-evaluation.html</loc>
-    <lastmod>2026-10-01</lastmod>
-  </url>
-  <url>
-    <loc>https://lion504.github.io/jobsresearch-decisions.html</loc>
-    <lastmod>2026-10-21</lastmod>
-  </url>
-  <url>
-    <loc>https://lion504.github.io/notes.html</loc>
-    <lastmod>2026-10-01</lastmod>
-  </url>
-  <url>
-    <loc>https://lion504.github.io/projects.html</loc>
-    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/about.html"/>
   </url>
   <url>
     <loc>https://lion504.github.io/work.html</loc>
     <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/work.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/work.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/work.html"/>
+  </url>
+  <url>
+    <loc>https://lion504.github.io/fi/work.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/work.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/work.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/work.html"/>
+  </url>
+  <url>
+    <loc>https://lion504.github.io/projects.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/projects.html"/>
+  </url>
+  <url>
+    <loc>https://lion504.github.io/fi/projects.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/projects.html"/>
+  </url>
+  <url>
+    <loc>https://lion504.github.io/ai-systems.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/ai-systems.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/ai-systems.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/ai-systems.html"/>
+  </url>
+  <url>
+    <loc>https://lion504.github.io/fi/ai-systems.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/ai-systems.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/ai-systems.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/ai-systems.html"/>
+  </url>
+  <url>
+    <loc>https://lion504.github.io/experience.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/experience.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/experience.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/experience.html"/>
+  </url>
+  <url>
+    <loc>https://lion504.github.io/fi/experience.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/experience.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/experience.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/experience.html"/>
+  </url>
+  <url>
+    <loc>https://lion504.github.io/capabilities.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/capabilities.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/capabilities.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/capabilities.html"/>
+  </url>
+  <url>
+    <loc>https://lion504.github.io/fi/capabilities.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/capabilities.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/capabilities.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/capabilities.html"/>
+  </url>
+  <url>
+    <loc>https://lion504.github.io/contact.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/contact.html"/>
+  </url>
+  <url>
+    <loc>https://lion504.github.io/fi/contact.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/contact.html"/>
+  </url>
+  <url>
+    <loc>https://lion504.github.io/notes.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/notes.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/notes.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/notes.html"/>
+  </url>
+  <url>
+    <loc>https://lion504.github.io/fi/notes.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/notes.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/notes.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/notes.html"/>
+  </url>
+  <url>
+    <loc>https://lion504.github.io/jobsresearch-decisions.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/jobsresearch-decisions.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/jobsresearch-decisions.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/jobsresearch-decisions.html"/>
+  </url>
+  <url>
+    <loc>https://lion504.github.io/fi/jobsresearch-decisions.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/jobsresearch-decisions.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/jobsresearch-decisions.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/jobsresearch-decisions.html"/>
+  </url>
+  <url>
+    <loc>https://lion504.github.io/clboost-beyond-generation.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/clboost-beyond-generation.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/clboost-beyond-generation.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/clboost-beyond-generation.html"/>
+  </url>
+  <url>
+    <loc>https://lion504.github.io/fi/clboost-beyond-generation.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/clboost-beyond-generation.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/clboost-beyond-generation.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/clboost-beyond-generation.html"/>
+  </url>
+  <url>
+    <loc>https://lion504.github.io/fijobmaps-data.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/fijobmaps-data.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/fijobmaps-data.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/fijobmaps-data.html"/>
+  </url>
+  <url>
+    <loc>https://lion504.github.io/fi/fijobmaps-data.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/fijobmaps-data.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/fijobmaps-data.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/fijobmaps-data.html"/>
+  </url>
+  <url>
+    <loc>https://lion504.github.io/jobai-evaluation.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/jobai-evaluation.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/jobai-evaluation.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/jobai-evaluation.html"/>
+  </url>
+  <url>
+    <loc>https://lion504.github.io/fi/jobai-evaluation.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/jobai-evaluation.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/jobai-evaluation.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/jobai-evaluation.html"/>
+  </url>
+  <url>
+    <loc>https://lion504.github.io/homelab.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/homelab.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/homelab.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/homelab.html"/>
+  </url>
+  <url>
+    <loc>https://lion504.github.io/fi/homelab.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lion504.github.io/homelab.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://lion504.github.io/fi/homelab.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lion504.github.io/homelab.html"/>
   </url>
 </urlset>

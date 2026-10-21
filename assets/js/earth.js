@@ -268,7 +268,7 @@
       if (!window.d3 || !window.topojson) throw new Error('Map helpers unavailable');
       ctx = canvas.getContext('2d');
       if (!ctx) throw new Error('Canvas unavailable');
-      var response = await fetch('assets/data/world-110m.json', { signal: abort.signal });
+      var response = await fetch('/assets/data/world-110m.json', { signal: abort.signal });
       if (!response.ok) throw new Error('Map data unavailable');
       var topology = await response.json();
       land = window.topojson.feature(topology, topology.objects.countries);
