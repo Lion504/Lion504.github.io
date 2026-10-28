@@ -1,3 +1,9 @@
 .DS_Store
 Thumbs.db
 *.log
+
+# Dev notes, design guide, changelog and build tools: kept on this machine only
+private/
+
+# Claude Code settings and worktrees: local only
+.claude/
