@@ -1,6 +1,6 @@
 # Wang Yongzhi
 
-> AI engineer in Helsinki, Finland, and machine learning engineering student at Metropolia University of Applied Sciences (171/240 ECTS, graduating December 2026). Builds LLM agent systems, semantic search, fine-tuned forecasting models and the CI/CD and quality gates around them. Open to junior or graduate roles as an AI engineer, forward-deployed engineer (FDE), backend or full-stack developer from January 2027, in Helsinki or remote in the EU.
+> AI engineer in Helsinki, Finland, and machine learning engineering student at Metropolia University of Applied Sciences (186 ECTS completed, graduating spring 2027). Builds LLM agent systems, semantic search, fine-tuned forecasting models and the CI/CD and quality gates around them. Open to junior or graduate roles as an AI engineer, forward-deployed engineer (FDE), backend or full-stack developer from January 2027, in Helsinki or remote in the EU.
 
 Key facts:
 

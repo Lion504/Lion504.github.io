@@ -296,7 +296,7 @@ window.I18N = {
     "nav.education": "Experience",
     "nav.contact": "Contact",
 
-    "hero.available": "Available now &middot; full-time from January 2027",
+    "hero.available": "Available now &middot; part-time from January 2027, full-time after graduating in spring 2027",
     "hero.role":
       'AI&nbsp;Engineer <span class="sep">·</span> Backend <span class="sep">·</span> Full&#8209;stack',
     "hero.lede":
@@ -308,7 +308,7 @@ window.I18N = {
     "hero.fi": "FI: conversational (CEFR A2), 20\u00a0ECTS",
 
     "stat.ects": "ECTS completed",
-    "stat.grad": "Expected graduation",
+    "stat.grad": "Expected graduation (spring)",
     "stat.gpa": "Current GPA",
     "stat.proj": "Projects built & in progress",
     "stat.hack": "Hackathons",
@@ -379,7 +379,7 @@ window.I18N = {
     "sec.edu": "Experience &amp; education",
     "edu.title": "Ten years before the degree.",
     "edu.major":
-      "Professional major: Software Engineering · 171 / 240 ECTS · Expected graduation: December 2026 · GPA 4.38 / 5.0",
+      "Professional major: Software Engineering · 186 ECTS completed · Expected graduation: spring 2027 · GPA 4.38 / 5.0",
     "edu.selected": "Selected coursework",
     "c.ml": "Machine Learning Algorithms",
     "c.sw": "Software 1 &amp; 2",
@@ -404,11 +404,11 @@ window.I18N = {
 
     "avail.start.k": "Start",
     "avail.start.v":
-      "Available to start now, alongside my studies — and full-time from January 2027.",
+      "Available to start now, part-time alongside my studies — and full-time after graduating in spring 2027.",
     "sec.contact": "Contact",
     "contact.title": "Let's talk.",
     "contact.sub":
-      "I'm looking for a junior or graduate position as an AI engineer, forward-deployed engineer (FDE), backend or full-stack developer from January 2027 — in Helsinki or remote across the EU.",
+      "I'm looking for a junior or graduate position as an AI engineer, forward-deployed engineer (FDE), backend or full-stack developer in Helsinki or remote across the EU: part-time from January 2027, and full-time after graduating in spring 2027.",
     "contact.wa": "Message me <i>\u2197</i>",
     "contact.loc": "Location",
     "qr.lbl": "Scan to connect",
@@ -727,7 +727,7 @@ window.I18N = {
     "nav.contact": "Yhteystiedot",
 
     "hero.available":
-      "Käytettävissä nyt &middot; kokoaikaisesti tammikuusta 2027",
+      "Käytettävissä nyt &middot; osa-aikaisesti tammikuusta 2027, kokoaikaisesti valmistuttuani keväällä 2027",
     "hero.role":
       'Tekoälykehittäjä <span class="sep">·</span> Backend <span class="sep">·</span> Full&#8209;stack',
     "hero.lede":
@@ -739,7 +739,7 @@ window.I18N = {
     "hero.fi": "FI: perustaso (CEFR A2), 20\u00a0op",
 
     "stat.ects": "Opintopistettä suoritettu",
-    "stat.grad": "Arvioitu valmistuminen",
+    "stat.grad": "Arvioitu valmistuminen (kevät)",
     "stat.gpa": "Keskiarvo",
     "stat.proj": "Valmiit ja keskeneräiset projektit",
     "stat.hack": "Hackathonia",
@@ -813,7 +813,7 @@ window.I18N = {
     "sec.edu": "Työkokemus ja koulutus",
     "edu.title": "Kymmenen vuotta ennen tutkintoa.",
     "edu.major":
-      "Suuntautuminen: ohjelmistotekniikka · 171 / 240 op · arvioitu valmistuminen joulukuussa 2026 · keskiarvo 4,38 / 5,0",
+      "Suuntautuminen: ohjelmistotekniikka · 186 op suoritettu · arvioitu valmistuminen keväällä 2027 · keskiarvo 4,38 / 5,0",
     "edu.selected": "Valikoituja opintojaksoja",
     "c.ml": "Koneoppimisen algoritmit",
     "c.sw": "Ohjelmisto 1 ja 2",
@@ -838,11 +838,11 @@ window.I18N = {
 
     "avail.start.k": "Aloitus",
     "avail.start.v":
-      "Voin aloittaa heti opintojeni ohella — ja kokoaikaisesti tammikuusta 2027.",
+      "Voin aloittaa heti osa-aikaisesti opintojeni ohella — ja kokoaikaisesti valmistuttuani keväällä 2027.",
     "sec.contact": "Yhteystiedot",
     "contact.title": "Otetaan yhteyttä.",
     "contact.sub":
-      "Etsin junior- tai graduate-paikkaa tekoäly-, backend- tai full-stack-kehittäjänä tai forward deployed engineerinä (FDE) tammikuusta 2027 alkaen — Helsingissä tai etätyönä EU:n alueella.",
+      "Etsin junior- tai graduate-paikkaa tekoäly-, backend- tai full-stack-kehittäjänä tai forward deployed engineerinä (FDE) Helsingissä tai etätyönä EU:n alueella: osa-aikaisesti tammikuusta 2027 ja kokoaikaisesti valmistuttuani keväällä 2027.",
     "contact.wa": "L\u00e4het\u00e4 viesti <i>\u2197</i>",
     "contact.loc": "Sijainti",
     "qr.lbl": "Skannaa ja ota yhteyttä",
