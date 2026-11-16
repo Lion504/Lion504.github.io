@@ -6,7 +6,7 @@
   --paper-3:#19263D;
   --ink:#E2E8F0;
   --ink-2:#A3AFC4;
-  --ink-3:#94A3B8;
+  --ink-3:#B4C0D2;
   --signal:#5EEAD4;
   --signal-ground:rgba(45,212,191,.1);
   --on-signal:#0F172A;
@@ -26,8 +26,8 @@
   --fs-body:1rem;
   --fs-lede:1rem;
   --fs-meta:.875rem;
-  --fs-mono:.6875rem;
-  --fs-caption:.75rem;
+  --fs-mono:.78rem;
+  --fs-caption:.8125rem;
   --fs-number:1.375rem;
   --sp-1:4px; --sp-2:8px; --sp-3:16px; --sp-4:24px; --sp-5:32px;
   --sp-6:48px; --sp-7:64px; --sp-8:96px; --sp-9:128px;
@@ -717,6 +717,19 @@ html.menu-open{overflow:hidden;}
 .copy-email{flex:none;max-width:100%;min-height:44px;padding:var(--sp-2);border:1px solid var(--line);border-radius:var(--radius);background:var(--paper-2);color:var(--signal);font:inherit;font-size:var(--fs-caption);white-space:normal;text-align:left;cursor:pointer;}
 .copy-status{flex-basis:100%;font-size:var(--fs-caption);color:var(--ink-2);overflow-wrap:anywhere;}
 .copy-status:not(:empty){padding-bottom:var(--sp-3);}
+
+/* Jump list on Work: one row of anchors under the page heading. */
+.jump{margin-top:var(--sp-5);padding-block:var(--sp-3);border-block:1px solid var(--line-soft);}
+.jump>p{color:var(--ink-3);}
+.jump ol{display:flex;flex-wrap:wrap;gap:var(--sp-1) var(--sp-4);margin-top:var(--sp-2);}
+.jump a{display:inline-flex;align-items:baseline;gap:var(--sp-2);min-height:44px;align-items:center;font-size:var(--fs-meta);color:var(--ink);}
+.jump a span[aria-hidden]{font-family:var(--ff-mono);font-size:var(--fs-mono);color:var(--signal);}
+.jump a:hover,.jump a:focus-visible{color:var(--signal);}
+.jump+.projects{margin-top:var(--sp-5);}
+.note-card .note-card__meta{color:var(--ink-3);margin-top:var(--sp-2);}
+.notes-index .sec__title:not(:first-child){margin-top:var(--sp-6);}
+#education .proof{grid-template-columns:repeat(4,minmax(0,1fr));}
+@media (max-width:640px){#education .proof{grid-template-columns:repeat(2,minmax(0,1fr));}}
 
 /* Paper/PDF uses the same content, with a high-contrast ink-saving palette. */
 @media print{
