@@ -14,7 +14,7 @@ Key facts:
 
 ## Projects
 
-- [JobsResearch case study](https://lion504.github.io/jobsresearch-decisions.html): AI job-matching platform; 100,000+ postings from five sources, LLM fit scores capped by deterministic eligibility rules, built with a team of 8 AI agents (~4,700 commits, 1,500 merged pull requests, Aug–Oct 2026)
+- [JobsResearch case study](https://lion504.github.io/jobsresearch-decisions.html): AI job-matching platform; 160,000+ postings from five sources, LLM fit scores capped by deterministic eligibility rules, built with a team of 8 AI agents (~5,200 commits, 1,600 merged pull requests, Aug–Nov 2026)
 - [JobAI evaluation](https://lion504.github.io/jobai-evaluation.html): forecasting Finnish job vacancies with a Qwen3-4B QLoRA adapter, tested against four baselines with time-based splits
 - [Fi-Job-Maps case study](https://lion504.github.io/fijobmaps-data.html): Finnish labour market as an explorable treemap with AI-exposure estimates; live map at https://lion504.github.io/Fi-Job-Maps/
 - [CLboost case study](https://lion504.github.io/clboost-beyond-generation.html): AI cover-letter generator in six languages including right-to-left; frontend and DevOps lead
